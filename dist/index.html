@@ -1,0 +1,621 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>subsecond — Digital presence that converts</title>
+    <meta
+      name="description"
+      content="We build digital presence that converts attention into revenue for B2B firms. Web design, AI lead capture, automation, and conversion optimisation."
+    />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href="https://subsecond.app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://subsecond.app/" />
+    <meta property="og:title" content="subsecond — Digital presence that converts" />
+    <meta
+      property="og:description"
+      content="We build digital presence that converts attention into revenue for B2B firms. Web design, AI lead capture, automation, and conversion optimisation."
+    />
+    <meta property="og:image" content="https://subsecond.app/og-image.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="subsecond — Digital presence that converts" />
+    <meta
+      name="twitter:description"
+      content="We build digital presence that converts attention into revenue for B2B firms."
+    />
+    <meta name="twitter:image" content="https://subsecond.app/og-image.svg" />
+    <!-- Analytics: uncomment and set your domain when ready
+    <script defer data-domain="subsecond.app" src="https://plausible.io/js/script.js"></script>
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="/assets/index-Oz7Rjdeo.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-G2a8kedc.css">
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader" aria-hidden="true">
+      <div class="preloader__inner">
+        <span class="preloader__wordmark">subsecond<sup>&reg;</sup></span>
+        <span class="preloader__counter" id="preloader-counter">0</span>
+      </div>
+    </div>
+
+    <!-- Custom cursor -->
+    <div class="cursor" id="cursor" aria-hidden="true">
+      <div class="cursor__dot"></div>
+      <div class="cursor__ring"></div>
+    </div>
+
+    <!-- Film grain -->
+    <div class="grain" aria-hidden="true"></div>
+
+    <!-- Navigation -->
+    <header class="nav" id="nav">
+      <a href="#hero" class="nav__wordmark" data-cursor>subsecond<sup>&reg;</sup></a>
+      <button
+        type="button"
+        class="nav__toggle"
+        id="nav-toggle"
+        aria-expanded="false"
+        aria-controls="nav-drawer"
+        data-i18n-aria="nav.menu"
+        aria-label="Open menu"
+      >
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
+      <div class="nav__drawer" id="nav-drawer">
+        <nav class="nav__links nav__links--drawer" aria-label="Primary">
+          <a href="#services" data-cursor data-i18n="nav.services">What we do</a>
+          <a href="#clients" data-cursor data-i18n="nav.clients">Who we work with</a>
+          <a href="#work" data-cursor data-i18n="nav.work">Results</a>
+          <a href="#packages" data-cursor data-i18n="nav.packages">Packages</a>
+          <a href="#process" data-cursor data-i18n="nav.process">Process</a>
+          <a href="#faq" data-cursor data-i18n="nav.faq">FAQ</a>
+        </nav>
+        <a href="#contact" class="btn btn--primary nav__drawer-cta" data-cursor data-i18n="nav.cta">
+          Book a revenue review
+        </a>
+      </div>
+      <nav class="nav__links nav__links--desktop" aria-label="Primary">
+        <a href="#services" data-cursor data-i18n="nav.services">What we do</a>
+        <a href="#clients" data-cursor data-i18n="nav.clients">Who we work with</a>
+        <a href="#work" data-cursor data-i18n="nav.work">Results</a>
+        <a href="#packages" data-cursor data-i18n="nav.packages">Packages</a>
+        <a href="#process" data-cursor data-i18n="nav.process">Process</a>
+        <a href="#faq" data-cursor data-i18n="nav.faq">FAQ</a>
+      </nav>
+      <div class="nav__right">
+        <div class="lang-toggle" role="group" aria-label="Language">
+          <button class="lang-toggle__btn" id="lang-en" data-cursor data-lang="en">EN</button>
+          <span class="lang-toggle__divider">/</span>
+          <button class="lang-toggle__btn" id="lang-pl" data-cursor data-lang="pl">PL</button>
+        </div>
+        <a href="#contact" class="btn btn--small" data-cursor data-magnetic data-i18n="nav.cta">
+          Book a revenue review
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <!-- 01 / Hero -->
+      <section class="hero" id="hero">
+        <canvas class="hero__canvas" id="webgl-canvas" aria-hidden="true"></canvas>
+        <div class="hero__content">
+          <h1 class="hero__title">
+            <span class="hero__line hero__line--muted" data-split data-i18n="hero.line1"
+              >Some agencies build websites.</span
+            >
+            <span class="hero__line hero__line--accent" data-split data-i18n="hero.line2"
+              >We build presence.</span
+            >
+          </h1>
+          <p class="hero__sub" data-i18n="hero.sub">
+            We build digital presence that converts attention into revenue — for B2B firms where
+            every lost lead costs real money.
+          </p>
+          <div class="hero__cta">
+            <a href="#contact" class="btn btn--primary" data-cursor data-magnetic data-i18n="hero.cta">
+              Book a free revenue review
+            </a>
+          </div>
+        </div>
+        <div class="hero__scroll" aria-hidden="true">
+          <span data-i18n="hero.scroll">Scroll</span>
+          <span class="hero__scroll-line"></span>
+        </div>
+      </section>
+
+      <!-- 02 / Philosophy -->
+      <section class="philosophy section" id="philosophy">
+        <p class="eyebrow"><span class="eyebrow__num">01</span><span data-i18n="philosophy.eyebrow">Philosophy</span></p>
+        <div class="philosophy__body">
+          <p class="philosophy__line" data-split data-i18n="philosophy.l1">
+            We work with a handful of companies per year.
+          </p>
+          <p class="philosophy__line philosophy__line--em" data-split data-i18n="philosophy.l2">
+            Not because we can’t handle more — because we won’t.
+          </p>
+          <p class="philosophy__detail" data-i18n="philosophy.l3">
+            Every client gets our full attention. Every project gets our full craft. We don’t hand
+            you off to a junior and disappear. We stay until it’s right. Better presence isn’t
+            vanity — in professional services, it’s what separates “we’ll think about it” from “let’s
+            schedule a call.”
+          </p>
+        </div>
+      </section>
+
+      <!-- 03 / Services -->
+      <section class="services section" id="services">
+        <p class="eyebrow"><span class="eyebrow__num">02</span><span data-i18n="services.eyebrow">Services</span></p>
+        <h2 class="section__heading" data-split data-i18n="services.heading">What we do</h2>
+        <ul class="services__list">
+          <li class="service" data-reveal>
+            <span class="service__num">01</span>
+            <h3 class="service__title">Web Design &amp; Development</h3>
+            <p class="service__desc" data-i18n="services.s1.desc">
+              Websites that make you look like the obvious choice — before a prospect ever picks up
+              the phone. Faster trust, more inquiries, fewer dead-end conversations.
+            </p>
+          </li>
+          <li class="service" data-reveal>
+            <span class="service__num">02</span>
+            <h3 class="service__title">AI Assistants &amp; Chatbots</h3>
+            <p class="service__desc" data-i18n="services.s2.desc">
+              Capture leads outside office hours and qualify them before your team gets involved.
+              Fewer dead-end calls, more conversations worth having.
+            </p>
+          </li>
+          <li class="service" data-reveal>
+            <span class="service__num">03</span>
+            <h3 class="service__title">Automation (n8n / Make)</h3>
+            <p class="service__desc" data-i18n="services.s3.desc">
+              Remove the admin work that eats billable hours — follow-ups, CRM updates, onboarding,
+              reporting — so your team spends time on work clients actually pay for.
+            </p>
+          </li>
+          <li class="service" data-reveal>
+            <span class="service__num">04</span>
+            <h3 class="service__title">Conversion Rate Optimisation</h3>
+            <p class="service__desc" data-i18n="services.s4.desc">
+              More revenue from the traffic you already pay for. We find where qualified prospects
+              drop off — and fix the leaks in your funnel.
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 04 / Who we work with -->
+      <section class="clients section" id="clients">
+        <p class="eyebrow"><span class="eyebrow__num">03</span><span data-i18n="clients.eyebrow">Clients</span></p>
+        <div class="clients__grid">
+          <h2 class="section__heading" data-split data-i18n="clients.heading">Who we work with</h2>
+          <p class="clients__body" data-i18n="clients.body">
+            We work with B2B companies where one new client pays for the entire project — law
+            firms, private clinics, consultancies, premium service providers. You’ve built a serious
+            business. Your website should bring in the clients you deserve, not undersell what
+            you’ve built.
+          </p>
+        </div>
+        <blockquote class="clients__quote">
+          <p class="clients__quote-line clients__quote-line--muted" data-split data-i18n="clients.cheap">
+            If you’re optimising for the lowest price, we’re not it.
+          </p>
+          <p class="clients__quote-line clients__quote-line--accent" data-split data-i18n="clients.best">
+            If you’re optimising for clients who pay premium fees — let’s talk.
+          </p>
+        </blockquote>
+      </section>
+
+      <!-- 05 / Work -->
+      <section class="work section" id="work">
+        <p class="eyebrow"><span class="eyebrow__num">04</span><span data-i18n="work.eyebrow">Work</span></p>
+        <div class="work__header">
+          <h2 class="section__heading" data-split data-i18n="work.heading">Selected results</h2>
+          <p class="work__intro" data-i18n="work.intro">
+            Measured outcomes from B2B projects across Poland — websites, AI systems, and
+            automation built to move revenue.
+          </p>
+        </div>
+        <div class="work__stats">
+          <div class="work__stat" data-reveal>
+            <span class="work__stat-value" data-i18n="work.stat1.value">24</span>
+            <span class="work__stat-label" data-i18n="work.stat1.label">Projects delivered</span>
+          </div>
+          <div class="work__stat" data-reveal>
+            <span class="work__stat-value" data-i18n="work.stat2.value">+38%</span>
+            <span class="work__stat-label" data-i18n="work.stat2.label">Avg. inquiry growth</span>
+          </div>
+          <div class="work__stat" data-reveal>
+            <span class="work__stat-value" data-i18n="work.stat3.value">94%</span>
+            <span class="work__stat-label" data-i18n="work.stat3.label">Client retention</span>
+          </div>
+          <div class="work__stat" data-reveal>
+            <span class="work__stat-value" data-i18n="work.stat4.value">4.2×</span>
+            <span class="work__stat-label" data-i18n="work.stat4.label">Avg. ROI in 12 months</span>
+          </div>
+        </div>
+        <div class="work__grid">
+          <article class="work__case" data-reveal>
+            <p class="work__case-meta" data-i18n="work.case1.meta">Law firm · Warsaw</p>
+            <h3 class="work__case-title" data-i18n="work.case1.title">
+              Website redesign &amp; conversion optimisation
+            </h3>
+            <p class="work__case-package" data-i18n="work.case1.package">Foundation + CRO</p>
+            <div class="work__case-metric">
+              <span class="work__case-value" data-i18n="work.case1.metric">+47%</span>
+              <span class="work__case-metric-label" data-i18n="work.case1.metricLabel"
+                >Qualified inquiries in 90 days</span
+              >
+            </div>
+            <p class="work__case-desc" data-i18n="work.case1.desc">
+              Repositioned the firm online and rebuilt the contact flow. High-intent form submissions
+              and phone inquiries rose within the first quarter after launch.
+            </p>
+          </article>
+          <article class="work__case work__case--featured" data-reveal>
+            <p class="work__case-meta" data-i18n="work.case2.meta">Private clinic · Kraków</p>
+            <h3 class="work__case-title" data-i18n="work.case2.title">
+              Website, AI assistant &amp; lead qualification
+            </h3>
+            <p class="work__case-package" data-i18n="work.case2.package">Growth</p>
+            <div class="work__case-metric">
+              <span class="work__case-value" data-i18n="work.case2.metric">+62%</span>
+              <span class="work__case-metric-label" data-i18n="work.case2.metricLabel"
+                >After-hours leads captured</span
+              >
+            </div>
+            <p class="work__case-desc" data-i18n="work.case2.desc">
+              AI assistant now handles patient inquiries outside clinic hours — qualifying intent
+              and booking callbacks before the front desk opens.
+            </p>
+          </article>
+          <article class="work__case" data-reveal>
+            <p class="work__case-meta" data-i18n="work.case3.meta">B2B consultancy · Gdańsk</p>
+            <h3 class="work__case-title" data-i18n="work.case3.title">
+              Full-stack automation &amp; digital systems
+            </h3>
+            <p class="work__case-package" data-i18n="work.case3.package">Partner</p>
+            <div class="work__case-metric">
+              <span class="work__case-value" data-i18n="work.case3.metric">14 hrs</span>
+              <span class="work__case-metric-label" data-i18n="work.case3.metricLabel"
+                >Admin time recovered per week</span
+              >
+            </div>
+            <p class="work__case-desc" data-i18n="work.case3.desc">
+              Automated CRM updates, client onboarding, and reporting — freeing senior consultants
+              for billable work that actually moves revenue.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- 06 / Testimonial -->
+      <section class="testimonial section" id="testimonial">
+        <blockquote class="testimonial__quote" data-reveal>
+          <p class="testimonial__text" data-i18n="testimonial.quote">
+            “They didn’t just build us a website — they rebuilt how clients find us. Inquiries are
+            up, and the ones we get are actually worth our time.”
+          </p>
+          <footer class="testimonial__cite" data-i18n="testimonial.role">
+            Managing Partner, Warsaw law firm
+          </footer>
+        </blockquote>
+      </section>
+
+      <!-- 07 / Packages -->
+      <section class="packages section" id="packages">
+        <p class="eyebrow"><span class="eyebrow__num">06</span><span data-i18n="packages.eyebrow">Packages</span></p>
+        <h2 class="section__heading" data-split data-i18n="packages.heading">How we work together</h2>
+        <div class="packages__grid">
+          <article class="package" data-reveal>
+            <h3 class="package__name">Foundation</h3>
+            <p class="package__desc" data-i18n="packages.p1.desc">
+              Turn your website into a credible sales asset. For firms whose current site is costing
+              them inquiries they never even know about. Clean, fast, built to convert visitors into
+              conversations.
+            </p>
+            <p class="package__includes-label" data-i18n="packages.includes">What’s included</p>
+            <ul class="package__includes">
+              <li data-i18n="packages.p1.i1">Discovery & conversion strategy session</li>
+              <li data-i18n="packages.p1.i2">Custom design — up to 8 pages</li>
+              <li data-i18n="packages.p1.i3">Fast, mobile-first development</li>
+              <li data-i18n="packages.p1.i4">Contact forms & inquiry tracking setup</li>
+              <li data-i18n="packages.p1.i5">SEO foundations & analytics</li>
+              <li data-i18n="packages.p1.i6">30 days post-launch support</li>
+            </ul>
+            <p class="package__timeline" data-i18n="packages.p1.timeline">Typical timeline: 6–8 weeks</p>
+            <p class="package__price" data-i18n="packages.p1.price">From 12 000 PLN</p>
+            <a
+              href="#contact"
+              class="btn btn--ghost package__cta"
+              data-cursor
+              data-package="foundation"
+              data-i18n="packages.cta"
+              >Discuss this package</a
+            >
+          </article>
+          <article class="package package--featured" data-reveal>
+            <h3 class="package__name">Growth</h3>
+            <p class="package__desc" data-i18n="packages.p2.desc">
+              Website plus the systems that compound revenue over time. AI lead capture, automation,
+              and ongoing optimisation — so performance improves after launch, not just on launch
+              day.
+            </p>
+            <p class="package__includes-label" data-i18n="packages.includes">What’s included</p>
+            <ul class="package__includes">
+              <li data-i18n="packages.p2.i1">Everything in Foundation</li>
+              <li data-i18n="packages.p2.i2">AI assistant for lead capture & qualification</li>
+              <li data-i18n="packages.p2.i3">Core automation (CRM sync, follow-ups, notifications)</li>
+              <li data-i18n="packages.p2.i4">Conversion audit & initial optimisations</li>
+              <li data-i18n="packages.p2.i5">Monthly CRO & site improvements</li>
+              <li data-i18n="packages.p2.i6">Monthly reporting on inquiries & conversion</li>
+            </ul>
+            <p class="package__timeline" data-i18n="packages.p2.timeline">
+              Typical timeline: 10–12 weeks + ongoing retainer
+            </p>
+            <p class="package__price" data-i18n="packages.p2.price">From 25 000 PLN + 2 500 PLN/mo</p>
+            <a
+              href="#contact"
+              class="btn btn--ghost package__cta"
+              data-cursor
+              data-package="growth"
+              data-i18n="packages.cta"
+              >Discuss this package</a
+            >
+          </article>
+          <article class="package" data-reveal>
+            <h3 class="package__name">Partner</h3>
+            <p class="package__desc" data-i18n="packages.p3.desc">
+              Your external digital team focused on revenue, not deliverables. Full system, full
+              automation, strategic input — for companies that want digital as a competitive
+              advantage, not a checkbox.
+            </p>
+            <p class="package__includes-label" data-i18n="packages.includes">What’s included</p>
+            <ul class="package__includes">
+              <li data-i18n="packages.p3.i1">Everything in Growth</li>
+              <li data-i18n="packages.p3.i2">Full automation suite across your stack</li>
+              <li data-i18n="packages.p3.i3">Custom integrations & advanced AI workflows</li>
+              <li data-i18n="packages.p3.i4">Strategic roadmap with quarterly reviews</li>
+              <li data-i18n="packages.p3.i5">Priority support & dedicated channel</li>
+              <li data-i18n="packages.p3.i6">Landing pages & campaign support on retainer</li>
+            </ul>
+            <p class="package__timeline" data-i18n="packages.p3.timeline">
+              Typical timeline: 12–16 weeks + ongoing retainer
+            </p>
+            <p class="package__price" data-i18n="packages.p3.price">From 40 000 PLN + 5 000 PLN/mo</p>
+            <a
+              href="#contact"
+              class="btn btn--ghost package__cta"
+              data-cursor
+              data-package="partner"
+              data-i18n="packages.cta"
+              >Discuss this package</a
+            >
+          </article>
+        </div>
+      </section>
+
+      <!-- 08 / Process -->
+      <section class="process section" id="process">
+        <p class="eyebrow"><span class="eyebrow__num">07</span><span data-i18n="process.eyebrow">Process</span></p>
+        <h2 class="section__heading" data-split data-i18n="process.heading">How a project looks</h2>
+        <ol class="process__list">
+          <li class="step" data-reveal>
+            <span class="step__num">01</span>
+            <h3 class="step__title">Discovery</h3>
+            <p class="step__desc" data-i18n="process.st1.desc">
+              We map where leads and revenue are leaking today — before we touch a single pixel.
+              Goals, audience, competition, current gaps.
+            </p>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step__num">02</span>
+            <h3 class="step__title">Strategy &amp; Design</h3>
+            <p class="step__desc" data-i18n="process.st2.desc">
+              We design for your sales cycle — not a template that looks good but doesn’t convert. A
+              considered visual and structural proposal built for your specific goals.
+            </p>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step__num">03</span>
+            <h3 class="step__title">Build</h3>
+            <p class="step__desc" data-i18n="process.st3.desc">
+              Fast, clean, documented. You start earning from the investment sooner — and you’re
+              never left wondering what’s happening.
+            </p>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step__num">04</span>
+            <h3 class="step__title">Launch &amp; Retain</h3>
+            <p class="step__desc" data-i18n="process.st4.desc">
+              We don’t disappear after launch. Retainer clients get ongoing development, monthly
+              reporting on inquiries and conversion — and a team that knows their business.
+            </p>
+          </li>
+        </ol>
+      </section>
+
+      <!-- 09 / FAQ -->
+      <section class="faq section" id="faq">
+        <p class="eyebrow"><span class="eyebrow__num">08</span><span data-i18n="faq.eyebrow">FAQ</span></p>
+        <h2 class="section__heading" data-split data-i18n="faq.heading">Common questions</h2>
+        <dl class="faq__list">
+          <div class="faq__item" data-reveal>
+            <dt class="faq__q" data-i18n="faq.q1">How long does a project take?</dt>
+            <dd class="faq__a" data-i18n="faq.a1">
+              Foundation projects typically run 6–8 weeks. Growth and Partner take 10–16 weeks for
+              the initial build, then shift to an ongoing retainer. We’ll give you a specific
+              timeline on the consultation call.
+            </dd>
+          </div>
+          <div class="faq__item" data-reveal>
+            <dt class="faq__q" data-i18n="faq.q2">What happens on the free consultation?</dt>
+            <dd class="faq__a" data-i18n="faq.a2">
+              30 minutes, no pitch. We review your current site and funnel, identify where leads or
+              revenue are leaking, and outline what fixing it would involve — with honest scope and
+              ballpark numbers.
+            </dd>
+          </div>
+          <div class="faq__item" data-reveal>
+            <dt class="faq__q" data-i18n="faq.q3">Who is not a good fit?</dt>
+            <dd class="faq__a" data-i18n="faq.a3">
+              Companies optimising purely for the lowest price, or those needing a template site in
+              under two weeks. We work best with B2B firms who care about quality inquiries and
+              long-term digital performance.
+            </dd>
+          </div>
+          <div class="faq__item" data-reveal>
+            <dt class="faq__q" data-i18n="faq.q4">Do you work outside Poland?</dt>
+            <dd class="faq__a" data-i18n="faq.a4">
+              Yes. Most of our clients are Polish B2B firms, but we work remotely with premium
+              service businesses across the EU. Discovery and delivery are fully online.
+            </dd>
+          </div>
+        </dl>
+      </section>
+
+      <!-- 10 / Final CTA -->
+      <section class="contact section" id="contact">
+        <p class="eyebrow eyebrow--center"><span class="eyebrow__num">09</span><span data-i18n="contact.eyebrow">Contact</span></p>
+        <h2 class="contact__heading" data-split data-i18n="contact.heading">
+          Ready to stop leaving revenue on the table?
+        </h2>
+        <p class="contact__body" data-i18n="contact.body">
+          Book a free 30-minute revenue review. We’ll show you where prospects drop off, what’s
+          limiting inquiries, and what it would take to fix it — with honest numbers, not a sales
+          pitch.
+        </p>
+        <div class="contact__steps">
+          <h3 class="contact__steps-heading" data-i18n="contact.steps.heading">What happens on the call</h3>
+          <ol class="contact__steps-list">
+            <li class="contact__step" data-reveal>
+              <span class="contact__step-num">01</span>
+              <div>
+                <h4 class="contact__step-title" data-i18n="contact.steps.s1.title">We listen</h4>
+                <p class="contact__step-desc" data-i18n="contact.steps.s1.desc">
+                  Your business, goals, and how clients find you today — no questionnaire, just a
+                  conversation.
+                </p>
+              </div>
+            </li>
+            <li class="contact__step" data-reveal>
+              <span class="contact__step-num">02</span>
+              <div>
+                <h4 class="contact__step-title" data-i18n="contact.steps.s2.title">We diagnose</h4>
+                <p class="contact__step-desc" data-i18n="contact.steps.s2.desc">
+                  Where your funnel leaks, what’s costing you inquiries, and what quick wins exist
+                  before any build.
+                </p>
+              </div>
+            </li>
+            <li class="contact__step" data-reveal>
+              <span class="contact__step-num">03</span>
+              <div>
+                <h4 class="contact__step-title" data-i18n="contact.steps.s3.title">You get clarity</h4>
+                <p class="contact__step-desc" data-i18n="contact.steps.s3.desc">
+                  Honest scope, ballpark investment, and a recommended path — whether that’s with us
+                  or not.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+        <form class="contact__form" id="contact-form" data-reveal>
+          <div class="contact__field">
+            <label class="contact__label" for="contact-name" data-i18n="contact.form.name">Name</label>
+            <input
+              class="contact__input"
+              type="text"
+              id="contact-name"
+              name="name"
+              required
+              autocomplete="name"
+            />
+          </div>
+          <div class="contact__field">
+            <label class="contact__label" for="contact-email" data-i18n="contact.form.email">Email</label>
+            <input
+              class="contact__input"
+              type="email"
+              id="contact-email"
+              name="email"
+              required
+              autocomplete="email"
+            />
+          </div>
+          <div class="contact__field">
+            <label class="contact__label" for="contact-company" data-i18n="contact.form.company"
+              >Company</label
+            >
+            <input
+              class="contact__input"
+              type="text"
+              id="contact-company"
+              name="company"
+              autocomplete="organization"
+            />
+          </div>
+          <div class="contact__field">
+            <label class="contact__label" for="contact-package" data-i18n="contact.form.package"
+              >Package interest</label
+            >
+            <select class="contact__input contact__select" id="contact-package" name="package">
+              <option value="foundation" data-i18n="packages.select.foundation">Foundation</option>
+              <option value="growth" data-i18n="packages.select.growth">Growth</option>
+              <option value="partner" data-i18n="packages.select.partner">Partner</option>
+              <option value="unsure" data-i18n="packages.select.unsure">Not sure yet</option>
+            </select>
+          </div>
+          <div class="contact__field contact__field--full">
+            <label class="contact__label" for="contact-message" data-i18n="contact.form.message"
+              >What’s the biggest challenge with your digital presence?</label
+            >
+            <textarea
+              class="contact__input contact__textarea"
+              id="contact-message"
+              name="message"
+              rows="4"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--large contact__submit" data-i18n="contact.form.submit">
+            Send request
+          </button>
+          <p class="contact__note" data-i18n="contact.form.note">
+            Submitting opens your email client with a pre-filled message. Prefer to write directly?
+            hello@subsecond.app
+          </p>
+        </form>
+        <a
+          id="calendly-link"
+          class="contact__calendly"
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          hidden
+          data-i18n="contact.calendly"
+          >Prefer to pick a time directly?</a
+        >
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__top">
+        <span class="footer__wordmark">subsecond<sup>&reg;</sup></span>
+        <a href="mailto:hello@subsecond.app" class="footer__mail" data-cursor>hello@subsecond.app</a>
+      </div>
+      <div class="footer__bottom">
+        <span data-i18n="footer.tagline">We build presence.</span>
+        <span>&copy; 2026 subsecond.app</span>
+      </div>
+    </footer>
+
+  </body>
+</html>
