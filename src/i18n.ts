@@ -17,8 +17,9 @@ export const translations: Record<Lang, Record<string, string>> = {
     'hero.line1': 'Some agencies build websites.',
     'hero.line2': 'We build presence.',
     'hero.sub':
-      'We grow high-quality inquiries for law firms, clinics, and B2B advisors — through website rebuilds, AI, and automation.',
+      'We build high-converting web systems, AI assistants, and workflow automations for B2B firms where a single lost lead costs real revenue.',
     'hero.cta': 'Book a free revenue review',
+    'hero.ctaNote': '30 min call • Free diagnostic • No hard sales pitch',
     'hero.scroll': 'Scroll',
 
     'hero.proof.stat1.value': '+47%',
@@ -39,9 +40,9 @@ export const translations: Record<Lang, Record<string, string>> = {
     'services.s1.desc':
       'Websites that make you look like the obvious choice \u2014 before a prospect ever picks up the phone. Faster trust, more inquiries, fewer dead-end conversations.',
     'services.s2.desc':
-      'Capture leads outside office hours and qualify them before your team gets involved. Fewer dead-end calls, more conversations worth having.',
+      'Captures leads 24/7 \u2014 evenings, weekends, and outside office hours \u2014 and qualifies them before your team gets involved. Fewer dead-end calls, more conversations worth having.',
     'services.s3.desc':
-      'Remove the admin work that eats billable hours \u2014 follow-ups, CRM updates, onboarding, reporting \u2014 so your team spends time on work clients actually pay for.',
+      'Remove the admin work that eats billable hours \u2014 seamlessly connecting your website with tools like HubSpot, Pipedrive, Notion, and Slack for follow-ups, CRM updates, onboarding, and reporting \u2014 so your team spends time on work clients actually pay for.',
     'services.s4.desc':
       'More revenue from the traffic you already pay for. We find where qualified prospects drop off \u2014 and fix the leaks in your funnel.',
 
@@ -102,10 +103,11 @@ export const translations: Record<Lang, Record<string, string>> = {
     'packages.p1.i4': 'Contact forms & inquiry tracking setup',
     'packages.p1.i5': 'SEO foundations & analytics',
     'packages.p1.i6': '30 days post-launch support',
+    'packages.p1.i7': 'Full ownership of all assets & custom n8n/Make automation blueprints',
     'packages.p1.timeline': 'Typical timeline: 6\u20138 weeks',
     'packages.p1.price': 'From \u20ac2,800',
     'packages.p2.desc':
-      'Website plus the systems that compound revenue over time. AI lead capture, automation, and ongoing optimisation \u2014 so performance improves after launch, not just on launch day.',
+      'Website plus the systems that compound revenue over time \u2014 a done-for-you retainer with no dev team required on your end. AI lead capture, automation, and ongoing optimisation mean performance improves after launch, not just on launch day.',
     'packages.p2.i1': 'Everything in Foundation',
     'packages.p2.i2': 'AI assistant for lead capture & qualification',
     'packages.p2.i3': 'Core automation (CRM sync, follow-ups, notifications)',
@@ -115,7 +117,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     'packages.p2.timeline': 'Typical timeline: 10\u201312 weeks + ongoing retainer',
     'packages.p2.price': 'From \u20ac5,800 + \u20ac580/mo',
     'packages.p3.desc':
-      'Your external digital team focused on revenue, not deliverables. Full system, full automation, strategic input \u2014 for companies that want digital as a competitive advantage, not a checkbox.',
+      'Your external digital team, on retainer \u2014 full system, full automation, strategic input, and every change made for you, so you never need to hire your own developers. For companies that want digital as a competitive advantage, not a checkbox.',
     'packages.p3.i1': 'Everything in Growth',
     'packages.p3.i2': 'Full automation suite across your stack',
     'packages.p3.i3': 'Custom integrations & advanced AI workflows',
@@ -134,7 +136,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     'process.st3.desc':
       'Fast, clean, documented. You start earning from the investment sooner \u2014 and you\u2019re never left wondering what\u2019s happening.',
     'process.st4.desc':
-      'We don\u2019t disappear after launch. Retainer clients get ongoing development, monthly reporting on inquiries and conversion \u2014 and a team that knows their business.',
+      'We don\u2019t disappear after launch. Retainer clients get ongoing development, monthly reporting on inquiries and conversion \u2014 a done-for-you service, so you never need your own dev team.',
 
     'faq.eyebrow': 'FAQ',
     'faq.heading': 'Common questions',
@@ -186,8 +188,9 @@ export const translations: Record<Lang, Record<string, string>> = {
     'hero.line1': 'Niekt\u00f3re agencje buduj\u0105 strony.',
     'hero.line2': 'My budujemy obecno\u015b\u0107.',
     'hero.sub':
-      'Zwi\u0119kszamy liczb\u0119 wysokiej jako\u015bci zapyta\u0144 dla kancelarii, klinik i doradc\u00f3w B2B dzi\u0119ki przebudowie stron, AI i automatyzacji.',
+      'Budujemy wysokokonwertuj\u0105ce systemy webowe, asystent\u00f3w AI i automatyzacje proces\u00f3w dla firm B2B, gdzie jeden utracony lead kosztuje realny przych\u00f3d.',
     'hero.cta': 'Um\u00f3w bezp\u0142atn\u0105 analiz\u0119 przychod\u00f3w',
+    'hero.ctaNote': '30-minutowa rozmowa \u2022 Bezp\u0142atna diagnoza \u2022 Zero nachalnego sprzedawania',
     'hero.scroll': 'Przewi\u0144',
 
     'hero.proof.stat1.value': '+47%',
@@ -208,9 +211,9 @@ export const translations: Record<Lang, Record<string, string>> = {
     'services.s1.desc':
       'Strony, kt\u00f3re sprawiaj\u0105, \u017ce wygl\u0105dasz jak oczywisty wyb\u00f3r \u2014 zanim klient w og\u00f3le zadzwoni. Szybsze zaufanie, wi\u0119cej zapyta\u0144, mniej ja\u0142owych rozm\u00f3w.',
     'services.s2.desc':
-      'Przechwytuj leady po godzinach pracy i kwalifikuj je, zanim zaanga\u017cuje si\u0119 Tw\u00f3j zesp\u00f3\u0142. Mniej ja\u0142owych telefon\u00f3w, wi\u0119cej rozm\u00f3w, kt\u00f3re maj\u0105 sens.',
+      'Przechwytuje leady 24/7 \u2014 wieczorami, w weekendy i poza godzinami pracy \u2014 i kwalifikuje je, zanim zaanga\u017cuje si\u0119 Tw\u00f3j zesp\u00f3\u0142. Mniej ja\u0142owych telefon\u00f3w, wi\u0119cej rozm\u00f3w, kt\u00f3re maj\u0105 sens.',
     'services.s3.desc':
-      'Usu\u0144 administracj\u0119, kt\u00f3ra zjada godziny rozliczalne \u2014 follow-upy, aktualizacje CRM, onboarding, raporty \u2014 \u017ceby zesp\u00f3\u0142 robi\u0142 to, za co klienci realnie p\u0142ac\u0105.',
+      'Usuwamy administracj\u0119, kt\u00f3ra zjada godziny rozliczalne \u2014 \u0142\u0105cz\u0105c Twoj\u0105 stron\u0119 z narz\u0119dziami takimi jak HubSpot, Pipedrive, Notion czy Slack do follow-up\u00f3w, aktualizacji CRM, onboardingu i raportowania \u2014 \u017ceby zesp\u00f3\u0142 robi\u0142 to, za co klienci realnie p\u0142ac\u0105.',
     'services.s4.desc':
       'Wi\u0119cej przychodu z ruchu, za kt\u00f3ry ju\u017c p\u0142acisz. Znajdujemy, gdzie kwalifikowani prospekci rezygnuj\u0105 \u2014 i uszczelniamy lejki sprzeda\u017cowe.',
 
@@ -272,10 +275,11 @@ export const translations: Record<Lang, Record<string, string>> = {
     'packages.p1.i4': 'Formularze kontaktowe i \u015bledzenie zapyta\u0144',
     'packages.p1.i5': 'Fundamenty SEO i analityka',
     'packages.p1.i6': '30 dni wsparcia po wdro\u017ceniu',
+    'packages.p1.i7': 'Pe\u0142na w\u0142asno\u015b\u0107 wszystkich materia\u0142\u00f3w i szablon\u00f3w automatyzacji n8n/Make',
     'packages.p1.timeline': 'Typowy czas: 6\u20138 tygodni',
     'packages.p1.price': 'Od 12\u00a0000 PLN',
     'packages.p2.desc':
-      'Strona plus systemy, kt\u00f3re mno\u017c\u0105 przych\u00f3d w czasie. Przechwytywanie lead\u00f3w AI, automatyzacja i ci\u0105g\u0142a optymalizacja \u2014 \u017ceby wyniki ros\u0142y po wdro\u017ceniu, nie tylko w dniu launchu.',
+      'Strona plus systemy, kt\u00f3re mno\u017c\u0105 przych\u00f3d w czasie \u2014 retainer w modelu \u201ezrobimy to za Ciebie\u201d, bez potrzeby posiadania w\u0142asnego zespo\u0142u deweloperskiego. Przechwytywanie lead\u00f3w AI, automatyzacja i ci\u0105g\u0142a optymalizacja sprawiaj\u0105, \u017ce wyniki rosn\u0105 po wdro\u017ceniu, nie tylko w dniu launchu.',
     'packages.p2.i1': 'Wszystko z pakietu Foundation',
     'packages.p2.i2': 'Asystent AI do przechwytywania i kwalifikacji lead\u00f3w',
     'packages.p2.i3': 'Automatyzacja core (CRM, follow-upy, powiadomienia)',
@@ -285,7 +289,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     'packages.p2.timeline': 'Typowy czas: 10\u201312 tygodni + retainer',
     'packages.p2.price': 'Od 25\u00a0000 PLN + 2\u00a0500 PLN/msc',
     'packages.p3.desc':
-      'Tw\u00f3j zewn\u0119trzny zesp\u00f3\u0142 digital nastawiony na przych\u00f3d, nie na deliverables. Pe\u0142ny system, pe\u0142na automatyzacja, wsparcie strategiczne \u2014 dla firm, kt\u00f3re traktuj\u0105 digital jako przewag\u0119 konkurencyjn\u0105, nie obowi\u0105zek.',
+      'Tw\u00f3j zewn\u0119trzny zesp\u00f3\u0142 digital w modelu retainer \u2014 pe\u0142ny system, pe\u0142na automatyzacja, wsparcie strategiczne i ka\u017cda zmiana wykonana za Ciebie, bez potrzeby zatrudniania w\u0142asnych developer\u00f3w. Dla firm, kt\u00f3re traktuj\u0105 digital jako przewag\u0119 konkurencyjn\u0105, nie obowi\u0105zek.',
     'packages.p3.i1': 'Wszystko z pakietu Growth',
     'packages.p3.i2': 'Pe\u0142na automatyzacja w ca\u0142ym stacku',
     'packages.p3.i3': 'Integracje na miar\u0119 i zaawansowane workflow AI',
@@ -304,7 +308,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     'process.st3.desc':
       'Szybko, czysto, z dokumentacj\u0105. Szybciej zaczynasz zarabia\u0107 na inwestycji \u2014 i nigdy nie zastanawiasz si\u0119, co si\u0119 dzieje.',
     'process.st4.desc':
-      'Nie znikamy po wdro\u017ceniu. Klienci na retainerze otrzymuj\u0105 ci\u0105g\u0142y rozw\u00f3j, miesi\u0119czne raporty z zapyta\u0144 i konwersji \u2014 oraz zesp\u00f3\u0142, kt\u00f3ry zna ich biznes.',
+      'Nie znikamy po wdro\u017ceniu. Klienci na retainerze otrzymuj\u0105 ci\u0105g\u0142y rozw\u00f3j, miesi\u0119czne raporty z zapyta\u0144 i konwersji \u2014 us\u0142ug\u0119 w modelu \u201ezrobimy to za Ciebie\u201d, wi\u0119c nigdy nie potrzebujesz w\u0142asnego zespo\u0142u deweloperskiego.',
 
     'faq.eyebrow': 'FAQ',
     'faq.heading': 'Najcz\u0119stsze pytania',

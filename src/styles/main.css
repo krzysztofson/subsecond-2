@@ -586,6 +586,14 @@ body.nav-open {
   margin-top: clamp(2rem, 4vw, 3.2rem);
 }
 
+.hero__cta-note {
+  margin-top: 1rem;
+  font-family: var(--font-mono);
+  font-size: var(--step-small);
+  letter-spacing: 0.06em;
+  color: var(--ink-faint);
+}
+
 .hero__scroll {
   position: absolute;
   bottom: 2.2rem;
