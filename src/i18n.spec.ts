@@ -58,7 +58,7 @@ describe('setLanguage', () => {
       <p data-i18n="hero.line1">placeholder</p>
       <p data-i18n="hero.line2">placeholder</p>
       <p data-i18n="unknown.key">untouched</p>
-      <option data-i18n="packages.select.growth">Growth</option>
+      <option data-i18n="hero.scroll">Scroll</option>
       <button data-lang="en"></button>
       <button data-lang="pl"></button>
     `;
@@ -76,9 +76,7 @@ describe('setLanguage', () => {
 
   it('should translate option elements with data-i18n', () => {
     setLanguage('pl');
-    expect(document.querySelector('option')!.textContent).toBe(
-      translations.pl['packages.select.growth'],
-    );
+    expect(document.querySelector('option')!.textContent).toBe(translations.pl['hero.scroll']);
   });
 
   it('should leave elements with unknown keys untouched', () => {

@@ -78,9 +78,14 @@
           <a href="#process" data-cursor data-i18n="nav.process">Process</a>
           <a href="#faq" data-cursor data-i18n="nav.faq">FAQ</a>
         </nav>
-        <a href="#contact" class="btn btn--primary nav__drawer-cta" data-cursor data-i18n="nav.cta">
-          Book a revenue review
-        </a>
+        <a
+          href="#contact"
+          class="btn btn--primary nav__drawer-cta"
+          data-cursor
+          data-booking-cta
+          data-i18n="nav.cta"
+          >Book a revenue review</a
+        >
       </div>
       <nav class="nav__links nav__links--desktop" aria-label="Primary">
         <a href="#services" data-cursor data-i18n="nav.services">What we do</a>
@@ -96,9 +101,15 @@
           <span class="lang-toggle__divider">/</span>
           <button class="lang-toggle__btn" id="lang-pl" data-cursor data-lang="pl">PL</button>
         </div>
-        <a href="#contact" class="btn btn--small" data-cursor data-magnetic data-i18n="nav.cta">
-          Book a revenue review
-        </a>
+        <a
+          href="#contact"
+          class="btn btn--small"
+          data-cursor
+          data-magnetic
+          data-booking-cta
+          data-i18n="nav.cta"
+          >Book a revenue review</a
+        >
       </div>
     </header>
 
@@ -116,13 +127,35 @@
             >
           </h1>
           <p class="hero__sub" data-i18n="hero.sub">
-            We build digital presence that converts attention into revenue — for B2B firms where
-            every lost lead costs real money.
+            We grow high-quality inquiries for law firms, clinics, and B2B advisors — through
+            website rebuilds, AI, and automation.
           </p>
+          <div class="hero__proof">
+            <div class="hero__proof-stat">
+              <span class="hero__proof-value" data-i18n="hero.proof.stat1.value">+47%</span>
+              <span class="hero__proof-label" data-i18n="hero.proof.stat1.label">qualified leads</span>
+            </div>
+            <div class="hero__proof-stat">
+              <span class="hero__proof-value" data-i18n="hero.proof.stat2.value">+62%</span>
+              <span class="hero__proof-label" data-i18n="hero.proof.stat2.label"
+                >after-hours inquiries</span
+              >
+            </div>
+            <div class="hero__proof-stat">
+              <span class="hero__proof-value" data-i18n="hero.proof.stat3.value">14 hrs</span>
+              <span class="hero__proof-label" data-i18n="hero.proof.stat3.label">saved per week</span>
+            </div>
+          </div>
           <div class="hero__cta">
-            <a href="#contact" class="btn btn--primary" data-cursor data-magnetic data-i18n="hero.cta">
-              Book a free revenue review
-            </a>
+            <a
+              href="#contact"
+              class="btn btn--primary"
+              data-cursor
+              data-magnetic
+              data-booking-cta
+              data-i18n="hero.cta"
+              >Book a free revenue review</a
+            >
           </div>
         </div>
         <div class="hero__scroll" aria-hidden="true">
@@ -335,7 +368,7 @@
               href="#contact"
               class="btn btn--ghost package__cta"
               data-cursor
-              data-package="foundation"
+              data-booking-cta
               data-i18n="packages.cta"
               >Discuss this package</a
             >
@@ -364,7 +397,7 @@
               href="#contact"
               class="btn btn--ghost package__cta"
               data-cursor
-              data-package="growth"
+              data-booking-cta
               data-i18n="packages.cta"
               >Discuss this package</a
             >
@@ -393,7 +426,7 @@
               href="#contact"
               class="btn btn--ghost package__cta"
               data-cursor
-              data-package="partner"
+              data-booking-cta
               data-i18n="packages.cta"
               >Discuss this package</a
             >
@@ -526,82 +559,12 @@
             </li>
           </ol>
         </div>
-        <form class="contact__form" id="contact-form" data-reveal>
-          <div class="contact__field">
-            <label class="contact__label" for="contact-name" data-i18n="contact.form.name">Name</label>
-            <input
-              class="contact__input"
-              type="text"
-              id="contact-name"
-              name="name"
-              required
-              autocomplete="name"
-            />
-          </div>
-          <div class="contact__field">
-            <label class="contact__label" for="contact-email" data-i18n="contact.form.email">Email</label>
-            <input
-              class="contact__input"
-              type="email"
-              id="contact-email"
-              name="email"
-              required
-              autocomplete="email"
-            />
-          </div>
-          <div class="contact__field">
-            <label class="contact__label" for="contact-company" data-i18n="contact.form.company"
-              >Company</label
-            >
-            <input
-              class="contact__input"
-              type="text"
-              id="contact-company"
-              name="company"
-              autocomplete="organization"
-            />
-          </div>
-          <div class="contact__field">
-            <label class="contact__label" for="contact-package" data-i18n="contact.form.package"
-              >Package interest</label
-            >
-            <select class="contact__input contact__select" id="contact-package" name="package">
-              <option value="foundation" data-i18n="packages.select.foundation">Foundation</option>
-              <option value="growth" data-i18n="packages.select.growth">Growth</option>
-              <option value="partner" data-i18n="packages.select.partner">Partner</option>
-              <option value="unsure" data-i18n="packages.select.unsure">Not sure yet</option>
-            </select>
-          </div>
-          <div class="contact__field contact__field--full">
-            <label class="contact__label" for="contact-message" data-i18n="contact.form.message"
-              >What’s the biggest challenge with your digital presence?</label
-            >
-            <textarea
-              class="contact__input contact__textarea"
-              id="contact-message"
-              name="message"
-              rows="4"
-              required
-            ></textarea>
-          </div>
-          <button type="submit" class="btn btn--primary btn--large contact__submit" data-i18n="contact.form.submit">
-            Send request
-          </button>
-          <p class="contact__note" data-i18n="contact.form.note">
-            Submitting opens your email client with a pre-filled message. Prefer to write directly?
-            hello@subsecond.app
-          </p>
-        </form>
-        <a
-          id="calendly-link"
-          class="contact__calendly"
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
-          hidden
-          data-i18n="contact.calendly"
-          >Prefer to pick a time directly?</a
-        >
+        <div class="contact__calendly-embed" data-reveal>
+          <div
+            class="calendly-inline-widget"
+            data-url="https://calendly.com/hello-subsecond/30min?hide_gdpr_banner=1&background_color=0a0a0a&text_color=f5f2ed&primary_color=b82318"
+          ></div>
+        </div>
       </section>
     </main>
 
@@ -616,6 +579,27 @@
       </div>
     </footer>
 
+    <!-- Booking modal -->
+    <div class="calendly-modal-overlay" id="calendlyModal" role="dialog" aria-modal="true">
+      <button
+        type="button"
+        class="calendly-modal-close"
+        id="calendly-modal-close"
+        data-i18n-aria="booking.close"
+        aria-label="Close booking widget"
+      >
+        &times;
+      </button>
+      <div class="calendly-modal">
+        <div
+          class="calendly-inline-widget"
+          id="calendly-inline-widget"
+          data-url="https://calendly.com/hello-subsecond/30min?hide_gdpr_banner=1&background_color=0a0a0a&text_color=f5f2ed&primary_color=b82318"
+        ></div>
+      </div>
+    </div>
+
+    <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

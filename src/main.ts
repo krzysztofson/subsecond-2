@@ -1,10 +1,8 @@
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Lenis from 'lenis';
 
-import { initContactForm } from './contact';
+import { initBookingModal } from './booking';
 import { initMobileNav } from './nav';
-import { CALENDLY_URL } from './config';
 import { getStoredLang, setLanguage, type Lang } from './i18n';
 import { createHeroScene } from './webgl';
 import {
@@ -27,17 +25,6 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
 /* ---------------------------------------------------------------- */
 
 setLanguage(getStoredLang());
-
-/* ---------------------------------------------------------------- */
-/*  Smooth scroll                                                     */
-/* ---------------------------------------------------------------- */
-
-if (!prefersReducedMotion) {
-  const lenis = new Lenis({ lerp: 0.1, anchors: true });
-  lenis.on('scroll', ScrollTrigger.update);
-  gsap.ticker.add((time) => lenis.raf(time * 1000));
-  gsap.ticker.lagSmoothing(0);
-}
 
 /* ---------------------------------------------------------------- */
 /*  WebGL hero                                                        */
@@ -81,15 +68,20 @@ function buildSplits(animate: boolean): void {
 function heroIntro(): void {
   if (prefersReducedMotion) {
     gsap.set(heroLines, { yPercent: 0 });
-    gsap.set(['.hero__sub', '.hero__cta', '.hero__scroll', '.nav'], { autoAlpha: 1 });
+    gsap.set(['.hero__sub', '.hero__proof', '.hero__cta', '.hero__scroll', '.nav'], {
+      autoAlpha: 1,
+    });
     return;
   }
 
-  gsap.set(['.hero__sub', '.hero__cta', '.hero__scroll'], { autoAlpha: 0, y: 24 });
+  gsap.set(['.hero__sub', '.hero__proof', '.hero__cta', '.hero__scroll'], {
+    autoAlpha: 0,
+    y: 24,
+  });
   gsap.set('.nav', { autoAlpha: 0, y: -16 });
 
   animateLinesIn(heroLines, 0.1);
-  gsap.to(['.hero__sub', '.hero__cta'], {
+  gsap.to(['.hero__sub', '.hero__proof', '.hero__cta'], {
     autoAlpha: 1,
     y: 0,
     duration: 1,
@@ -139,10 +131,4 @@ initCursor();
 initMagnetics();
 initNavScrollState();
 initMobileNav();
-initContactForm();
-
-const calendlyLink = document.getElementById('calendly-link') as HTMLAnchorElement | null;
-if (calendlyLink && CALENDLY_URL) {
-  calendlyLink.href = CALENDLY_URL;
-  calendlyLink.hidden = false;
-}
+initBookingModal();

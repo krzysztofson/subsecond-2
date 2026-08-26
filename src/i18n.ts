@@ -17,9 +17,16 @@ export const translations: Record<Lang, Record<string, string>> = {
     'hero.line1': 'Some agencies build websites.',
     'hero.line2': 'We build presence.',
     'hero.sub':
-      'We build digital presence that converts attention into revenue — for B2B firms where every lost lead costs real money.',
+      'We grow high-quality inquiries for law firms, clinics, and B2B advisors — through website rebuilds, AI, and automation.',
     'hero.cta': 'Book a free revenue review',
     'hero.scroll': 'Scroll',
+
+    'hero.proof.stat1.value': '+47%',
+    'hero.proof.stat1.label': 'qualified leads',
+    'hero.proof.stat2.value': '+62%',
+    'hero.proof.stat2.label': 'after-hours inquiries',
+    'hero.proof.stat3.value': '14 hrs',
+    'hero.proof.stat3.label': 'saved per week',
 
     'philosophy.eyebrow': 'Philosophy',
     'philosophy.l1': 'We work with a handful of companies per year.',
@@ -96,7 +103,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     'packages.p1.i5': 'SEO foundations & analytics',
     'packages.p1.i6': '30 days post-launch support',
     'packages.p1.timeline': 'Typical timeline: 6\u20138 weeks',
-    'packages.p1.price': 'From 12\u00a0000 PLN',
+    'packages.p1.price': 'From \u20ac2,800',
     'packages.p2.desc':
       'Website plus the systems that compound revenue over time. AI lead capture, automation, and ongoing optimisation \u2014 so performance improves after launch, not just on launch day.',
     'packages.p2.i1': 'Everything in Foundation',
@@ -106,7 +113,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     'packages.p2.i5': 'Monthly CRO & site improvements',
     'packages.p2.i6': 'Monthly reporting on inquiries & conversion',
     'packages.p2.timeline': 'Typical timeline: 10\u201312 weeks + ongoing retainer',
-    'packages.p2.price': 'From 25\u00a0000 PLN + 2\u00a0500 PLN/mo',
+    'packages.p2.price': 'From \u20ac5,800 + \u20ac580/mo',
     'packages.p3.desc':
       'Your external digital team focused on revenue, not deliverables. Full system, full automation, strategic input \u2014 for companies that want digital as a competitive advantage, not a checkbox.',
     'packages.p3.i1': 'Everything in Growth',
@@ -116,12 +123,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     'packages.p3.i5': 'Priority support & dedicated channel',
     'packages.p3.i6': 'Landing pages & campaign support on retainer',
     'packages.p3.timeline': 'Typical timeline: 12\u201316 weeks + ongoing retainer',
-    'packages.p3.price': 'From 40\u00a0000 PLN + 5\u00a0000 PLN/mo',
-
-    'packages.select.foundation': 'Foundation',
-    'packages.select.growth': 'Growth',
-    'packages.select.partner': 'Partner',
-    'packages.select.unsure': 'Not sure yet',
+    'packages.p3.price': 'From \u20ac9,300 + \u20ac1,150/mo',
 
     'process.eyebrow': 'Process',
     'process.heading': 'How a project looks',
@@ -163,17 +165,9 @@ export const translations: Record<Lang, Record<string, string>> = {
     'contact.steps.s3.title': 'You get clarity',
     'contact.steps.s3.desc':
       'Honest scope, ballpark investment, and a recommended path \u2014 whether that\u2019s with us or not.',
-    'contact.form.name': 'Name',
-    'contact.form.email': 'Email',
-    'contact.form.company': 'Company',
-    'contact.form.package': 'Package interest',
-    'contact.form.message': 'What\u2019s the biggest challenge with your digital presence?',
-    'contact.form.submit': 'Send request',
-    'contact.form.note':
-      'Submitting opens your email client with a pre-filled message. Prefer to write directly? hello@subsecond.app',
-    'contact.form.subject': 'Revenue review request — subsecond.app',
     'contact.cta': 'Book a free revenue review',
-    'contact.calendly': 'Prefer to pick a time directly?',
+
+    'booking.close': 'Close booking widget',
 
     'footer.tagline': 'We build presence.',
   },
@@ -192,9 +186,16 @@ export const translations: Record<Lang, Record<string, string>> = {
     'hero.line1': 'Niekt\u00f3re agencje buduj\u0105 strony.',
     'hero.line2': 'My budujemy obecno\u015b\u0107.',
     'hero.sub':
-      'Budujemy obecno\u015b\u0107 cyfrow\u0105, kt\u00f3ra zamienia uwag\u0119 w przych\u00f3d \u2014 dla firm B2B, gdzie ka\u017cdy utracony lead kosztuje realne pieni\u0105dze.',
+      'Zwi\u0119kszamy liczb\u0119 wysokiej jako\u015bci zapyta\u0144 dla kancelarii, klinik i doradc\u00f3w B2B dzi\u0119ki przebudowie stron, AI i automatyzacji.',
     'hero.cta': 'Um\u00f3w bezp\u0142atn\u0105 analiz\u0119 przychod\u00f3w',
     'hero.scroll': 'Przewi\u0144',
+
+    'hero.proof.stat1.value': '+47%',
+    'hero.proof.stat1.label': 'wi\u0119cej lead\u00f3w',
+    'hero.proof.stat2.value': '+62%',
+    'hero.proof.stat2.label': 'zapyta\u0144 po godzinach',
+    'hero.proof.stat3.value': '14 godz.',
+    'hero.proof.stat3.label': 'zaoszcz\u0119dzonych tygodniowo',
 
     'philosophy.eyebrow': 'Filozofia',
     'philosophy.l1': 'Pracujemy z garstk\u0105 firm rocznie.',
@@ -294,11 +295,6 @@ export const translations: Record<Lang, Record<string, string>> = {
     'packages.p3.timeline': 'Typowy czas: 12\u201316 tygodni + retainer',
     'packages.p3.price': 'Od 40\u00a0000 PLN + 5\u00a0000 PLN/msc',
 
-    'packages.select.foundation': 'Foundation',
-    'packages.select.growth': 'Growth',
-    'packages.select.partner': 'Partner',
-    'packages.select.unsure': 'Jeszcze nie wiem',
-
     'process.eyebrow': 'Proces',
     'process.heading': 'Jak wygl\u0105da projekt',
     'process.st1.desc':
@@ -339,17 +335,9 @@ export const translations: Record<Lang, Record<string, string>> = {
     'contact.steps.s3.title': 'Masz jasno\u015b\u0107',
     'contact.steps.s3.desc':
       'Uczciwy zakres, wide\u0142ki inwestycji i rekomendowany kierunek \u2014 nawet je\u015bli to nie b\u0119dzie z nami.',
-    'contact.form.name': 'Imi\u0119 i nazwisko',
-    'contact.form.email': 'E-mail',
-    'contact.form.company': 'Firma',
-    'contact.form.package': 'Interesuj\u0105cy pakiet',
-    'contact.form.message': 'Co najbardziej hamuje Twoj\u0105 obecno\u015b\u0107 online?',
-    'contact.form.submit': 'Wy\u015blij zapytanie',
-    'contact.form.note':
-      'Wys\u0142anie otworzy klienta poczty z gotow\u0105 wiadomo\u015bci\u0105. Wolisz napisa\u0107 sam? hello@subsecond.app',
-    'contact.form.subject': 'Zapytanie o analiz\u0119 przychod\u00f3w — subsecond.app',
     'contact.cta': 'Um\u00f3w bezp\u0142atn\u0105 analiz\u0119 przychod\u00f3w',
-    'contact.calendly': 'Wolisz od razu wybra\u0107 termin?',
+
+    'booking.close': 'Zamknij wid\u017cet rezerwacji',
 
     'footer.tagline': 'My budujemy obecno\u015b\u0107.',
   },
@@ -401,6 +389,13 @@ export function setLanguage(lang: Lang, options: SetLanguageOptions = {}): void 
     const key = el.dataset.i18n;
     if (key && dict[key] !== undefined) {
       el.textContent = dict[key];
+    }
+  });
+
+  root.querySelectorAll<HTMLElement>('[data-i18n-aria]').forEach((el) => {
+    const key = el.dataset.i18nAria;
+    if (key && dict[key] !== undefined) {
+      el.setAttribute('aria-label', dict[key]);
     }
   });
 

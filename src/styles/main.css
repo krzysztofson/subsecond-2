@@ -35,12 +35,6 @@
   box-sizing: border-box;
 }
 
-/* No CSS smooth scrolling: Lenis owns scroll animation and the two conflict. */
-html.lenis,
-html.lenis body {
-  height: auto;
-}
-
 body {
   background: var(--bg);
   color: var(--ink);
@@ -556,6 +550,36 @@ body.nav-open {
   color: var(--ink-muted);
   max-width: 34em;
   line-height: 1.55;
+}
+
+.hero__proof {
+  margin-top: clamp(1.8rem, 3vw, 2.6rem);
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1.6rem, 4vw, 3rem);
+}
+
+.hero__proof-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.hero__proof-value {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 1.4vw + 0.9rem, 2.1rem);
+  font-weight: 350;
+  font-style: italic;
+  line-height: 1;
+  color: var(--accent);
+}
+
+.hero__proof-label {
+  font-family: var(--font-mono);
+  font-size: var(--step-small);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-muted);
 }
 
 .hero__cta {
@@ -1233,104 +1257,17 @@ body.nav-open {
   line-height: 1.55;
 }
 
-.contact__form {
+.contact__calendly-embed {
   width: 100%;
-  max-width: 40rem;
+  max-width: 60rem;
+  height: clamp(38rem, 70vh, 48rem);
   margin-top: clamp(3rem, 6vw, 5rem);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.2rem 1.4rem;
-  text-align: left;
-}
-
-.contact__field {
-  display: flex;
-  flex-direction: column;
-  gap: 0.45rem;
-}
-
-.contact__field--full {
-  grid-column: 1 / -1;
-}
-
-.contact__label {
-  font-family: var(--font-mono);
-  font-size: var(--step-small);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--ink-muted);
-}
-
-.contact__input {
-  width: 100%;
-  background: var(--bg-raised);
-  border: 1px solid var(--hairline);
-  color: var(--ink);
-  font-family: var(--font-sans);
-  font-size: var(--step-body);
-  padding: 0.85rem 1rem;
-  border-radius: 0;
-  transition: border-color 0.3s;
-}
-
-.contact__input:focus {
-  outline: none;
-  border-color: var(--accent);
-}
-
-.contact__select {
-  appearance: none;
-  cursor: pointer;
-}
-
-.contact__textarea {
-  resize: vertical;
-  min-height: 7rem;
-}
-
-.contact__submit {
-  grid-column: 1 / -1;
-  justify-self: center;
-  margin-top: 0.6rem;
-}
-
-.contact__note {
-  grid-column: 1 / -1;
-  text-align: center;
-  font-size: 0.85em;
-  color: var(--ink-faint);
-  line-height: 1.5;
-}
-
-.contact__calendly {
-  display: inline-block;
-  margin-top: 1.6rem;
-  font-family: var(--font-mono);
-  font-size: var(--step-small);
-  letter-spacing: 0.08em;
-  color: var(--ink-muted);
-  border-bottom: 1px solid var(--hairline);
-  padding-bottom: 0.15rem;
-  transition: color 0.3s, border-color 0.3s;
-}
-
-.contact__calendly:hover {
-  color: var(--accent);
-  border-color: var(--accent);
 }
 
 @media (max-width: 640px) {
   .contact__steps-list {
     grid-template-columns: 1fr;
   }
-
-  .contact__form {
-    grid-template-columns: 1fr;
-  }
-}
-
-.contact .btn--large {
-  margin-top: clamp(2.4rem, 5vw, 4rem);
 }
 
 /* ------------------------------------------------------------------ */
@@ -1391,6 +1328,70 @@ body.nav-open {
 
 body.is-ready [data-reveal] {
   /* GSAP controls these; class exists to avoid FOUC handling in CSS */
+}
+
+/* ------------------------------------------------------------------ */
+/*  Booking modal                                                      */
+/* ------------------------------------------------------------------ */
+
+body.calendly-modal-open {
+  overflow: hidden;
+}
+
+.calendly-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--gutter);
+  background: rgba(10, 10, 9, 0.85);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s var(--ease-out), visibility 0.35s var(--ease-out);
+}
+
+.calendly-modal-overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.calendly-modal {
+  position: relative;
+  width: min(60rem, 100%);
+  height: min(46rem, 85vh);
+}
+
+.calendly-modal-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 1;
+  width: 2.4rem;
+  height: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: var(--ink);
+  transition: color 0.3s;
+}
+
+.calendly-modal-close:hover {
+  color: var(--accent);
+}
+
+.calendly-inline-widget {
+  width: 100%;
+  height: 100%;
+}
+
+.calendly-inline-widget iframe {
+  filter: invert(1) hue-rotate(180deg);
 }
 
 @media (prefers-reduced-motion: reduce) {
