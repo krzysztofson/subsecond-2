@@ -84,7 +84,7 @@
           data-cursor
           data-booking-cta
           data-i18n="nav.cta"
-          >Book a revenue review</a
+          >Book a free revenue review</a
         >
       </div>
       <nav class="nav__links nav__links--desktop" aria-label="Primary">
@@ -108,7 +108,7 @@
           data-magnetic
           data-booking-cta
           data-i18n="nav.cta"
-          >Book a revenue review</a
+          >Book a free revenue review</a
         >
       </div>
     </header>
@@ -193,15 +193,23 @@
         <ul class="services__list">
           <li class="service" data-reveal>
             <span class="service__num">01</span>
-            <h3 class="service__title">Web Design &amp; Development</h3>
+            <h3 class="service__title" data-i18n="services.s1.title">Web Design &amp; Development</h3>
             <p class="service__desc" data-i18n="services.s1.desc">
               Websites that make you look like the obvious choice — before a prospect ever picks up
-              the phone. Faster trust, more inquiries, fewer dead-end conversations.
+              the phone. Faster trust, more inquiries, fewer conversations that go nowhere.
             </p>
           </li>
           <li class="service" data-reveal>
             <span class="service__num">02</span>
-            <h3 class="service__title">AI Assistants &amp; Chatbots</h3>
+            <h3 class="service__title" data-i18n="services.s4.title">Conversion Rate Optimisation</h3>
+            <p class="service__desc" data-i18n="services.s4.desc">
+              More revenue from the traffic you already pay for. We find where qualified prospects
+              drop off — and fix the leaks in your funnel.
+            </p>
+          </li>
+          <li class="service" data-reveal>
+            <span class="service__num">03</span>
+            <h3 class="service__title" data-i18n="services.s2.title">AI Assistants &amp; Chatbots</h3>
             <p class="service__desc" data-i18n="services.s2.desc">
               Captures leads 24/7 — evenings, weekends, and outside office hours — and qualifies
               them before your team gets involved. Fewer dead-end calls, more conversations worth
@@ -209,21 +217,13 @@
             </p>
           </li>
           <li class="service" data-reveal>
-            <span class="service__num">03</span>
-            <h3 class="service__title">Automation (n8n / Make)</h3>
+            <span class="service__num">04</span>
+            <h3 class="service__title" data-i18n="services.s3.title">Automation (n8n / Make)</h3>
             <p class="service__desc" data-i18n="services.s3.desc">
               Remove the admin work that eats billable hours — seamlessly connecting your website
               with tools like HubSpot, Pipedrive, Notion, and Slack for follow-ups, CRM updates,
-              onboarding, and reporting — so your team spends time on work clients actually pay
+              onboarding, and reporting — so your team spends time on work clients pay
               for.
-            </p>
-          </li>
-          <li class="service" data-reveal>
-            <span class="service__num">04</span>
-            <h3 class="service__title">Conversion Rate Optimisation</h3>
-            <p class="service__desc" data-i18n="services.s4.desc">
-              More revenue from the traffic you already pay for. We find where qualified prospects
-              drop off — and fix the leaks in your funnel.
             </p>
           </li>
         </ul>
@@ -349,7 +349,7 @@
 
       <!-- 07 / Packages -->
       <section class="packages section" id="packages">
-        <p class="eyebrow"><span class="eyebrow__num">06</span><span data-i18n="packages.eyebrow">Packages</span></p>
+        <p class="eyebrow"><span class="eyebrow__num">05</span><span data-i18n="packages.eyebrow">Packages</span></p>
         <h2 class="section__heading" data-split data-i18n="packages.heading">How we work together</h2>
         <div class="packages__grid">
           <article class="package" data-reveal>
@@ -445,12 +445,12 @@
 
       <!-- 08 / Process -->
       <section class="process section" id="process">
-        <p class="eyebrow"><span class="eyebrow__num">07</span><span data-i18n="process.eyebrow">Process</span></p>
+        <p class="eyebrow"><span class="eyebrow__num">06</span><span data-i18n="process.eyebrow">Process</span></p>
         <h2 class="section__heading" data-split data-i18n="process.heading">How a project looks</h2>
         <ol class="process__list">
           <li class="step" data-reveal>
             <span class="step__num">01</span>
-            <h3 class="step__title">Discovery</h3>
+            <h3 class="step__title" data-i18n="process.st1.title">Discovery</h3>
             <p class="step__desc" data-i18n="process.st1.desc">
               We map where leads and revenue are leaking today — before we touch a single pixel.
               Goals, audience, competition, current gaps.
@@ -458,7 +458,7 @@
           </li>
           <li class="step" data-reveal>
             <span class="step__num">02</span>
-            <h3 class="step__title">Strategy &amp; Design</h3>
+            <h3 class="step__title" data-i18n="process.st2.title">Strategy &amp; Design</h3>
             <p class="step__desc" data-i18n="process.st2.desc">
               We design for your sales cycle — not a template that looks good but doesn’t convert. A
               considered visual and structural proposal built for your specific goals.
@@ -466,7 +466,7 @@
           </li>
           <li class="step" data-reveal>
             <span class="step__num">03</span>
-            <h3 class="step__title">Build</h3>
+            <h3 class="step__title" data-i18n="process.st3.title">Build</h3>
             <p class="step__desc" data-i18n="process.st3.desc">
               Fast, clean, documented. You start earning from the investment sooner — and you’re
               never left wondering what’s happening.
@@ -474,7 +474,7 @@
           </li>
           <li class="step" data-reveal>
             <span class="step__num">04</span>
-            <h3 class="step__title">Launch &amp; Retain</h3>
+            <h3 class="step__title" data-i18n="process.st4.title">Launch &amp; Retain</h3>
             <p class="step__desc" data-i18n="process.st4.desc">
               We don’t disappear after launch. Retainer clients get ongoing development, monthly
               reporting on inquiries and conversion — a done-for-you service, so you never need
@@ -486,7 +486,7 @@
 
       <!-- 09 / FAQ -->
       <section class="faq section" id="faq">
-        <p class="eyebrow"><span class="eyebrow__num">08</span><span data-i18n="faq.eyebrow">FAQ</span></p>
+        <p class="eyebrow"><span class="eyebrow__num">07</span><span data-i18n="faq.eyebrow">FAQ</span></p>
         <h2 class="section__heading" data-split data-i18n="faq.heading">Common questions</h2>
         <dl class="faq__list">
           <div class="faq__item" data-reveal>
@@ -513,19 +513,12 @@
               long-term digital performance.
             </dd>
           </div>
-          <div class="faq__item" data-reveal>
-            <dt class="faq__q" data-i18n="faq.q4">Do you work outside Poland?</dt>
-            <dd class="faq__a" data-i18n="faq.a4">
-              Yes. Most of our clients are Polish B2B firms, but we work remotely with premium
-              service businesses across the EU. Discovery and delivery are fully online.
-            </dd>
-          </div>
         </dl>
       </section>
 
       <!-- 10 / Final CTA -->
       <section class="contact section" id="contact">
-        <p class="eyebrow eyebrow--center"><span class="eyebrow__num">09</span><span data-i18n="contact.eyebrow">Contact</span></p>
+        <p class="eyebrow eyebrow--center"><span class="eyebrow__num">08</span><span data-i18n="contact.eyebrow">Contact</span></p>
         <h2 class="contact__heading" data-split data-i18n="contact.heading">
           Ready to stop leaving revenue on the table?
         </h2>
@@ -585,7 +578,7 @@
       </div>
       <div class="footer__bottom">
         <span data-i18n="footer.tagline">We build presence.</span>
-        <span>&copy; 2026 subsecond.app</span>
+        <span>&copy; <span id="footer-year">2026</span> subsecond.app</span>
       </div>
     </footer>
 

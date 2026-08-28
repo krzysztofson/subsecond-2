@@ -1268,7 +1268,7 @@ body.nav-open {
 .contact__calendly-embed {
   width: 100%;
   max-width: 60rem;
-  height: clamp(38rem, 70vh, 48rem);
+  height: clamp(46rem, 90vh, 62rem);
   margin-top: clamp(3rem, 6vw, 5rem);
 }
 

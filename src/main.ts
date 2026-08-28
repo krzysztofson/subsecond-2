@@ -26,6 +26,9 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
 
 setLanguage(getStoredLang());
 
+const footerYear = document.getElementById('footer-year');
+if (footerYear) footerYear.textContent = String(new Date().getFullYear());
+
 /* ---------------------------------------------------------------- */
 /*  WebGL hero                                                        */
 /* ---------------------------------------------------------------- */

@@ -12,7 +12,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     'nav.faq': 'FAQ',
     'nav.menu': 'Open menu',
     'nav.menuClose': 'Close menu',
-    'nav.cta': 'Book a revenue review',
+    'nav.cta': 'Book a free revenue review',
 
     'hero.line1': 'Some agencies build websites.',
     'hero.line2': 'We build presence.',
@@ -37,12 +37,16 @@ export const translations: Record<Lang, Record<string, string>> = {
 
     'services.eyebrow': 'Services',
     'services.heading': 'What we do',
+    'services.s1.title': 'Web Design & Development',
     'services.s1.desc':
-      'Websites that make you look like the obvious choice \u2014 before a prospect ever picks up the phone. Faster trust, more inquiries, fewer dead-end conversations.',
+      'Websites that make you look like the obvious choice \u2014 before a prospect ever picks up the phone. Faster trust, more inquiries, fewer conversations that go nowhere.',
+    'services.s2.title': 'AI Assistants & Chatbots',
     'services.s2.desc':
       'Captures leads 24/7 \u2014 evenings, weekends, and outside office hours \u2014 and qualifies them before your team gets involved. Fewer dead-end calls, more conversations worth having.',
+    'services.s3.title': 'Automation (n8n / Make)',
     'services.s3.desc':
-      'Remove the admin work that eats billable hours \u2014 seamlessly connecting your website with tools like HubSpot, Pipedrive, Notion, and Slack for follow-ups, CRM updates, onboarding, and reporting \u2014 so your team spends time on work clients actually pay for.',
+      'Remove the admin work that eats billable hours \u2014 seamlessly connecting your website with tools like HubSpot, Pipedrive, Notion, and Slack for follow-ups, CRM updates, onboarding, and reporting \u2014 so your team spends time on work clients pay for.',
+    'services.s4.title': 'Conversion Rate Optimisation',
     'services.s4.desc':
       'More revenue from the traffic you already pay for. We find where qualified prospects drop off \u2014 and fix the leaks in your funnel.',
 
@@ -129,12 +133,16 @@ export const translations: Record<Lang, Record<string, string>> = {
 
     'process.eyebrow': 'Process',
     'process.heading': 'How a project looks',
+    'process.st1.title': 'Discovery',
     'process.st1.desc':
       'We map where leads and revenue are leaking today \u2014 before we touch a single pixel. Goals, audience, competition, current gaps.',
+    'process.st2.title': 'Strategy & Design',
     'process.st2.desc':
       'We design for your sales cycle \u2014 not a template that looks good but doesn\u2019t convert. A considered visual and structural proposal built for your specific goals.',
+    'process.st3.title': 'Build',
     'process.st3.desc':
       'Fast, clean, documented. You start earning from the investment sooner \u2014 and you\u2019re never left wondering what\u2019s happening.',
+    'process.st4.title': 'Launch & Retain',
     'process.st4.desc':
       'We don\u2019t disappear after launch. Retainer clients get ongoing development, monthly reporting on inquiries and conversion \u2014 a done-for-you service, so you never need your own dev team.',
 
@@ -149,10 +157,6 @@ export const translations: Record<Lang, Record<string, string>> = {
     'faq.q3': 'Who is not a good fit?',
     'faq.a3':
       'Companies optimising purely for the lowest price, or those needing a template site in under two weeks. We work best with B2B firms who care about quality inquiries and long-term digital performance.',
-    'faq.q4': 'Do you work outside Poland?',
-    'faq.a4':
-      'Yes. Most of our clients are Polish B2B firms, but we work remotely with premium service businesses across the EU. Discovery and delivery are fully online.',
-
     'contact.eyebrow': 'Contact',
     'contact.heading': 'Ready to stop leaving revenue on the table?',
     'contact.body':
@@ -183,7 +187,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     'nav.faq': 'FAQ',
     'nav.menu': 'Otw\u00f3rz menu',
     'nav.menuClose': 'Zamknij menu',
-    'nav.cta': 'Um\u00f3w analiz\u0119 przychod\u00f3w',
+    'nav.cta': 'Um\u00f3w bezp\u0142atn\u0105 analiz\u0119 przychod\u00f3w',
 
     'hero.line1': 'Niekt\u00f3re agencje buduj\u0105 strony.',
     'hero.line2': 'My budujemy obecno\u015b\u0107.',
@@ -208,12 +212,16 @@ export const translations: Record<Lang, Record<string, string>> = {
 
     'services.eyebrow': 'Us\u0142ugi',
     'services.heading': 'Co robimy',
+    'services.s1.title': 'Projektowanie i tworzenie stron',
     'services.s1.desc':
-      'Strony, kt\u00f3re sprawiaj\u0105, \u017ce wygl\u0105dasz jak oczywisty wyb\u00f3r \u2014 zanim klient w og\u00f3le zadzwoni. Szybsze zaufanie, wi\u0119cej zapyta\u0144, mniej ja\u0142owych rozm\u00f3w.',
+      'Strony, kt\u00f3re sprawiaj\u0105, \u017ce wygl\u0105dasz jak oczywisty wyb\u00f3r \u2014 zanim klient w og\u00f3le zadzwoni. Szybsze zaufanie, wi\u0119cej zapyta\u0144, mniej rozm\u00f3w, kt\u00f3re nigdzie nie prowadz\u0105.',
+    'services.s2.title': 'Asystenci AI i chatboty',
     'services.s2.desc':
       'Przechwytuje leady 24/7 \u2014 wieczorami, w weekendy i poza godzinami pracy \u2014 i kwalifikuje je, zanim zaanga\u017cuje si\u0119 Tw\u00f3j zesp\u00f3\u0142. Mniej ja\u0142owych telefon\u00f3w, wi\u0119cej rozm\u00f3w, kt\u00f3re maj\u0105 sens.',
+    'services.s3.title': 'Automatyzacja (n8n / Make)',
     'services.s3.desc':
-      'Usuwamy administracj\u0119, kt\u00f3ra zjada godziny rozliczalne \u2014 \u0142\u0105cz\u0105c Twoj\u0105 stron\u0119 z narz\u0119dziami takimi jak HubSpot, Pipedrive, Notion czy Slack do follow-up\u00f3w, aktualizacji CRM, onboardingu i raportowania \u2014 \u017ceby zesp\u00f3\u0142 robi\u0142 to, za co klienci realnie p\u0142ac\u0105.',
+      'Usuwamy administracj\u0119, kt\u00f3ra zjada godziny rozliczalne \u2014 \u0142\u0105cz\u0105c Twoj\u0105 stron\u0119 z narz\u0119dziami takimi jak HubSpot, Pipedrive, Notion czy Slack do follow-up\u00f3w, aktualizacji CRM, onboardingu i raportowania \u2014 \u017ceby zesp\u00f3\u0142 robi\u0142 to, za co klienci p\u0142ac\u0105.',
+    'services.s4.title': 'Optymalizacja konwersji (CRO)',
     'services.s4.desc':
       'Wi\u0119cej przychodu z ruchu, za kt\u00f3ry ju\u017c p\u0142acisz. Znajdujemy, gdzie kwalifikowani prospekci rezygnuj\u0105 \u2014 i uszczelniamy lejki sprzeda\u017cowe.',
 
@@ -301,12 +309,16 @@ export const translations: Record<Lang, Record<string, string>> = {
 
     'process.eyebrow': 'Proces',
     'process.heading': 'Jak wygl\u0105da projekt',
+    'process.st1.title': 'Analiza wst\u0119pna',
     'process.st1.desc':
       'Mapujemy, gdzie dzi\u015b uciekaj\u0105 leady i przych\u00f3d \u2014 zanim dotkniemy cho\u0107by jednego piksela. Cele, odbiorcy, konkurencja, obecne luki.',
+    'process.st2.title': 'Strategia i projekt',
     'process.st2.desc':
       'Projektujemy pod Tw\u00f3j cykl sprzeda\u017cy \u2014 nie szablon, kt\u00f3ry \u0142adnie wygl\u0105da, ale nie konwertuje. Przemy\u015blana propozycja wizualna i strukturalna, zbudowana dla Twoich cel\u00f3w.',
+    'process.st3.title': 'Realizacja',
     'process.st3.desc':
       'Szybko, czysto, z dokumentacj\u0105. Szybciej zaczynasz zarabia\u0107 na inwestycji \u2014 i nigdy nie zastanawiasz si\u0119, co si\u0119 dzieje.',
+    'process.st4.title': 'Wdro\u017cenie i rozw\u00f3j',
     'process.st4.desc':
       'Nie znikamy po wdro\u017ceniu. Klienci na retainerze otrzymuj\u0105 ci\u0105g\u0142y rozw\u00f3j, miesi\u0119czne raporty z zapyta\u0144 i konwersji \u2014 us\u0142ug\u0119 w modelu \u201ezrobimy to za Ciebie\u201d, wi\u0119c nigdy nie potrzebujesz w\u0142asnego zespo\u0142u deweloperskiego.',
 
@@ -321,10 +333,6 @@ export const translations: Record<Lang, Record<string, string>> = {
     'faq.q3': 'Dla kogo to nie jest?',
     'faq.a3':
       'Dla firm szukaj\u0105cych wy\u0142\u0105cznie najni\u017cszej ceny lub template\u2019u w dwa tygodnie. Najlepiej wsp\u00f3\u0142pracujemy z B2B, kt\u00f3rym zale\u017cy na jako\u015bci zapyta\u0144 i d\u0142ugoterminowych wynikach.',
-    'faq.q4': 'Pracujecie poza Polsk\u0105?',
-    'faq.a4':
-      'Tak. Wi\u0119kszo\u015b\u0107 klient\u00f3w to polskie B2B, ale pracujemy zdalnie z firmami premium w ca\u0142ej UE. Discovery i delivery w pe\u0142ni online.',
-
     'contact.eyebrow': 'Kontakt',
     'contact.heading': 'Gotowy przesta\u0107 zostawia\u0107 pieni\u0105dze na stole?',
     'contact.body':
