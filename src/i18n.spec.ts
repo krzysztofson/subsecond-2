@@ -48,6 +48,15 @@ describe('getStoredLang', () => {
     localStorage.setItem(STORAGE_KEY, 'fr');
     expect(getStoredLang()).toBe('en');
   });
+
+  it('should default to pl for a Polish browser language when nothing is stored', () => {
+    expect(getStoredLang(localStorage, 'pl-PL')).toBe('pl');
+  });
+
+  it('should prefer the stored language over the browser language', () => {
+    localStorage.setItem(STORAGE_KEY, 'en');
+    expect(getStoredLang(localStorage, 'pl-PL')).toBe('en');
+  });
 });
 
 describe('setLanguage', () => {

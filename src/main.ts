@@ -71,20 +71,20 @@ function buildSplits(animate: boolean): void {
 function heroIntro(): void {
   if (prefersReducedMotion) {
     gsap.set(heroLines, { yPercent: 0 });
-    gsap.set(['.hero__sub', '.hero__proof', '.hero__cta', '.hero__scroll', '.nav'], {
+    gsap.set(['.hero__sub', '.hero__cta', '.hero__scroll', '.nav'], {
       autoAlpha: 1,
     });
     return;
   }
 
-  gsap.set(['.hero__sub', '.hero__proof', '.hero__cta', '.hero__scroll'], {
+  gsap.set(['.hero__sub', '.hero__cta', '.hero__scroll'], {
     autoAlpha: 0,
     y: 24,
   });
   gsap.set('.nav', { autoAlpha: 0, y: -16 });
 
   animateLinesIn(heroLines, 0.1);
-  gsap.to(['.hero__sub', '.hero__proof', '.hero__cta'], {
+  gsap.to(['.hero__sub', '.hero__cta'], {
     autoAlpha: 1,
     y: 0,
     duration: 1,

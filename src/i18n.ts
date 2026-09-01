@@ -14,46 +14,39 @@ export const translations: Record<Lang, Record<string, string>> = {
     'nav.menuClose': 'Close menu',
     'nav.cta': 'Book a free revenue review',
 
-    'hero.line1': 'Some agencies build websites.',
-    'hero.line2': 'We build presence.',
+    'hero.line1': 'Your site is leaking inquiries you never see.',
+    'hero.line2': 'Buried contact. Nothing after hours. Looks cheaper than the fees you charge.',
     'hero.sub':
-      'We build high-converting web systems, AI assistants, and workflow automations for B2B firms where a single lost lead costs real revenue.',
+      'A slow or weak site bleeds qualified leads every day. We find the leaks on a free 30-min call, then fix the system that keeps costing you work.',
     'hero.cta': 'Book a free revenue review',
-    'hero.ctaNote': '30 min call • Free diagnostic • No hard sales pitch',
+    'hero.ctaNote': '30 min · We use your live site · Not a sales pitch',
     'hero.scroll': 'Scroll',
 
-    'hero.proof.stat1.value': '+47%',
-    'hero.proof.stat1.label': 'qualified leads',
-    'hero.proof.stat2.value': '+62%',
-    'hero.proof.stat2.label': 'after-hours inquiries',
-    'hero.proof.stat3.value': '14 hrs',
-    'hero.proof.stat3.label': 'saved per week',
-
     'philosophy.eyebrow': 'Philosophy',
-    'philosophy.l1': 'We work with a handful of companies per year.',
-    'philosophy.l2': 'Not because we can\u2019t handle more \u2014 because we won\u2019t.',
+    'philosophy.l1': 'We take on a few firms at a time.',
+    'philosophy.l2': 'Not a factory. Not a closed shop.',
     'philosophy.l3':
-      'Every client gets our full attention. Every project gets our full craft. We don\u2019t hand you off to a junior and disappear. We stay until it\u2019s right. Better presence isn\u2019t vanity \u2014 in professional services, it\u2019s what separates \u201cwe\u2019ll think about it\u201d from \u201clet\u2019s schedule a call.\u201d',
+      'Full bench on every project. No junior handoff. We stay until the site stops leaking.',
 
     'services.eyebrow': 'Services',
     'services.heading': 'What we do',
     'services.s1.title': 'Web Design & Development',
     'services.s1.desc':
-      'Websites that make you look like the obvious choice \u2014 before a prospect ever picks up the phone. Faster trust, more inquiries, fewer conversations that go nowhere.',
+      'Your site is the first proof of the fees you charge. If it looks cheaper than your rates, prospects notice before they ever call. We build sites that match what you charge \u2014 faster trust, more inquiries, fewer conversations that go nowhere.',
     'services.s2.title': 'AI Assistants & Chatbots',
     'services.s2.desc':
-      'Captures leads 24/7 \u2014 evenings, weekends, and outside office hours \u2014 and qualifies them before your team gets involved. Fewer dead-end calls, more conversations worth having.',
+      'Most inquiries land when your office is closed \u2014 and without capture, that traffic just leaves. Our AI assistants qualify and capture leads 24/7, evenings, weekends, and after hours, so nothing walks away unanswered.',
     'services.s3.title': 'Automation (n8n / Make)',
     'services.s3.desc':
       'Remove the admin work that eats billable hours \u2014 seamlessly connecting your website with tools like HubSpot, Pipedrive, Notion, and Slack for follow-ups, CRM updates, onboarding, and reporting \u2014 so your team spends time on work clients pay for.',
     'services.s4.title': 'Conversion Rate Optimisation',
     'services.s4.desc':
-      'More revenue from the traffic you already pay for. We find where qualified prospects drop off \u2014 and fix the leaks in your funnel.',
+      'Buried contact forms and confusing paths cost you prospects who were ready to reach out. We find where qualified visitors drop off \u2014 and fix the leak.',
 
     'clients.eyebrow': 'Clients',
     'clients.heading': 'Who we work with',
     'clients.body':
-      'We work with B2B companies where one new client pays for the entire project \u2014 law firms, private clinics, consultancies, premium service providers. You\u2019ve built a serious business. Your website should bring in the clients you deserve, not undersell what you\u2019ve built.',
+      'We work with B2B companies where one new client pays for the entire project \u2014 law firms, private clinics, consultancies, premium service providers. You\u2019ve built a serious business. Your site should not look cheaper than the fees you charge.',
     'clients.cheap': 'If you\u2019re optimising for the lowest price, we\u2019re not it.',
     'clients.best': 'If you\u2019re optimising for clients who pay premium fees \u2014 let\u2019s talk.',
 
@@ -98,7 +91,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     'packages.eyebrow': 'Packages',
     'packages.heading': 'How we work together',
     'packages.includes': 'What\u2019s included',
-    'packages.cta': 'Discuss this package',
+    'packages.cta': 'Book a free revenue review',
     'packages.p1.desc':
       'Turn your website into a credible sales asset. For firms whose current site is costing them inquiries they never even know about. Clean, fast, built to convert visitors into conversations.',
     'packages.p1.i1': 'Discovery & conversion strategy session',
@@ -107,29 +100,29 @@ export const translations: Record<Lang, Record<string, string>> = {
     'packages.p1.i4': 'Contact forms & inquiry tracking setup',
     'packages.p1.i5': 'SEO foundations & analytics',
     'packages.p1.i6': '30 days post-launch support',
-    'packages.p1.i7': 'Full ownership of all assets & custom n8n/Make automation blueprints',
+    'packages.p1.i7': 'Full ownership of all assets',
     'packages.p1.timeline': 'Typical timeline: 6\u20138 weeks',
-    'packages.p1.price': 'From \u20ac2,800',
+    'packages.p1.price': 'From $3,000',
     'packages.p2.desc':
       'Website plus the systems that compound revenue over time \u2014 a done-for-you retainer with no dev team required on your end. AI lead capture, automation, and ongoing optimisation mean performance improves after launch, not just on launch day.',
     'packages.p2.i1': 'Everything in Foundation',
     'packages.p2.i2': 'AI assistant for lead capture & qualification',
     'packages.p2.i3': 'Core automation (CRM sync, follow-ups, notifications)',
-    'packages.p2.i4': 'Conversion audit & initial optimisations',
+    'packages.p2.i4': 'Find the leaks & fix the first ones',
     'packages.p2.i5': 'Monthly CRO & site improvements',
     'packages.p2.i6': 'Monthly reporting on inquiries & conversion',
     'packages.p2.timeline': 'Typical timeline: 10\u201312 weeks + ongoing retainer',
-    'packages.p2.price': 'From \u20ac5,800 + \u20ac580/mo',
+    'packages.p2.price': 'From $6,200 + $620/mo',
     'packages.p3.desc':
       'Your external digital team, on retainer \u2014 full system, full automation, strategic input, and every change made for you, so you never need to hire your own developers. For companies that want digital as a competitive advantage, not a checkbox.',
     'packages.p3.i1': 'Everything in Growth',
-    'packages.p3.i2': 'Full automation suite across your stack',
+    'packages.p3.i2': 'Full automation suite across your stack, including custom n8n/Make blueprints',
     'packages.p3.i3': 'Custom integrations & advanced AI workflows',
     'packages.p3.i4': 'Strategic roadmap with quarterly reviews',
     'packages.p3.i5': 'Priority support & dedicated channel',
     'packages.p3.i6': 'Landing pages & campaign support on retainer',
     'packages.p3.timeline': 'Typical timeline: 12\u201316 weeks + ongoing retainer',
-    'packages.p3.price': 'From \u20ac9,300 + \u20ac1,150/mo',
+    'packages.p3.price': 'From $10,000 + $1,250/mo',
 
     'process.eyebrow': 'Process',
     'process.heading': 'How a project looks',
@@ -150,8 +143,8 @@ export const translations: Record<Lang, Record<string, string>> = {
     'faq.heading': 'Common questions',
     'faq.q1': 'How long does a project take?',
     'faq.a1':
-      'Foundation projects typically run 6\u20138 weeks. Growth and Partner take 10\u201316 weeks for the initial build, then shift to an ongoing retainer. We\u2019ll give you a specific timeline on the consultation call.',
-    'faq.q2': 'What happens on the free consultation?',
+      'Foundation projects typically run 6\u20138 weeks. Growth and Partner take 10\u201316 weeks for the initial build, then shift to an ongoing retainer. We\u2019ll give you a specific timeline on the revenue review call.',
+    'faq.q2': 'What happens on the free revenue review?',
     'faq.a2':
       '30 minutes, no pitch. We review your current site and funnel, identify where leads or revenue are leaking, and outline what fixing it would involve \u2014 with honest scope and ballpark numbers.',
     'faq.q3': 'Who is not a good fit?',
@@ -173,9 +166,17 @@ export const translations: Record<Lang, Record<string, string>> = {
       'Honest scope, ballpark investment, and a recommended path \u2014 whether that\u2019s with us or not.',
     'contact.cta': 'Book a free revenue review',
 
+    'contact.fallback.heading': 'Not ready to book a slot?',
+    'contact.fallback.body': 'Tell us what’s leaking. We reply — even if you didn’t pick a time.',
+    'contact.fallback.name': 'Name',
+    'contact.fallback.email': 'Work email',
+    'contact.fallback.site': 'Site URL',
+    'contact.fallback.leak': 'What’s leaking?',
+    'contact.fallback.submit': 'Send',
+
     'booking.close': 'Close booking widget',
 
-    'footer.tagline': 'We build presence.',
+    'footer.tagline': 'Stop leaking inquiries.',
   },
 
   pl: {
@@ -189,46 +190,40 @@ export const translations: Record<Lang, Record<string, string>> = {
     'nav.menuClose': 'Zamknij menu',
     'nav.cta': 'Um\u00f3w bezp\u0142atn\u0105 analiz\u0119 przychod\u00f3w',
 
-    'hero.line1': 'Niekt\u00f3re agencje buduj\u0105 strony.',
-    'hero.line2': 'My budujemy obecno\u015b\u0107.',
+    'hero.line1': 'Twoja strona gubi zapytania, o kt\u00f3rych nawet nie wiesz.',
+    'hero.line2':
+      'Kontakt schowany. Zero obs\u0142ugi po godzinach. Wygl\u0105da taniej ni\u017c stawki, kt\u00f3re bierzesz.',
     'hero.sub':
-      'Budujemy wysokokonwertuj\u0105ce systemy webowe, asystent\u00f3w AI i automatyzacje proces\u00f3w dla firm B2B, gdzie jeden utracony lead kosztuje realny przych\u00f3d.',
+      'Wolna lub s\u0142aba strona codziennie traci warto\u015bciowe leady. Podczas bezp\u0142atnej 30-minutowej rozmowy znajdujemy przecieki, a potem naprawiamy system, kt\u00f3ry wci\u0105\u017c kosztuje Ci\u0119 klient\u00f3w.',
     'hero.cta': 'Um\u00f3w bezp\u0142atn\u0105 analiz\u0119 przychod\u00f3w',
-    'hero.ctaNote': '30-minutowa rozmowa \u2022 Bezp\u0142atna diagnoza \u2022 Zero nachalnego sprzedawania',
+    'hero.ctaNote': '30 minut \u00b7 Analizujemy Twoj\u0105 \u017cyw\u0105 stron\u0119 \u00b7 Zero sprzeda\u017cowego pitchu',
     'hero.scroll': 'Przewi\u0144',
 
-    'hero.proof.stat1.value': '+47%',
-    'hero.proof.stat1.label': 'wi\u0119cej lead\u00f3w',
-    'hero.proof.stat2.value': '+62%',
-    'hero.proof.stat2.label': 'zapyta\u0144 po godzinach',
-    'hero.proof.stat3.value': '14 godz.',
-    'hero.proof.stat3.label': 'zaoszcz\u0119dzonych tygodniowo',
-
     'philosophy.eyebrow': 'Filozofia',
-    'philosophy.l1': 'Pracujemy z garstk\u0105 firm rocznie.',
-    'philosophy.l2': 'Nie dlatego, \u017ce nie mo\u017cemy \u2014 dlatego, \u017ce nie chcemy.',
+    'philosophy.l1': 'Pracujemy z kilkoma firmami naraz.',
+    'philosophy.l2': 'Nie fabryka. Nie zamkni\u0119ty klub.',
     'philosophy.l3':
-      'Ka\u017cdy klient dostaje nasz\u0105 pe\u0142n\u0105 uwag\u0119. Ka\u017cdy projekt \u2014 nasze pe\u0142ne zaanga\u017cowanie. Nie oddajemy Ci\u0119 juniorowi i nie znikamy. Zostajemy, dop\u00f3ki nie b\u0119dzie idealnie. Lepsza obecno\u015b\u0107 to nie fanaberia \u2014 w us\u0142ugach profesjonalnych decyduje o tym, czy us\u0142yszysz \u201cpomy\u015blimy\u201d, czy \u201cum\u00f3wmy rozmow\u0119\u201d.',
+      'Pe\u0142ny zesp\u00f3\u0142 przy ka\u017cdym projekcie. Bez oddawania Ci\u0119 juniorowi. Zostajemy, dop\u00f3ki strona nie przestanie przecieka\u0107.',
 
     'services.eyebrow': 'Us\u0142ugi',
     'services.heading': 'Co robimy',
     'services.s1.title': 'Projektowanie i tworzenie stron',
     'services.s1.desc':
-      'Strony, kt\u00f3re sprawiaj\u0105, \u017ce wygl\u0105dasz jak oczywisty wyb\u00f3r \u2014 zanim klient w og\u00f3le zadzwoni. Szybsze zaufanie, wi\u0119cej zapyta\u0144, mniej rozm\u00f3w, kt\u00f3re nigdzie nie prowadz\u0105.',
+      'Twoja strona to pierwszy dow\u00f3d stawek, kt\u00f3re bierzesz. Je\u015bli wygl\u0105da taniej ni\u017c Twoje ceny, klienci zauwa\u017c\u0105 to, zanim zadzwoni\u0105. Budujemy strony, kt\u00f3re dor\u00f3wnuj\u0105 Twoim stawkom \u2014 szybsze zaufanie, wi\u0119cej zapyta\u0144, mniej rozm\u00f3w, kt\u00f3re nigdzie nie prowadz\u0105.',
     'services.s2.title': 'Asystenci AI i chatboty',
     'services.s2.desc':
-      'Przechwytuje leady 24/7 \u2014 wieczorami, w weekendy i poza godzinami pracy \u2014 i kwalifikuje je, zanim zaanga\u017cuje si\u0119 Tw\u00f3j zesp\u00f3\u0142. Mniej ja\u0142owych telefon\u00f3w, wi\u0119cej rozm\u00f3w, kt\u00f3re maj\u0105 sens.',
+      'Wi\u0119kszo\u015b\u0107 zapyta\u0144 trafia do Ciebie, gdy biuro jest zamkni\u0119te \u2014 a bez przechwytywania ten ruch po prostu odchodzi. Nasi asystenci AI kwalifikuj\u0105 i przechwytuj\u0105 leady 24/7, wieczorami, w weekendy i po godzinach, \u017ceby nic nie zosta\u0142o bez odpowiedzi.',
     'services.s3.title': 'Automatyzacja (n8n / Make)',
     'services.s3.desc':
       'Usuwamy administracj\u0119, kt\u00f3ra zjada godziny rozliczalne \u2014 \u0142\u0105cz\u0105c Twoj\u0105 stron\u0119 z narz\u0119dziami takimi jak HubSpot, Pipedrive, Notion czy Slack do follow-up\u00f3w, aktualizacji CRM, onboardingu i raportowania \u2014 \u017ceby zesp\u00f3\u0142 robi\u0142 to, za co klienci p\u0142ac\u0105.',
     'services.s4.title': 'Optymalizacja konwersji (CRO)',
     'services.s4.desc':
-      'Wi\u0119cej przychodu z ruchu, za kt\u00f3ry ju\u017c p\u0142acisz. Znajdujemy, gdzie kwalifikowani prospekci rezygnuj\u0105 \u2014 i uszczelniamy lejki sprzeda\u017cowe.',
+      'Schowane formularze kontaktowe i niejasne \u015bcie\u017cki kosztuj\u0105 Ci\u0119 klient\u00f3w, kt\u00f3rzy byli gotowi si\u0119 odezwa\u0107. Znajdujemy, gdzie kwalifikowani odwiedzaj\u0105cy rezygnuj\u0105 \u2014 i uszczelniamy przeciek.',
 
     'clients.eyebrow': 'Klienci',
     'clients.heading': 'Z kim pracujemy',
     'clients.body':
-      'Pracujemy z firmami B2B, gdzie jeden nowy klient sp\u0142aca ca\u0142y projekt \u2014 kancelariami prawnymi, prywatnymi klinikami, firmami doradczymi, dostawcami us\u0142ug premium. Zbudowa\u0142e\u015b powa\u017cny biznes. Twoja strona powinna przyci\u0105ga\u0107 klient\u00f3w, na kt\u00f3rych zas\u0142ugujesz \u2014 a nie obni\u017ca\u0107 warto\u015bci tego, co zbudowa\u0142e\u015b.',
+      'Pracujemy z firmami B2B, gdzie jeden nowy klient sp\u0142aca ca\u0142y projekt \u2014 kancelariami prawnymi, prywatnymi klinikami, firmami doradczymi, dostawcami us\u0142ug premium. Zbudowa\u0142e\u015b powa\u017cny biznes. Twoja strona nie powinna wygl\u0105da\u0107 taniej ni\u017c stawki, kt\u00f3re bierzesz.',
     'clients.cheap': 'Je\u015bli optymalizujesz pod najni\u017csz\u0105 cen\u0119 \u2014 nie jeste\u015bmy dla Ciebie.',
     'clients.best':
       'Je\u015bli optymalizujesz pod klient\u00f3w p\u0142ac\u0105cych premium \u2014 porozmawiajmy.',
@@ -274,7 +269,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     'packages.eyebrow': 'Pakiety',
     'packages.heading': 'Jak wsp\u00f3\u0142pracujemy',
     'packages.includes': 'Co zawiera',
-    'packages.cta': 'Om\u00f3w ten pakiet',
+    'packages.cta': 'Um\u00f3w bezp\u0142atn\u0105 analiz\u0119 przychod\u00f3w',
     'packages.p1.desc':
       'Zamie\u0144 stron\u0119 w wiarygodne narz\u0119dzie sprzeda\u017cowe. Dla firm, kt\u00f3rych obecna witryna kosztuje ich zapytania, o kt\u00f3rych nawet nie wiedz\u0105. Czysta, szybka, zaprojektowana \u017ceby zamienia\u0107 odwiedzaj\u0105cych w rozmowy.',
     'packages.p1.i1': 'Discovery i sesja strategii konwersji',
@@ -283,7 +278,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     'packages.p1.i4': 'Formularze kontaktowe i \u015bledzenie zapyta\u0144',
     'packages.p1.i5': 'Fundamenty SEO i analityka',
     'packages.p1.i6': '30 dni wsparcia po wdro\u017ceniu',
-    'packages.p1.i7': 'Pe\u0142na w\u0142asno\u015b\u0107 wszystkich materia\u0142\u00f3w i szablon\u00f3w automatyzacji n8n/Make',
+    'packages.p1.i7': 'Pe\u0142na w\u0142asno\u015b\u0107 wszystkich materia\u0142\u00f3w',
     'packages.p1.timeline': 'Typowy czas: 6\u20138 tygodni',
     'packages.p1.price': 'Od 12\u00a0000 PLN',
     'packages.p2.desc':
@@ -291,7 +286,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     'packages.p2.i1': 'Wszystko z pakietu Foundation',
     'packages.p2.i2': 'Asystent AI do przechwytywania i kwalifikacji lead\u00f3w',
     'packages.p2.i3': 'Automatyzacja core (CRM, follow-upy, powiadomienia)',
-    'packages.p2.i4': 'Audyt konwersji i pierwsze optymalizacje',
+    'packages.p2.i4': 'Namierzamy przecieki i naprawiamy pierwsze',
     'packages.p2.i5': 'Miesi\u0119czne CRO i ulepszenia strony',
     'packages.p2.i6': 'Miesi\u0119czne raporty z zapyta\u0144 i konwersji',
     'packages.p2.timeline': 'Typowy czas: 10\u201312 tygodni + retainer',
@@ -299,7 +294,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     'packages.p3.desc':
       'Tw\u00f3j zewn\u0119trzny zesp\u00f3\u0142 digital w modelu retainer \u2014 pe\u0142ny system, pe\u0142na automatyzacja, wsparcie strategiczne i ka\u017cda zmiana wykonana za Ciebie, bez potrzeby zatrudniania w\u0142asnych developer\u00f3w. Dla firm, kt\u00f3re traktuj\u0105 digital jako przewag\u0119 konkurencyjn\u0105, nie obowi\u0105zek.',
     'packages.p3.i1': 'Wszystko z pakietu Growth',
-    'packages.p3.i2': 'Pe\u0142na automatyzacja w ca\u0142ym stacku',
+    'packages.p3.i2': 'Pe\u0142na automatyzacja w ca\u0142ym stacku, w tym w\u0142asne szablony n8n/Make',
     'packages.p3.i3': 'Integracje na miar\u0119 i zaawansowane workflow AI',
     'packages.p3.i4': 'Roadmapa strategiczna z kwartalnymi review',
     'packages.p3.i5': 'Priorytetowe wsparcie i dedykowany kana\u0142',
@@ -326,8 +321,8 @@ export const translations: Record<Lang, Record<string, string>> = {
     'faq.heading': 'Najcz\u0119stsze pytania',
     'faq.q1': 'Ile trwa projekt?',
     'faq.a1':
-      'Foundation to zwykle 6\u20138 tygodni. Growth i Partner wymagaj\u0105 10\u201316 tygodni na start, potem retainer. Konkretny harmonogram dostaniesz na konsultacji.',
-    'faq.q2': 'Co obejmuje bezp\u0142atna konsultacja?',
+      'Foundation to zwykle 6\u20138 tygodni. Growth i Partner wymagaj\u0105 10\u201316 tygodni na start, potem retainer. Konkretny harmonogram dostaniesz na analizie przychod\u00f3w.',
+    'faq.q2': 'Co obejmuje bezp\u0142atna analiza przychod\u00f3w?',
     'faq.a2':
       '30 minut, bez pitchu. Przegl\u0105damy Twoj\u0105 stron\u0119 i lejek, pokazujemy gdzie uciekaj\u0105 leady i przych\u00f3d oraz co trzeba zrobi\u0107 \u2014 z uczciwym zakresem i wide\u0142kami cenowymi.',
     'faq.q3': 'Dla kogo to nie jest?',
@@ -336,22 +331,30 @@ export const translations: Record<Lang, Record<string, string>> = {
     'contact.eyebrow': 'Kontakt',
     'contact.heading': 'Gotowy przesta\u0107 zostawia\u0107 pieni\u0105dze na stole?',
     'contact.body':
-      'Um\u00f3w bezp\u0142atn\u0105 30-minutow\u0105 analiz\u0119 przychod\u00f3w. Poka\u017cemy, gdzie rezygnuj\u0105 prospekci, co ogranicza liczb\u0119 zapyta\u0144 i co trzeba zrobi\u0107, \u017ceby to zmieni\u0107 \u2014 z uczciwymi liczbami, nie pitch\u0027em sprzeda\u017cowym.',
+      'Um\u00f3w bezp\u0142atn\u0105 30-minutow\u0105 analiz\u0119 przychod\u00f3w. Poka\u017cemy, gdzie rezygnuj\u0105 prospekci, co ogranicza liczb\u0119 zapyta\u0144 i co trzeba zrobi\u0107, \u017ceby to zmieni\u0107 \u2014 z uczciwymi liczbami, a nie sprzeda\u017cow\u0105 gadk\u0105.',
     'contact.steps.heading': 'Jak wygl\u0105da rozmowa',
     'contact.steps.s1.title': 'S\u0142uchamy',
     'contact.steps.s1.desc':
       'Tw\u00f3j biznes, cele i jak klienci trafiaj\u0105 do Ciebie dzi\u015b \u2014 rozmowa, nie ankieta.',
     'contact.steps.s2.title': 'Diagnozujemy',
     'contact.steps.s2.desc':
-      'Gdzie przecieka lejek, co kosztuje Ci\u0119 zapytania i jakie quick winy s\u0105 mo\u017cliwe przed jakimkolwiek buildem.',
+      'Gdzie przecieka lejek, co kosztuje Ci\u0119 zapytania i jakie szybkie usprawnienia s\u0105 mo\u017cliwe, zanim zaczniemy budowa\u0107.',
     'contact.steps.s3.title': 'Masz jasno\u015b\u0107',
     'contact.steps.s3.desc':
       'Uczciwy zakres, wide\u0142ki inwestycji i rekomendowany kierunek \u2014 nawet je\u015bli to nie b\u0119dzie z nami.',
     'contact.cta': 'Um\u00f3w bezp\u0142atn\u0105 analiz\u0119 przychod\u00f3w',
 
+    'contact.fallback.heading': 'Nie chcesz jeszcze rezerwowa\u0107 terminu?',
+    'contact.fallback.body': 'Napisz, co przecieka. Odpowiadamy \u2014 nawet je\u015bli nie wybierzesz terminu.',
+    'contact.fallback.name': 'Imi\u0119',
+    'contact.fallback.email': 'Firmowy e-mail',
+    'contact.fallback.site': 'Adres strony',
+    'contact.fallback.leak': 'Co przecieka?',
+    'contact.fallback.submit': 'Wy\u015blij',
+
     'booking.close': 'Zamknij wid\u017cet rezerwacji',
 
-    'footer.tagline': 'My budujemy obecno\u015b\u0107.',
+    'footer.tagline': 'Przesta\u0144 traci\u0107 zapyta\u0144.',
   },
 };
 
@@ -359,9 +362,13 @@ export function isLang(value: unknown): value is Lang {
   return value === 'en' || value === 'pl';
 }
 
-export function getStoredLang(storage: Pick<Storage, 'getItem'> = localStorage): Lang {
+export function getStoredLang(
+  storage: Pick<Storage, 'getItem'> = localStorage,
+  browserLang: string = typeof navigator !== 'undefined' ? navigator.language : 'en',
+): Lang {
   const stored = storage.getItem(STORAGE_KEY);
-  return isLang(stored) ? stored : 'en';
+  if (isLang(stored)) return stored;
+  return browserLang.toLowerCase().startsWith('pl') ? 'pl' : 'en';
 }
 
 export interface SetLanguageOptions {
