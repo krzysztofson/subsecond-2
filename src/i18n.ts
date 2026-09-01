@@ -153,8 +153,8 @@ export const translations: Record<Lang, Record<string, string>> = {
       'The rebuilt landing page next to its Lighthouse report: performance 96, LCP 0.7 s.',
 
     'testimonial.quote':
-      '\u201cThey didn\u2019t just build us a website \u2014 they rebuilt how clients find us. Inquiries are up, and the ones we get are actually worth our time.\u201d',
-    'testimonial.role': 'Managing Partner, law firm',
+      '\u201cThey didn\u2019t just build us a website \u2014 they rebuilt how patients find us. Inquiries are up, and the ones we get are actually worth our time.\u201d',
+    'testimonial.role': 'Owner, medical clinic',
 
     'packages.eyebrow': 'Packages',
     'packages.heading': 'How we work together',
@@ -399,8 +399,8 @@ export const translations: Record<Lang, Record<string, string>> = {
       'Przebudowana strona docelowa obok raportu Lighthouse: wydajno\u015b\u0107 96, LCP 0,7 s.',
 
     'testimonial.quote':
-      '\u201cNie zbudowali nam tylko strony \u2014 przebudowali spos\u00f3b, w jaki klienci nas znajduj\u0105. Zapyta\u0144 jest wi\u0119cej, a te, kt\u00f3re dostajemy, naprawd\u0119 maj\u0105 sens.\u201d',
-    'testimonial.role': 'Managing Partner, kancelaria prawna',
+      '\u201cNie zbudowali nam tylko strony \u2014 przebudowali spos\u00f3b, w jaki pacjenci nas znajduj\u0105. Zapyta\u0144 jest wi\u0119cej, a te, kt\u00f3re dostajemy, naprawd\u0119 maj\u0105 sens.\u201d',
+    'testimonial.role': 'W\u0142a\u015bciciel, centrum medyczne',
 
     'packages.eyebrow': 'Pakiety',
     'packages.heading': 'Jak wsp\u00f3\u0142pracujemy',
