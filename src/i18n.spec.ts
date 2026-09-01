@@ -1,4 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest';
+import indexHtml from '../index.html?raw';
 import { STORAGE_KEY, getStoredLang, isLang, setLanguage, translations } from './i18n';
 
 describe('translations', () => {
@@ -14,6 +15,16 @@ describe('translations', () => {
         expect(value.trim(), `${lang}.${key}`).not.toBe('');
       }
     }
+  });
+
+  it('should define every key referenced from index.html', () => {
+    const referenced = [
+      ...indexHtml.matchAll(/data-i18n(?:-alt|-aria|-placeholder)?="([^"]+)"/g),
+    ].map((match) => match[1]);
+
+    expect(referenced.length).toBeGreaterThan(0);
+    const missing = referenced.filter((key) => translations.en[key] === undefined);
+    expect(missing).toEqual([]);
   });
 });
 

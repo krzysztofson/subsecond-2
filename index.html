@@ -242,77 +242,414 @@
             automation built to move revenue.
           </p>
         </div>
-        <div class="work__stats">
-          <div class="work__stat" data-reveal>
-            <span class="work__stat-value" data-i18n="work.stat1.value">24</span>
-            <span class="work__stat-label" data-i18n="work.stat1.label">Projects delivered</span>
-          </div>
-          <div class="work__stat" data-reveal>
-            <span class="work__stat-value" data-i18n="work.stat2.value">+38%</span>
-            <span class="work__stat-label" data-i18n="work.stat2.label">Avg. inquiry growth</span>
-          </div>
-          <div class="work__stat" data-reveal>
-            <span class="work__stat-value" data-i18n="work.stat3.value">94%</span>
-            <span class="work__stat-label" data-i18n="work.stat3.label">Client retention</span>
-          </div>
-          <div class="work__stat" data-reveal>
-            <span class="work__stat-value" data-i18n="work.stat4.value">4.2×</span>
-            <span class="work__stat-label" data-i18n="work.stat4.label">Avg. ROI in 12 months</span>
-          </div>
-        </div>
-        <div class="work__grid">
-          <article class="work__case" data-reveal>
-            <p class="work__case-meta" data-i18n="work.case1.meta">Law firm · Warsaw</p>
-            <h3 class="work__case-title" data-i18n="work.case1.title">
-              Website redesign &amp; conversion optimisation
-            </h3>
-            <p class="work__case-package" data-i18n="work.case1.package">Foundation + CRO</p>
-            <div class="work__case-metric">
-              <span class="work__case-value" data-i18n="work.case1.metric">+47%</span>
-              <span class="work__case-metric-label" data-i18n="work.case1.metricLabel"
-                >Qualified inquiries in 90 days</span
-              >
+        <ul class="cases">
+          <!-- Case 01 — Instapage speed & CRO -->
+          <li class="case case--wide" data-reveal>
+            <div class="case__head">
+              <div>
+                <p class="case__meta" data-i18n="work.case1.meta">Instapage · SaaS</p>
+                <h3 class="case__title" data-i18n="work.case1.title">Speed rebuild on the conversion path</h3>
+                <p class="case__tags" data-i18n="work.case1.tags">Performance · Conversion</p>
+              </div>
+              <p class="case__headline">
+                <span class="case__value" data-i18n="work.case1.metric">+34%</span>
+                <span class="case__value-label" data-i18n="work.case1.metricLabel"
+                  >conversion rate</span
+                >
+              </p>
             </div>
-            <p class="work__case-desc" data-i18n="work.case1.desc">
-              Repositioned the firm online and rebuilt the contact flow. High-intent form submissions
-              and phone inquiries rose within the first quarter after launch.
-            </p>
-          </article>
-          <article class="work__case work__case--featured" data-reveal>
-            <p class="work__case-meta" data-i18n="work.case2.meta">Private clinic · Kraków</p>
-            <h3 class="work__case-title" data-i18n="work.case2.title">
-              Website, AI assistant &amp; lead qualification
-            </h3>
-            <p class="work__case-package" data-i18n="work.case2.package">Growth</p>
-            <div class="work__case-metric">
-              <span class="work__case-value" data-i18n="work.case2.metric">+62%</span>
-              <span class="work__case-metric-label" data-i18n="work.case2.metricLabel"
-                >After-hours leads captured</span
-              >
+            <figure class="case__media">
+              <div class="case__frame">
+                <img
+                  class="case__img"
+                  src="/portfolio/instapage-cro.webp"
+                  width="1600"
+                  height="550"
+                  loading="lazy"
+                  decoding="async"
+                  data-i18n-alt="work.case1.alt1"
+                  alt="The rebuilt landing page next to its Lighthouse report: performance 96, LCP 0.7 s."
+                />
+              </div>
+            </figure>
+            <div class="case__body">
+              <div class="case__notes">
+                <p class="case__note">
+                  <span class="case__note-label" data-i18n="work.label.leak">The leak</span>
+                  <span data-i18n="work.case1.leak"
+                    >The pages built to convert were the slowest on the site. Every extra second of load was paid for in signups that never happened.</span
+                  >
+                </p>
+                <p class="case__note">
+                  <span class="case__note-label" data-i18n="work.label.fix">The fix</span>
+                  <span data-i18n="work.case1.fix"
+                    >Rebuilt the critical render path — 69% faster load, sub-second LCP, and nothing left blocking the main thread.</span
+                  >
+                </p>
+              </div>
+              <ul class="case__receipt">
+                <li class="case__receipt-item">
+                  <span class="case__receipt-value" data-i18n="work.case1.r1.value"
+                    >0.7 s</span
+                  >
+                  <span class="case__receipt-label" data-i18n="work.case1.r1.label"
+                    >LCP</span
+                  >
+                </li>
+                <li class="case__receipt-item">
+                  <span class="case__receipt-value" data-i18n="work.case1.r2.value"
+                    >0.11</span
+                  >
+                  <span class="case__receipt-label" data-i18n="work.case1.r2.label"
+                    >CLS</span
+                  >
+                </li>
+                <li class="case__receipt-item">
+                  <span class="case__receipt-value" data-i18n="work.case1.r3.value"
+                    >0 ms</span
+                  >
+                  <span class="case__receipt-label" data-i18n="work.case1.r3.label"
+                    >total blocking time</span
+                  >
+                </li>
+                <li class="case__receipt-item">
+                  <span class="case__receipt-value" data-i18n="work.case1.r4.value"
+                    >96</span
+                  >
+                  <span class="case__receipt-label" data-i18n="work.case1.r4.label"
+                    >Lighthouse performance</span
+                  >
+                </li>
+              </ul>
             </div>
-            <p class="work__case-desc" data-i18n="work.case2.desc">
-              AI assistant now handles patient inquiries outside clinic hours — qualifying intent
-              and booking callbacks before the front desk opens.
-            </p>
-          </article>
-          <article class="work__case" data-reveal>
-            <p class="work__case-meta" data-i18n="work.case3.meta">B2B consultancy · Gdańsk</p>
-            <h3 class="work__case-title" data-i18n="work.case3.title">
-              Full-stack automation &amp; digital systems
-            </h3>
-            <p class="work__case-package" data-i18n="work.case3.package">Partner</p>
-            <div class="work__case-metric">
-              <span class="work__case-value" data-i18n="work.case3.metric">14 hrs</span>
-              <span class="work__case-metric-label" data-i18n="work.case3.metricLabel"
-                >Admin time recovered per week</span
-              >
+          </li>
+
+          <!-- Case 02 — beauty clinic flat pricing -->
+          <li class="case case--split" data-reveal>
+            <div class="case__visual">
+              <figure class="case__media">
+                <div class="case__frame">
+                  <img
+                    class="case__img"
+                    src="/portfolio/flat-interactive-pricing-beauti-clinic.webp"
+                    width="1200"
+                    height="1344"
+                    loading="lazy"
+                    decoding="async"
+                    data-i18n-alt="work.case2.alt1"
+                    alt="Clinic pricing page: one searchable list of consultations and procedures with prices."
+                  />
+                </div>
+              </figure>
             </div>
-            <p class="work__case-desc" data-i18n="work.case3.desc">
-              Automated CRM updates, client onboarding, and reporting — freeing senior consultants
-              for billable work that actually moves revenue.
-            </p>
-          </article>
-        </div>
+            <div class="case__text">
+              <div class="case__head">
+                <div>
+                  <p class="case__meta" data-i18n="work.case2.meta">Beauty clinic</p>
+                  <h3 class="case__title" data-i18n="work.case2.title">Interactive flat pricing</h3>
+                  <p class="case__tags" data-i18n="work.case2.tags">Pricing UX · Booking</p>
+                </div>
+                <p class="case__headline">
+                  <span class="case__value" data-i18n="work.case2.metric">+31%</span>
+                  <span class="case__value-label" data-i18n="work.case2.metricLabel"
+                    >recurring monthly revenue</span
+                  >
+                </p>
+              </div>
+              <div class="case__body">
+                <div class="case__notes">
+                  <p class="case__note">
+                    <span class="case__note-label" data-i18n="work.label.leak">The leak</span>
+                    <span data-i18n="work.case2.leak"
+                      >Prices for 120+ treatments were spread across PDFs and sub-pages. Anyone who wanted the cost of one procedure had to call and ask — and most never did.</span
+                    >
+                  </p>
+                  <p class="case__note">
+                    <span class="case__note-label" data-i18n="work.label.fix">The fix</span>
+                    <span data-i18n="work.case2.fix"
+                      >One flat, searchable price list. Every procedure and specialist on a single page, with booking one tap away from any line.</span
+                    >
+                  </p>
+                </div>
+                <ul class="case__receipt">
+                  <li class="case__receipt-item">
+                    <span class="case__receipt-value" data-i18n="work.case2.r1.value"
+                      >−80%</span
+                    >
+                    <span class="case__receipt-label" data-i18n="work.case2.r1.label"
+                      >clicks to book a visit</span
+                    >
+                  </li>
+                  <li class="case__receipt-item">
+                    <span class="case__receipt-value" data-i18n="work.case2.r2.value"
+                      >+44%</span
+                    >
+                    <span class="case__receipt-label" data-i18n="work.case2.r2.label"
+                      >online bookings</span
+                    >
+                  </li>
+                  <li class="case__receipt-item">
+                    <span class="case__receipt-value" data-i18n="work.case2.r3.value"
+                      >120+</span
+                    >
+                    <span class="case__receipt-label" data-i18n="work.case2.r3.label"
+                      >prices on one page</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <!-- Case 03 — law firm private AI document app -->
+          <li class="case case--split case--flip" data-reveal>
+            <div class="case__visual">
+              <figure class="case__media">
+                <div class="case__frame">
+                  <img
+                    class="case__img"
+                    src="/portfolio/private-ai-document-app-2.webp"
+                    width="1300"
+                    height="1016"
+                    loading="lazy"
+                    decoding="async"
+                    data-i18n-alt="work.case3.alt1"
+                    alt="Contract review screen: the private model flags a deposit that contradicts the price written in words, and suggests the correction."
+                  />
+                </div>
+              </figure>
+            </div>
+            <div class="case__text">
+              <div class="case__head">
+                <div>
+                  <p class="case__meta" data-i18n="work.case3.meta">Property law firm</p>
+                  <h3 class="case__title" data-i18n="work.case3.title">Drafting &amp; review app on a private model</h3>
+                  <p class="case__tags" data-i18n="work.case3.tags">Custom app · Private AI</p>
+                </div>
+                <p class="case__headline">
+                  <span class="case__value" data-i18n="work.case3.metric">30+ hrs</span>
+                  <span class="case__value-label" data-i18n="work.case3.metricLabel"
+                    >recovered every week</span
+                  >
+                </p>
+              </div>
+              <div class="case__body">
+                <div class="case__notes">
+                  <p class="case__note">
+                    <span class="case__note-label" data-i18n="work.label.leak">The leak</span>
+                    <span data-i18n="work.case3.leak"
+                      >Every deal meant retyping the same six documents, then reading them line by line for the errors that cost money: a deposit that contradicts the contract, a handover date that lands on a Sunday.</span
+                    >
+                  </p>
+                  <p class="case__note">
+                    <span class="case__note-label" data-i18n="work.label.fix">The fix</span>
+                    <span data-i18n="work.case3.fix"
+                      >An app that drafts from the deal file and checks each contract against the firm’s own playbook. The model runs on the firm’s server — no client data leaves the office.</span
+                    >
+                  </p>
+                </div>
+                <ul class="case__receipt">
+                  <li class="case__receipt-item">
+                    <span class="case__receipt-value" data-i18n="work.case3.r1.value"
+                      >45 → 6 min</span
+                    >
+                    <span class="case__receipt-label" data-i18n="work.case3.r1.label"
+                      >per first draft</span
+                    >
+                  </li>
+                  <li class="case__receipt-item">
+                    <span class="case__receipt-value" data-i18n="work.case3.r2.value"
+                      >6</span
+                    >
+                    <span class="case__receipt-label" data-i18n="work.case3.r2.label"
+                      >document types automated</span
+                    >
+                  </li>
+                  <li class="case__receipt-item">
+                    <span class="case__receipt-value" data-i18n="work.case3.r3.value"
+                      >100%</span
+                    >
+                    <span class="case__receipt-label" data-i18n="work.case3.r3.label"
+                      >on-premise, nothing sent out</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <!-- Case 04 — medical clinic redesign -->
+          <li class="case case--wide" data-reveal>
+            <div class="case__head">
+              <div>
+                <p class="case__meta" data-i18n="work.case4.meta">Medical clinic</p>
+                <h3 class="case__title" data-i18n="work.case4.title">Site redesign &amp; booking flow</h3>
+                <p class="case__tags" data-i18n="work.case4.tags">Redesign · Conversion</p>
+              </div>
+              <p class="case__headline">
+                <span class="case__value" data-i18n="work.case4.metric">+58%</span>
+                <span class="case__value-label" data-i18n="work.case4.metricLabel"
+                  >online appointment bookings</span
+                >
+              </p>
+            </div>
+            <figure class="case__media">
+              <div class="case__frame">
+                <img
+                  class="case__img"
+                  src="/portfolio/medica-clinic-redesign-1.webp"
+                  width="1600"
+                  height="845"
+                  loading="lazy"
+                  decoding="async"
+                  data-i18n-alt="work.case4.alt1"
+                  alt="Clinic homepage before and after the redesign, side by side."
+                />
+                <span class="case__tag case__tag--before" data-i18n="work.compare.before">Before</span>
+                <span class="case__tag case__tag--after" data-i18n="work.compare.after">After</span>
+              </div>
+            </figure>
+            <div class="case__thumbs">
+              <figure class="case__thumb">
+                <img
+                  src="/portfolio/medica-clinic-redesign-2.webp"
+                  width="1000"
+                  height="529"
+                  loading="lazy"
+                  decoding="async"
+                  data-i18n-alt="work.case4.alt2"
+                  alt="About page before and after, with clinic photography and a clearer structure."
+                />
+              </figure>
+              <figure class="case__thumb">
+                <img
+                  src="/portfolio/medica-clinic-redesign-3.webp"
+                  width="1000"
+                  height="528"
+                  loading="lazy"
+                  decoding="async"
+                  data-i18n-alt="work.case4.alt3"
+                  alt="Treatments page before and after, with procedures grouped into readable cards."
+                />
+              </figure>
+            </div>
+            <div class="case__body">
+              <div class="case__notes">
+                <p class="case__note">
+                  <span class="case__note-label" data-i18n="work.label.leak">The leak</span>
+                  <span data-i18n="work.case4.leak"
+                    >The old site buried the one thing patients came for. Walls of text, no clear path to a visit, and nothing that matched the standard of care inside the clinic.</span
+                  >
+                </p>
+                <p class="case__note">
+                  <span class="case__note-label" data-i18n="work.label.fix">The fix</span>
+                  <span data-i18n="work.case4.fix"
+                    >Rebuilt around the appointment: services grouped the way patients ask for them, photography of the actual rooms and team, and booking within reach on every screen.</span
+                  >
+                </p>
+              </div>
+              <ul class="case__receipt">
+                <li class="case__receipt-item">
+                  <span class="case__receipt-value" data-i18n="work.case4.r1.value"
+                    >+41%</span
+                  >
+                  <span class="case__receipt-label" data-i18n="work.case4.r1.label"
+                    >avg. time on site</span
+                  >
+                </li>
+                <li class="case__receipt-item">
+                  <span class="case__receipt-value" data-i18n="work.case4.r2.value"
+                    >−34%</span
+                  >
+                  <span class="case__receipt-label" data-i18n="work.case4.r2.label"
+                    >bounce rate</span
+                  >
+                </li>
+                <li class="case__receipt-item">
+                  <span class="case__receipt-value" data-i18n="work.case4.r3.value"
+                    >2 clicks</span
+                  >
+                  <span class="case__receipt-label" data-i18n="work.case4.r3.label"
+                    >from any page to a booking</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <!-- Case 05 — device + plan configurator -->
+          <li class="case case--wide" data-reveal>
+            <div class="case__head">
+              <div>
+                <p class="case__meta" data-i18n="work.case5.meta">Medical alert devices</p>
+                <h3 class="case__title" data-i18n="work.case5.title">Device and plan configurator</h3>
+                <p class="case__tags" data-i18n="work.case5.tags">Configurator UX · Performance</p>
+              </div>
+              <p class="case__headline">
+                <span class="case__value" data-i18n="work.case5.metric">+27%</span>
+                <span class="case__value-label" data-i18n="work.case5.metricLabel"
+                  >product page conversion</span
+                >
+              </p>
+            </div>
+            <figure class="case__media">
+              <div class="case__frame">
+                <img
+                  class="case__img"
+                  src="/portfolio/product-configurator.webp"
+                  width="1600"
+                  height="1498"
+                  loading="lazy"
+                  decoding="async"
+                  data-i18n-alt="work.case5.alt1"
+                  alt="Product page for a medical alert watch: plan length, the 24/7 responder add-on and the running total on one screen."
+                />
+              </div>
+            </figure>
+            <div class="case__body">
+              <div class="case__notes">
+                <p class="case__note">
+                  <span class="case__note-label" data-i18n="work.label.leak">The leak</span>
+                  <span data-i18n="work.case5.leak"
+                    >Picking a device and a care plan ran across separate screens, and the real monthly cost only appeared at checkout. People who wanted the watch left before they understood what they were signing up for.</span
+                  >
+                </p>
+                <p class="case__note">
+                  <span class="case__note-label" data-i18n="work.label.fix">The fix</span>
+                  <span data-i18n="work.case5.fix"
+                    >One configurator: device, plan length and the 24/7 responder on a single screen, with the total updating as you choose. The front end was rebuilt so nothing reloads between choices.</span
+                  >
+                </p>
+              </div>
+              <ul class="case__receipt">
+                <li class="case__receipt-item">
+                  <span class="case__receipt-value" data-i18n="work.case5.r1.value"
+                    >5 → 2</span
+                  >
+                  <span class="case__receipt-label" data-i18n="work.case5.r1.label"
+                    >clicks to a complete order</span
+                  >
+                </li>
+                <li class="case__receipt-item">
+                  <span class="case__receipt-value" data-i18n="work.case5.r2.value"
+                    >2.8 → 0.8 s</span
+                  >
+                  <span class="case__receipt-label" data-i18n="work.case5.r2.label"
+                    >load time</span
+                  >
+                </li>
+                <li class="case__receipt-item">
+                  <span class="case__receipt-value" data-i18n="work.case5.r3.value"
+                    >+18%</span
+                  >
+                  <span class="case__receipt-label" data-i18n="work.case5.r3.label"
+                    >plans attached to a device</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
       </section>
 
       <!-- 06 / Testimonial -->
@@ -558,16 +895,14 @@
               Tell us what’s leaking. We reply — even if you didn’t pick a time.
             </p>
             <form class="contact__fallback-form" action="https://submit-form.com/YOUR_FORMSPARK_ID" method="POST">
-              <div class="contact__fallback-row">
-                <label class="contact__fallback-field">
-                  <span data-i18n="contact.fallback.name">Name</span>
-                  <input type="text" name="name" required />
-                </label>
-                <label class="contact__fallback-field">
-                  <span data-i18n="contact.fallback.email">Work email</span>
-                  <input type="email" name="email" required />
-                </label>
-              </div>
+              <label class="contact__fallback-field">
+                <span data-i18n="contact.fallback.name">Name</span>
+                <input type="text" name="name" required />
+              </label>
+              <label class="contact__fallback-field">
+                <span data-i18n="contact.fallback.email">Work email</span>
+                <input type="email" name="email" required />
+              </label>
               <label class="contact__fallback-field">
                 <span data-i18n="contact.fallback.site">Site URL</span>
                 <input type="url" name="site_url" placeholder="https://" />
