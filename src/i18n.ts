@@ -59,104 +59,102 @@ export const translations: Record<Lang, Record<string, string>> = {
     'work.compare.before': 'Before',
     'work.compare.after': 'After',
 
-    'work.case1.meta': 'Instapage \u00b7 SaaS',
-    'work.case1.title': 'Speed rebuild on the conversion path',
-    'work.case1.tags': 'Performance \u00b7 Conversion',
-    'work.case1.metric': '+34%',
-    'work.case1.metricLabel': 'conversion rate',
+    'work.case1.meta': 'Beauty clinic',
+    'work.case1.title': 'Interactive flat pricing',
+    'work.case1.tags': 'Pricing UX \u00b7 Booking',
+    'work.case1.metric': '+44%',
+    'work.case1.metricLabel': 'online bookings in 90 days',
     'work.case1.leak':
-      'The pages built to convert were the slowest on the site. Every extra second of load was paid for in signups that never happened.',
-    'work.case1.fix':
-      'Rebuilt the critical render path \u2014 69% faster load, sub-second LCP, and nothing left blocking the main thread.',
-    'work.case1.r1.value': '0.7 s',
-    'work.case1.r1.label': 'LCP',
-    'work.case1.r2.value': '0.11',
-    'work.case1.r2.label': 'CLS',
-    'work.case1.r3.value': '0 ms',
-    'work.case1.r3.label': 'total blocking time',
-    'work.case1.r4.value': '96',
-    'work.case1.r4.label': 'Lighthouse performance',
-    'work.case1.alt1':
-      'The rebuilt landing page next to its Lighthouse report: performance 96, LCP 0.7 s.',
-
-    'work.case2.meta': 'Beauty clinic',
-    'work.case2.title': 'Interactive flat pricing',
-    'work.case2.tags': 'Pricing UX \u00b7 Booking',
-    'work.case2.metric': '+31%',
-    'work.case2.metricLabel': 'recurring monthly revenue',
-    'work.case2.leak':
       'Prices for 120+ treatments were spread across PDFs and sub-pages. Anyone who wanted the cost of one procedure had to call and ask \u2014 and most never did.',
-    'work.case2.fix':
+    'work.case1.fix':
       'One flat, searchable price list. Every procedure and specialist on a single page, with booking one tap away from any line.',
-    'work.case2.r1.value': '\u221280%',
-    'work.case2.r1.label': 'clicks to book a visit',
-    'work.case2.r2.value': '+44%',
-    'work.case2.r2.label': 'online bookings',
-    'work.case2.r3.value': '120+',
-    'work.case2.r3.label': 'prices on one page',
-    'work.case2.alt1':
+    'work.case1.r1.value': '5 \u2192 1',
+    'work.case1.r1.label': 'clicks to book a visit',
+    'work.case1.r2.value': '120+',
+    'work.case1.r2.label': 'prices on one page',
+    'work.case1.alt1':
       'Clinic pricing page: one searchable list of consultations and procedures with prices.',
 
-    'work.case3.meta': 'Property law firm',
-    'work.case3.title': 'Drafting & review app on a private model',
-    'work.case3.tags': 'Custom app \u00b7 Private AI',
-    'work.case3.metric': '30+ hrs',
-    'work.case3.metricLabel': 'recovered every week',
-    'work.case3.leak':
+    'work.case2.meta': 'Property law firm',
+    'work.case2.title': 'Drafting & review app on a private model',
+    'work.case2.tags': 'Custom app \u00b7 Private AI',
+    'work.case2.metric': '30+ hrs',
+    'work.case2.metricLabel': 'recovered every week',
+    'work.case2.leak':
       'Every deal meant retyping the same six documents, then reading them line by line for the errors that cost money: a deposit that contradicts the contract, a handover date that lands on a Sunday.',
-    'work.case3.fix':
+    'work.case2.fix':
       'An app that drafts from the deal file and checks each contract against the firm\u2019s own playbook. The model runs on the firm\u2019s server \u2014 no client data leaves the office.',
-    'work.case3.r1.value': '45 \u2192 6 min',
-    'work.case3.r1.label': 'per first draft',
-    'work.case3.r2.value': '6',
-    'work.case3.r2.label': 'document types automated',
-    'work.case3.r3.value': '100%',
-    'work.case3.r3.label': 'on-premise, nothing sent out',
-    'work.case3.alt1':
+    'work.case2.r1.value': '45 \u2192 6 min',
+    'work.case2.r1.label': 'per first draft',
+    'work.case2.r2.value': '6',
+    'work.case2.r2.label': 'document types automated',
+    'work.case2.r3.value': '100%',
+    'work.case2.r3.label': 'on-premise, nothing sent out',
+    'work.case2.alt1':
       'Contract review screen: the private model flags a deposit that contradicts the price written in words, and suggests the correction.',
 
-    'work.case4.meta': 'Medical clinic',
-    'work.case4.title': 'Site redesign & booking flow',
-    'work.case4.tags': 'Redesign \u00b7 Conversion',
-    'work.case4.metric': '+58%',
-    'work.case4.metricLabel': 'online appointment bookings',
-    'work.case4.leak':
+    'work.case3.meta': 'Medical clinic',
+    'work.case3.title': 'Site redesign & booking flow',
+    'work.case3.tags': 'Redesign \u00b7 Conversion',
+    'work.case3.metric': '+58%',
+    'work.case3.metricLabel': 'online appointment bookings in 90 days',
+    'work.case3.leak':
       'The old site buried the one thing patients came for. Walls of text, no clear path to a visit, and nothing that matched the standard of care inside the clinic.',
-    'work.case4.fix':
+    'work.case3.fix':
       'Rebuilt around the appointment: services grouped the way patients ask for them, photography of the actual rooms and team, and booking within reach on every screen.',
-    'work.case4.r1.value': '+41%',
-    'work.case4.r1.label': 'avg. time on site',
-    'work.case4.r2.value': '\u221234%',
-    'work.case4.r2.label': 'bounce rate',
-    'work.case4.r3.value': '2 clicks',
-    'work.case4.r3.label': 'from any page to a booking',
-    'work.case4.alt1': 'Clinic homepage before and after the redesign, side by side.',
-    'work.case4.alt2':
+    'work.case3.r1.value': '+41%',
+    'work.case3.r1.label': 'avg. time on site',
+    'work.case3.r2.value': '\u221234%',
+    'work.case3.r2.label': 'bounce rate',
+    'work.case3.r3.value': '2 clicks',
+    'work.case3.r3.label': 'from any page to a booking',
+    'work.case3.alt1': 'Clinic homepage before and after the redesign, side by side.',
+    'work.case3.alt2':
       'About page before and after, with clinic photography and a clearer structure.',
-    'work.case4.alt3':
+    'work.case3.alt3':
       'Treatments page before and after, with procedures grouped into readable cards.',
 
-    'work.case5.meta': 'Medical alert devices',
-    'work.case5.title': 'Device and plan configurator',
-    'work.case5.tags': 'Configurator UX \u00b7 Performance',
-    'work.case5.metric': '+27%',
-    'work.case5.metricLabel': 'product page conversion',
-    'work.case5.leak':
+    'work.case4.meta': 'Medical alert devices',
+    'work.case4.title': 'Device and plan configurator',
+    'work.case4.tags': 'Configurator UX \u00b7 Performance',
+    'work.case4.metric': '+27%',
+    'work.case4.metricLabel': 'product page conversion in 90 days',
+    'work.case4.leak':
       'Picking a device and a care plan ran across separate screens, and the real monthly cost only appeared at checkout. People who wanted the watch left before they understood what they were signing up for.',
-    'work.case5.fix':
+    'work.case4.fix':
       'One configurator: device, plan length and the 24/7 responder on a single screen, with the total updating as you choose. The front end was rebuilt so nothing reloads between choices.',
-    'work.case5.r1.value': '5 \u2192 2',
-    'work.case5.r1.label': 'clicks to a complete order',
-    'work.case5.r2.value': '2.8 \u2192 0.8 s',
-    'work.case5.r2.label': 'load time',
-    'work.case5.r3.value': '+18%',
-    'work.case5.r3.label': 'plans attached to a device',
-    'work.case5.alt1':
+    'work.case4.r1.value': '5 \u2192 2',
+    'work.case4.r1.label': 'clicks to a complete order',
+    'work.case4.r2.value': '2.8 \u2192 0.8 s',
+    'work.case4.r2.label': 'load time',
+    'work.case4.r3.value': '+18%',
+    'work.case4.r3.label': 'plans attached to a device',
+    'work.case4.alt1':
       'Product page for a medical alert watch: plan length, the 24/7 responder add-on and the running total on one screen.',
+
+    'work.case5.meta': 'B2B SaaS',
+    'work.case5.title': 'Speed rebuild on the conversion path',
+    'work.case5.tags': 'Performance \u00b7 Conversion',
+    'work.case5.metric': '+34%',
+    'work.case5.metricLabel': 'conversion rate in 90 days',
+    'work.case5.leak':
+      'The pages built to convert were the slowest on the site. Every extra second of load was paid for in signups that never happened.',
+    'work.case5.fix':
+      'Rebuilt the critical render path \u2014 69% faster load, sub-second LCP, and nothing left blocking the main thread.',
+    'work.case5.r1.value': '0.7 s',
+    'work.case5.r1.label': 'LCP',
+    'work.case5.r2.value': '0.11',
+    'work.case5.r2.label': 'CLS',
+    'work.case5.r3.value': '0 ms',
+    'work.case5.r3.label': 'total blocking time',
+    'work.case5.r4.value': '96',
+    'work.case5.r4.label': 'Lighthouse performance',
+    'work.case5.alt1':
+      'The rebuilt landing page next to its Lighthouse report: performance 96, LCP 0.7 s.',
 
     'testimonial.quote':
       '\u201cThey didn\u2019t just build us a website \u2014 they rebuilt how clients find us. Inquiries are up, and the ones we get are actually worth our time.\u201d',
-    'testimonial.role': 'Managing Partner, Warsaw law firm',
+    'testimonial.role': 'Managing Partner, law firm',
 
     'packages.eyebrow': 'Packages',
     'packages.heading': 'How we work together',
@@ -307,104 +305,102 @@ export const translations: Record<Lang, Record<string, string>> = {
     'work.compare.before': 'Przed',
     'work.compare.after': 'Po',
 
-    'work.case1.meta': 'Instapage \u00b7 SaaS',
-    'work.case1.title': 'Przebudowa szybko\u015bci na \u015bcie\u017cce konwersji',
-    'work.case1.tags': 'Wydajno\u015b\u0107 \u00b7 Konwersja',
-    'work.case1.metric': '+34%',
-    'work.case1.metricLabel': 'wsp\u00f3\u0142czynnik konwersji',
+    'work.case1.meta': 'Klinika medycyny estetycznej',
+    'work.case1.title': 'Interaktywny, p\u0142aski cennik',
+    'work.case1.tags': 'UX cennika \u00b7 Rezerwacje',
+    'work.case1.metric': '+44%',
+    'work.case1.metricLabel': 'rezerwacji online w 90 dni',
     'work.case1.leak':
-      'Strony zbudowane po to, \u017ceby konwertowa\u0107, \u0142adowa\u0142y si\u0119 najwolniej w ca\u0142ym serwisie. Za ka\u017cd\u0105 dodatkow\u0105 sekund\u0119 \u0142adowania p\u0142aci\u0142y rejestracje, kt\u00f3re nie dosz\u0142y do skutku.',
-    'work.case1.fix':
-      'Przebudowali\u015bmy krytyczn\u0105 \u015bcie\u017ck\u0119 renderowania \u2014 69% szybsze \u0142adowanie, LCP poni\u017cej sekundy i zero blokowania g\u0142\u00f3wnego w\u0105tku.',
-    'work.case1.r1.value': '0,7 s',
-    'work.case1.r1.label': 'LCP',
-    'work.case1.r2.value': '0,11',
-    'work.case1.r2.label': 'CLS',
-    'work.case1.r3.value': '0 ms',
-    'work.case1.r3.label': 'czas blokowania (TBT)',
-    'work.case1.r4.value': '96',
-    'work.case1.r4.label': 'Lighthouse \u2014 wydajno\u015b\u0107',
-    'work.case1.alt1':
-      'Przebudowana strona docelowa obok raportu Lighthouse: wydajno\u015b\u0107 96, LCP 0,7 s.',
-
-    'work.case2.meta': 'Klinika medycyny estetycznej',
-    'work.case2.title': 'Interaktywny, p\u0142aski cennik',
-    'work.case2.tags': 'UX cennika \u00b7 Rezerwacje',
-    'work.case2.metric': '+31%',
-    'work.case2.metricLabel': 'powtarzalnego przychodu miesi\u0119cznego',
-    'work.case2.leak':
       'Ceny ponad 120 zabieg\u00f3w by\u0142y rozrzucone po PDF-ach i podstronach. Kto chcia\u0142 pozna\u0107 koszt jednego zabiegu, musia\u0142 zadzwoni\u0107 i zapyta\u0107 \u2014 a wi\u0119kszo\u015b\u0107 nie dzwoni\u0142a.',
-    'work.case2.fix':
+    'work.case1.fix':
       'Jeden p\u0142aski cennik z wyszukiwark\u0105. Wszystkie zabiegi i wszyscy specjali\u015bci na jednej stronie, a rezerwacja o jedno klikni\u0119cie od ka\u017cdej pozycji.',
-    'work.case2.r1.value': '\u221280%',
-    'work.case2.r1.label': 'klikni\u0119\u0107 do rezerwacji wizyty',
-    'work.case2.r2.value': '+44%',
-    'work.case2.r2.label': 'rezerwacji online',
-    'work.case2.r3.value': '120+',
-    'work.case2.r3.label': 'cen na jednej stronie',
-    'work.case2.alt1':
+    'work.case1.r1.value': '5 \u2192 1',
+    'work.case1.r1.label': 'klikni\u0119\u0107 do rezerwacji wizyty',
+    'work.case1.r2.value': '120+',
+    'work.case1.r2.label': 'cen na jednej stronie',
+    'work.case1.alt1':
       'Cennik kliniki: jedna lista konsultacji i zabieg\u00f3w z cenami, z wyszukiwark\u0105.',
 
-    'work.case3.meta': 'Kancelaria nieruchomo\u015bci',
-    'work.case3.title': 'Aplikacja do um\u00f3w na prywatnym modelu',
-    'work.case3.tags': 'Aplikacja na miar\u0119 \u00b7 Prywatne AI',
-    'work.case3.metric': '30+ godz.',
-    'work.case3.metricLabel': 'odzyskiwanych co tydzie\u0144',
-    'work.case3.leak':
+    'work.case2.meta': 'Kancelaria nieruchomo\u015bci',
+    'work.case2.title': 'Aplikacja do um\u00f3w na prywatnym modelu',
+    'work.case2.tags': 'Aplikacja na miar\u0119 \u00b7 Prywatne AI',
+    'work.case2.metric': '30+ godz.',
+    'work.case2.metricLabel': 'odzyskiwanych co tydzie\u0144',
+    'work.case2.leak':
       'Ka\u017cda transakcja oznacza\u0142a przepisywanie tych samych sze\u015bciu dokument\u00f3w, a potem czytanie ich linijka po linijce w poszukiwaniu kosztownych b\u0142\u0119d\u00f3w: zaliczki sprzecznej z tre\u015bci\u0105 umowy, terminu przekazania kluczy wypadaj\u0105cego w niedziel\u0119.',
-    'work.case3.fix':
+    'work.case2.fix':
       'Aplikacja tworzy projekt umowy z danych transakcji i sprawdza go wed\u0142ug wewn\u0119trznych zasad kancelarii. Model dzia\u0142a na serwerze kancelarii \u2014 \u017cadne dane klient\u00f3w nie opuszczaj\u0105 biura.',
-    'work.case3.r1.value': '45 \u2192 6 min',
-    'work.case3.r1.label': 'na pierwszy projekt umowy',
-    'work.case3.r2.value': '6',
-    'work.case3.r2.label': 'zautomatyzowanych typ\u00f3w dokument\u00f3w',
-    'work.case3.r3.value': '100%',
-    'work.case3.r3.label': 'lokalnie, nic nie wychodzi na zewn\u0105trz',
-    'work.case3.alt1':
+    'work.case2.r1.value': '45 \u2192 6 min',
+    'work.case2.r1.label': 'na pierwszy projekt umowy',
+    'work.case2.r2.value': '6',
+    'work.case2.r2.label': 'zautomatyzowanych typ\u00f3w dokument\u00f3w',
+    'work.case2.r3.value': '100%',
+    'work.case2.r3.label': 'lokalnie, nic nie wychodzi na zewn\u0105trz',
+    'work.case2.alt1':
       'Ekran kontroli umowy: prywatny model wskazuje zaliczk\u0119 sprzeczn\u0105 z kwot\u0105 zapisan\u0105 s\u0142ownie i proponuje poprawk\u0119.',
 
-    'work.case4.meta': 'Centrum medyczne',
-    'work.case4.title': 'Redesign strony i \u015bcie\u017cka rezerwacji',
-    'work.case4.tags': 'Redesign \u00b7 Konwersja',
-    'work.case4.metric': '+58%',
-    'work.case4.metricLabel': 'rezerwacji wizyt online',
-    'work.case4.leak':
+    'work.case3.meta': 'Centrum medyczne',
+    'work.case3.title': 'Redesign strony i \u015bcie\u017cka rezerwacji',
+    'work.case3.tags': 'Redesign \u00b7 Konwersja',
+    'work.case3.metric': '+58%',
+    'work.case3.metricLabel': 'rezerwacji wizyt online w 90 dni',
+    'work.case3.leak':
       'Stara strona chowa\u0142a to, po co pacjentki na ni\u0105 wchodzi\u0142y. \u015aciany tekstu, brak jasnej drogi do wizyty i nic, co odpowiada\u0142oby poziomowi opieki w gabinecie.',
-    'work.case4.fix':
+    'work.case3.fix':
       'Przebudowali\u015bmy stron\u0119 wok\u00f3\u0142 wizyty: us\u0142ugi pogrupowane tak, jak pytaj\u0105 o nie pacjentki, zdj\u0119cia prawdziwych gabinet\u00f3w i zespo\u0142u, rezerwacja w zasi\u0119gu r\u0119ki na ka\u017cdym ekranie.',
-    'work.case4.r1.value': '+41%',
-    'work.case4.r1.label': '\u015br. czas na stronie',
-    'work.case4.r2.value': '\u221234%',
-    'work.case4.r2.label': 'wsp\u00f3\u0142czynnik odrzuce\u0144',
-    'work.case4.r3.value': '2 klikni\u0119cia',
-    'work.case4.r3.label': 'z dowolnej strony do rezerwacji',
-    'work.case4.alt1': 'Strona g\u0142\u00f3wna kliniki przed i po redesignie, obok siebie.',
-    'work.case4.alt2':
+    'work.case3.r1.value': '+41%',
+    'work.case3.r1.label': '\u015br. czas na stronie',
+    'work.case3.r2.value': '\u221234%',
+    'work.case3.r2.label': 'wsp\u00f3\u0142czynnik odrzuce\u0144',
+    'work.case3.r3.value': '2 klikni\u0119cia',
+    'work.case3.r3.label': 'z dowolnej strony do rezerwacji',
+    'work.case3.alt1': 'Strona g\u0142\u00f3wna kliniki przed i po redesignie, obok siebie.',
+    'work.case3.alt2':
       'Podstrona \u201eO nas\u201d przed i po, ze zdj\u0119ciami kliniki i czytelniejsz\u0105 struktur\u0105.',
-    'work.case4.alt3':
+    'work.case3.alt3':
       'Podstrona zabieg\u00f3w przed i po, z procedurami pogrupowanymi w czytelne karty.',
 
-    'work.case5.meta': 'Urz\u0105dzenia SOS dla senior\u00f3w',
-    'work.case5.title': 'Konfigurator urz\u0105dzenia i pakietu',
-    'work.case5.tags': 'UX konfiguratora \u00b7 Wydajno\u015b\u0107',
-    'work.case5.metric': '+27%',
-    'work.case5.metricLabel': 'konwersja na karcie produktu',
-    'work.case5.leak':
+    'work.case4.meta': 'Urz\u0105dzenia SOS dla senior\u00f3w',
+    'work.case4.title': 'Konfigurator urz\u0105dzenia i pakietu',
+    'work.case4.tags': 'UX konfiguratora \u00b7 Wydajno\u015b\u0107',
+    'work.case4.metric': '+27%',
+    'work.case4.metricLabel': 'konwersja na karcie produktu w 90 dni',
+    'work.case4.leak':
       'Wyb\u00f3r urz\u0105dzenia i pakietu opieki by\u0142 rozbity na osobne ekrany, a realny koszt miesi\u0119czny pojawia\u0142 si\u0119 dopiero w koszyku. Ludzie, kt\u00f3rzy chcieli kupi\u0107 zegarek, odchodzili, zanim zrozumieli, na co si\u0119 pisz\u0105.',
-    'work.case5.fix':
+    'work.case4.fix':
       'Jeden konfigurator: urz\u0105dzenie, d\u0142ugo\u015b\u0107 pakietu i ca\u0142odobowa teleopieka na jednym ekranie, z sum\u0105 aktualizuj\u0105c\u0105 si\u0119 przy ka\u017cdym wyborze. Front przebudowany tak, \u017ce nic nie prze\u0142adowuje si\u0119 mi\u0119dzy wyborami.',
-    'work.case5.r1.value': '5 \u2192 2',
-    'work.case5.r1.label': 'klikni\u0119\u0107 do z\u0142o\u017cenia zam\u00f3wienia',
-    'work.case5.r2.value': '2,8 \u2192 0,8 s',
-    'work.case5.r2.label': 'czas \u0142adowania',
-    'work.case5.r3.value': '+18%',
-    'work.case5.r3.label': 'pakiet\u00f3w dokupionych do urz\u0105dzenia',
-    'work.case5.alt1':
+    'work.case4.r1.value': '5 \u2192 2',
+    'work.case4.r1.label': 'klikni\u0119\u0107 do z\u0142o\u017cenia zam\u00f3wienia',
+    'work.case4.r2.value': '2,8 \u2192 0,8 s',
+    'work.case4.r2.label': 'czas \u0142adowania',
+    'work.case4.r3.value': '+18%',
+    'work.case4.r3.label': 'pakiet\u00f3w dokupionych do urz\u0105dzenia',
+    'work.case4.alt1':
       'Karta produktu zegarka SOS: d\u0142ugo\u015b\u0107 pakietu, ca\u0142odobowa teleopieka i suma zam\u00f3wienia na jednym ekranie.',
+
+    'work.case5.meta': 'B2B SaaS',
+    'work.case5.title': 'Przebudowa szybko\u015bci na \u015bcie\u017cce konwersji',
+    'work.case5.tags': 'Wydajno\u015b\u0107 \u00b7 Konwersja',
+    'work.case5.metric': '+34%',
+    'work.case5.metricLabel': 'wsp\u00f3\u0142czynnik konwersji w 90 dni',
+    'work.case5.leak':
+      'Strony zbudowane po to, \u017ceby konwertowa\u0107, \u0142adowa\u0142y si\u0119 najwolniej w ca\u0142ym serwisie. Za ka\u017cd\u0105 dodatkow\u0105 sekund\u0119 \u0142adowania p\u0142aci\u0142y rejestracje, kt\u00f3re nie dosz\u0142y do skutku.',
+    'work.case5.fix':
+      'Przebudowali\u015bmy krytyczn\u0105 \u015bcie\u017ck\u0119 renderowania \u2014 69% szybsze \u0142adowanie, LCP poni\u017cej sekundy i zero blokowania g\u0142\u00f3wnego w\u0105tku.',
+    'work.case5.r1.value': '0,7 s',
+    'work.case5.r1.label': 'LCP',
+    'work.case5.r2.value': '0,11',
+    'work.case5.r2.label': 'CLS',
+    'work.case5.r3.value': '0 ms',
+    'work.case5.r3.label': 'czas blokowania (TBT)',
+    'work.case5.r4.value': '96',
+    'work.case5.r4.label': 'Lighthouse \u2014 wydajno\u015b\u0107',
+    'work.case5.alt1':
+      'Przebudowana strona docelowa obok raportu Lighthouse: wydajno\u015b\u0107 96, LCP 0,7 s.',
 
     'testimonial.quote':
       '\u201cNie zbudowali nam tylko strony \u2014 przebudowali spos\u00f3b, w jaki klienci nas znajduj\u0105. Zapyta\u0144 jest wi\u0119cej, a te, kt\u00f3re dostajemy, naprawd\u0119 maj\u0105 sens.\u201d',
-    'testimonial.role': 'Managing Partner, kancelaria prawna, Warszawa',
+    'testimonial.role': 'Managing Partner, kancelaria prawna',
 
     'packages.eyebrow': 'Pakiety',
     'packages.heading': 'Jak wsp\u00f3\u0142pracujemy',
@@ -494,7 +490,7 @@ export const translations: Record<Lang, Record<string, string>> = {
 
     'booking.close': 'Zamknij wid\u017cet rezerwacji',
 
-    'footer.tagline': 'Przesta\u0144 traci\u0107 zapyta\u0144.',
+    'footer.tagline': 'Przesta\u0144 traci\u0107 zapytania.',
   },
 };
 
