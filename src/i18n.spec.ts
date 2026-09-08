@@ -76,7 +76,7 @@ describe('setLanguage', () => {
     document.documentElement.lang = 'en';
     document.body.innerHTML = `
       <p data-i18n="hero.line1">placeholder</p>
-      <p data-i18n="hero.line2">placeholder</p>
+      <p data-i18n="hero.point1">placeholder</p>
       <p data-i18n="unknown.key">untouched</p>
       <option data-i18n="hero.scroll">Scroll</option>
       <button data-lang="en"></button>
@@ -89,8 +89,8 @@ describe('setLanguage', () => {
     expect(document.querySelector('[data-i18n="hero.line1"]')!.textContent).toBe(
       translations.pl['hero.line1'],
     );
-    expect(document.querySelector('[data-i18n="hero.line2"]')!.textContent).toBe(
-      translations.pl['hero.line2'],
+    expect(document.querySelector('[data-i18n="hero.point1"]')!.textContent).toBe(
+      translations.pl['hero.point1'],
     );
   });
 

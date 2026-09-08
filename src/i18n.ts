@@ -8,14 +8,14 @@ export const translations: Record<Lang, Record<string, string>> = {
     'nav.clients': 'Who we work with',
     'nav.work': 'Results',
     'nav.packages': 'Packages',
-    'nav.process': 'Process',
-    'nav.faq': 'FAQ',
     'nav.menu': 'Open menu',
     'nav.menuClose': 'Close menu',
     'nav.cta': 'Book a free revenue review',
 
     'hero.line1': 'Your site is leaking inquiries you never see.',
-    'hero.line2': 'Buried contact. Nothing after hours. Looks cheaper than the fees you charge.',
+    'hero.point1': 'Buried contact.',
+    'hero.point2': 'Nothing after hours.',
+    'hero.point3': 'Looks cheaper than the fees you charge.',
     'hero.sub':
       'A slow or weak site bleeds qualified leads every day. We find the leaks on a free 30-min call, then fix the system that keeps costing you work.',
     'hero.cta': 'Book a free revenue review',
@@ -252,15 +252,14 @@ export const translations: Record<Lang, Record<string, string>> = {
     'nav.clients': 'Z kim pracujemy',
     'nav.work': 'Rezultaty',
     'nav.packages': 'Pakiety',
-    'nav.process': 'Proces',
-    'nav.faq': 'FAQ',
     'nav.menu': 'Otw\u00f3rz menu',
     'nav.menuClose': 'Zamknij menu',
     'nav.cta': 'Um\u00f3w bezp\u0142atn\u0105 analiz\u0119 przychod\u00f3w',
 
     'hero.line1': 'Twoja strona gubi zapytania, o kt\u00f3rych nawet nie wiesz.',
-    'hero.line2':
-      'Kontakt schowany. Zero obs\u0142ugi po godzinach. Wygl\u0105da taniej ni\u017c stawki, kt\u00f3re bierzesz.',
+    'hero.point1': 'Kontakt schowany.',
+    'hero.point2': 'Zero obs\u0142ugi po godzinach.',
+    'hero.point3': 'Wygl\u0105da taniej ni\u017c stawki, kt\u00f3re bierzesz.',
     'hero.sub':
       'Wolna lub s\u0142aba strona codziennie traci warto\u015bciowe leady. Podczas bezp\u0142atnej 30-minutowej rozmowy znajdujemy przecieki, a potem naprawiamy system, kt\u00f3ry wci\u0105\u017c kosztuje Ci\u0119 klient\u00f3w.',
     'hero.cta': 'Um\u00f3w bezp\u0142atn\u0105 analiz\u0119 przychod\u00f3w',

@@ -498,7 +498,6 @@ body.nav-open {
 /* split-text line wrappers */
 .split-line-mask {
   display: block;
-  overflow: hidden;
 }
 
 .split-line {
@@ -555,6 +554,27 @@ body.nav-open {
 .hero__line--accent {
   font-style: italic;
   color: var(--ink);
+  padding-top: 24px;
+}
+
+.hero__points {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.4em 1em;
+  font-size: clamp(1.15rem, 1.6vw + 0.6rem, 1.7rem);
+}
+
+.hero__point .split-line-mask {
+  display: inline-block;
+}
+
+.hero__point:not(:first-child)::before {
+  content: "·";
+  margin-right: 0.6em;
+  font-style: normal;
+  color: var(--ink-muted);
+  vertical-align: text-top;
 }
 
 .hero__line--accent .split-line em,
