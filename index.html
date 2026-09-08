@@ -44,7 +44,7 @@
   </head>
   <body>
     <!-- Preloader -->
-    <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader" id="preloader" aria-hidden="true" data-deploy>
       <div class="preloader__inner">
         <span class="preloader__wordmark">subsecond<sup>&reg;</sup></span>
         <span class="preloader__counter" id="preloader-counter">0</span>
@@ -772,9 +772,7 @@
           <li class="case case--wide" data-reveal>
             <div class="case__head">
               <div>
-                <p class="case__meta" data-i18n="work.case5.meta">
-                  B2B SaaS
-                </p>
+                <p class="case__meta" data-i18n="work.case5.meta">B2B SaaS</p>
                 <h3 class="case__title" data-i18n="work.case5.title">
                   Speed rebuild on the conversion path
                 </h3>
@@ -1303,14 +1301,14 @@
       }
       (function () {
         function loadGA() {
-          gtag('js', new Date());
-          gtag('config', 'G-0FPHMP823V');
-          var s = document.createElement('script');
-          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-0FPHMP823V';
+          gtag("js", new Date());
+          gtag("config", "G-0FPHMP823V");
+          var s = document.createElement("script");
+          s.src = "https://www.googletagmanager.com/gtag/js?id=G-0FPHMP823V";
           s.async = true;
           document.head.appendChild(s);
         }
-        if ('requestIdleCallback' in window) {
+        if ("requestIdleCallback" in window) {
           requestIdleCallback(loadGA, { timeout: 3000 });
         } else {
           setTimeout(loadGA, 2500);
