@@ -1373,7 +1373,7 @@ body.nav-open {
   font-size: var(--step-small);
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--ink-faint);
+  color: var(--ink-muted);
   margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
   text-align: center;
 }
@@ -1571,7 +1571,7 @@ body.nav-open {
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--ink-faint);
+  color: var(--ink-muted);
 }
 
 /* ------------------------------------------------------------------ */
