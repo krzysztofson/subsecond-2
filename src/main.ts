@@ -1,9 +1,12 @@
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-import { initBookingModal } from './booking';
+import { captureAttribution } from './attribution';
+import { initBookingModal, initCalendly, initFallbackForms } from './booking';
 import { initMobileNav } from './nav';
 import { getStoredLang, setLanguage, type Lang } from './i18n';
+import { initNotice } from './notice';
+import { trackPageView } from './tracking';
 import { createHeroScene } from './webgl';
 import {
   animateLinesIn,
@@ -17,6 +20,9 @@ import {
 } from './animations';
 
 gsap.registerPlugin(ScrollTrigger);
+
+captureAttribution();
+trackPageView('home', 'Homepage');
 
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -130,8 +136,11 @@ document.querySelectorAll<HTMLElement>('[data-lang]').forEach((btn) => {
 /*  Interaction layers                                                */
 /* ---------------------------------------------------------------- */
 
+initNotice();
 initCursor();
 initMagnetics();
 initNavScrollState();
 initMobileNav();
 initBookingModal();
+initCalendly();
+initFallbackForms();

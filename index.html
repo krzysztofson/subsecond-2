@@ -92,7 +92,7 @@
           href="#contact"
           class="btn btn--primary nav__drawer-cta"
           data-cursor
-          data-booking-cta
+          data-booking-cta="drawer"
           data-i18n="nav.cta"
           >Book a free revenue review</a
         >
@@ -130,7 +130,7 @@
           class="btn btn--small"
           data-cursor
           data-magnetic
-          data-booking-cta
+          data-booking-cta="nav"
           data-i18n="nav.cta"
           >Book a free revenue review</a
         >
@@ -176,7 +176,7 @@
               class="btn btn--primary"
               data-cursor
               data-magnetic
-              data-booking-cta
+              data-booking-cta="hero"
               data-i18n="hero.cta"
               >Book a free revenue review</a
             >
@@ -940,7 +940,7 @@
               href="#contact"
               class="btn btn--ghost package__cta"
               data-cursor
-              data-booking-cta
+              data-booking-cta="package-foundation"
               data-i18n="packages.cta"
               >Book a free revenue review</a
             >
@@ -984,7 +984,7 @@
               href="#contact"
               class="btn btn--ghost package__cta"
               data-cursor
-              data-booking-cta
+              data-booking-cta="package-growth"
               data-i18n="packages.cta"
               >Book a free revenue review</a
             >
@@ -1029,7 +1029,7 @@
               href="#contact"
               class="btn btn--ghost package__cta"
               data-cursor
-              data-booking-cta
+              data-booking-cta="package-partner"
               data-i18n="packages.cta"
               >Book a free revenue review</a
             >
@@ -1199,10 +1199,7 @@
         </div>
         <div class="contact__booking">
           <div class="contact__calendly-embed" data-reveal>
-            <div
-              class="calendly-inline-widget"
-              data-url="https://calendly.com/chatcraft/introductory-call?hide_event_type_details=1&hide_gdpr_banner=1&background_color=0a0a0a&text_color=f5f2ed&primary_color=b82318&timezone=Europe%2FWarsaw"
-            ></div>
+            <div class="calendly-inline-widget" data-calendly-embed="contact" data-auto-load="false"></div>
           </div>
           <div class="contact__fallback" data-reveal>
             <p
@@ -1218,6 +1215,7 @@
               class="contact__fallback-form"
               action="https://submit-form.com/nF9PeLkU9"
               method="POST"
+              data-fallback-form="contact"
             >
               <label class="contact__fallback-field">
                 <span data-i18n="contact.fallback.name">Name</span>
@@ -1282,38 +1280,14 @@
         <div
           class="calendly-inline-widget"
           id="calendly-inline-widget"
-          data-url="https://calendly.com/chatcraft/introductory-call?hide_event_type_details=1&hide_gdpr_banner=1&background_color=0a0a0a&text_color=f5f2ed&primary_color=b82318&timezone=Europe%2FWarsaw"
+          data-calendly-embed="modal"
+          data-calendly-lazy="manual"
+          data-auto-load="false"
         ></div>
       </div>
     </div>
 
-    <script
-      src="https://assets.calendly.com/assets/external/widget.js"
-      async
-    ></script>
     <script type="module" src="/src/main.ts"></script>
 
-    <!-- Google Analytics -->
-    <script defer>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      (function () {
-        function loadGA() {
-          gtag("js", new Date());
-          gtag("config", "G-0FPHMP823V");
-          var s = document.createElement("script");
-          s.src = "https://www.googletagmanager.com/gtag/js?id=G-0FPHMP823V";
-          s.async = true;
-          document.head.appendChild(s);
-        }
-        if ("requestIdleCallback" in window) {
-          requestIdleCallback(loadGA, { timeout: 3000 });
-        } else {
-          setTimeout(loadGA, 2500);
-        }
-      })();
-    </script>
   </body>
 </html>

@@ -1674,3 +1674,417 @@ body.calendly-modal-open {
     animation: none;
   }
 }
+
+/* ------------------------------------------------------------------ */
+/*  Cookie notice                                                      */
+/* ------------------------------------------------------------------ */
+
+.cookie-notice {
+  position: fixed;
+  left: var(--gutter);
+  bottom: 1.25rem;
+  z-index: 150;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  max-width: calc(100% - 2 * var(--gutter));
+  padding: 0.75rem 0.75rem 0.75rem 1.1rem;
+  border: 1px solid var(--hairline);
+  background: var(--bg-raised);
+  font-size: 0.82rem;
+  color: var(--ink-muted);
+}
+
+.cookie-notice__btn {
+  flex: none;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  color: var(--ink);
+  border: 1px solid var(--hairline);
+  border-radius: 999px;
+  padding: 0.45rem 1rem;
+  transition: border-color 0.3s, color 0.3s;
+}
+
+.cookie-notice__btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ------------------------------------------------------------------ */
+/*  Revenue review LP                                                  */
+/* ------------------------------------------------------------------ */
+
+/* Helper copy here carries the reassurance ("Free · No pitch", what you get),
+   so it gets real contrast on --bg: muted 0.72 ≈ 8.5:1, faint 0.55 ≈ 5.3:1,
+   note 0.82 ≈ 10.8:1 (the site-wide faint 0.3 is only 2.3:1). */
+.lp {
+  --ink-muted: rgba(236, 232, 225, 0.72);
+  --ink-faint: rgba(236, 232, 225, 0.55);
+  --ink-note: rgba(236, 232, 225, 0.82);
+}
+
+.lp .hero__cta-note {
+  font-size: 0.875rem;
+  letter-spacing: 0.04em;
+  color: var(--ink-note);
+}
+
+.lp-hero {
+  min-height: 88svh;
+  padding-top: 6rem;
+  background: radial-gradient(
+    120% 80% at 85% 10%,
+    rgba(201, 163, 106, 0.09),
+    transparent 60%
+  );
+}
+
+.lp .nav.is-scrolled {
+  background: var(--bg);
+  box-shadow: 0 1px 0 var(--hairline);
+}
+
+.lp-hero__title {
+  font-size: clamp(2.4rem, 6vw + 0.5rem, 6rem);
+  max-width: 14em;
+}
+
+.lp-section {
+  padding-top: clamp(5rem, 10vw, 9rem);
+  scroll-margin-top: 4.5rem;
+}
+
+.lp-benefits {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--hairline);
+}
+
+.lp-benefit {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding: clamp(1.8rem, 3vw, 2.6rem) clamp(1rem, 2.5vw, 2.4rem) 0 0;
+}
+
+.lp-benefit__num {
+  font-family: var(--font-mono);
+  font-size: var(--step-small);
+  color: var(--accent);
+}
+
+.lp-benefit__title {
+  font-family: var(--font-serif);
+  font-size: var(--step-h3);
+  font-weight: 350;
+  line-height: 1.15;
+}
+
+.lp-benefit__desc {
+  color: var(--ink-muted);
+  line-height: 1.6;
+  max-width: 26em;
+}
+
+.lp-cta-row {
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+}
+
+.lp-proof {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1rem, 3vw, 2rem);
+}
+
+.lp-proof__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: clamp(1.4rem, 2.5vw, 2rem);
+  border: 1px solid var(--hairline);
+  background: var(--bg-raised);
+}
+
+.lp-proof__metric {
+  font-family: var(--font-serif);
+  font-size: clamp(2.6rem, 4vw + 1rem, 4.2rem);
+  font-weight: 320;
+  line-height: 1;
+  color: var(--accent);
+}
+
+.lp-proof__label {
+  font-family: var(--font-mono);
+  font-size: var(--step-small);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-muted);
+}
+
+.lp-proof__desc {
+  margin-top: 1rem;
+  color: var(--ink-muted);
+  font-size: 0.92em;
+  line-height: 1.55;
+}
+
+.lp-proof__desc strong {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.lp-proof__figure {
+  margin-top: clamp(1rem, 3vw, 2rem);
+}
+
+.lp-proof__caption {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.9rem;
+  padding: 0.9rem 0.4rem 0.3rem;
+  font-family: var(--font-mono);
+  font-size: var(--step-small);
+  letter-spacing: 0.04em;
+  color: var(--ink-muted);
+}
+
+.lp-proof__caption-metric {
+  color: var(--accent);
+}
+
+.lp-steps .contact__step-title {
+  font-size: 1.25rem;
+}
+
+.lp-promise {
+  margin-top: clamp(2rem, 4vw, 3rem);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: var(--step-lede);
+  color: var(--ink);
+}
+
+.lp-book {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.lp-book.section {
+  padding-top: clamp(3rem, 6vw, 5rem);
+}
+
+.lp-book .eyebrow {
+  margin-bottom: 1.2rem;
+}
+
+.lp-book__heading {
+  font-size: var(--step-h2);
+  max-width: 14em;
+}
+
+.lp-book .contact__body {
+  margin-top: 0.8rem;
+}
+
+.lp-book__booking {
+  margin-top: 0.5rem;
+}
+
+.lp-book__sub {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.5rem 1.4rem;
+  margin-top: 0.9rem;
+}
+
+.lp-book__meta {
+  font-size: var(--step-lede);
+  color: var(--ink-note);
+}
+
+.lp-book__open {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 0.1rem;
+  transition: color 0.3s;
+}
+
+.lp-book__open:hover {
+  color: var(--ink);
+}
+
+.lp-sticky {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .lp-benefits,
+  .lp-proof {
+    grid-template-columns: 1fr;
+  }
+
+  .lp-benefit {
+    padding-right: 0;
+    padding-bottom: 1.6rem;
+    border-bottom: 1px solid var(--hairline);
+  }
+
+}
+
+@media (max-width: 640px) {
+  .lp-steps {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .lp-hero .btn--large {
+    width: 100%;
+    padding-inline: 1.2rem;
+    white-space: normal;
+  }
+
+  .lp-sticky {
+    display: block;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 60;
+    padding: 0.75rem var(--gutter) calc(0.75rem + env(safe-area-inset-bottom));
+    background: rgba(10, 10, 9, 0.9);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-top: 1px solid var(--hairline);
+    transform: translateY(100%);
+    transition: transform 0.4s var(--ease-out);
+  }
+
+  .lp-sticky.is-visible {
+    transform: translateY(0);
+  }
+
+  .lp-sticky__btn {
+    width: 100%;
+  }
+
+  /* keep the notice clear of the sticky CTA while it's showing */
+  .lp-sticky.is-visible ~ .cookie-notice {
+    bottom: calc(4.5rem + env(safe-area-inset-bottom));
+  }
+
+  .lp-hero {
+    min-height: auto;
+    padding-top: 8rem;
+    padding-bottom: 3rem;
+  }
+
+  .cookie-notice {
+    bottom: 0.75rem;
+    font-size: 0.75rem;
+    transition: bottom 0.4s var(--ease-out);
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/*  Calendly loading state                                             */
+/* ------------------------------------------------------------------ */
+
+.calendly-inline-widget {
+  position: relative;
+}
+
+/* Calendly's own spinner needs its stylesheet; ours replaces it. */
+.calendly-spinner {
+  display: none;
+}
+
+.calendly-status {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding: clamp(4rem, 12vh, 8rem) 1.5rem 2rem;
+  border: 1px solid var(--hairline);
+  background: var(--bg-raised);
+  text-align: center;
+}
+
+.calendly-status__dots {
+  display: flex;
+  gap: 0.45rem;
+}
+
+.calendly-status__dots i {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: calendly-dot 1.2s var(--ease-out) infinite;
+}
+
+.calendly-status__dots i:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.calendly-status__dots i:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes calendly-dot {
+  0%,
+  80%,
+  100% {
+    opacity: 0.25;
+    transform: scale(0.8);
+  }
+  40% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.calendly-status__text {
+  max-width: 22em;
+  font-size: var(--step-body);
+  color: var(--ink);
+}
+
+.calendly-status__link {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 0.1rem;
+}
+
+[data-calendly-state="slow"] .calendly-status__dots,
+[data-calendly-state="error"] .calendly-status__dots {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .calendly-status__dots i {
+    animation: none;
+    opacity: 0.7;
+  }
+}
