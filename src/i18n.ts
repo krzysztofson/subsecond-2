@@ -58,6 +58,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     'work.label.fix': 'The fix',
     'work.compare.before': 'Before',
     'work.compare.after': 'After',
+    'work.compare.drag': 'Drag to compare before and after',
 
     'work.case1.meta': 'Beauty clinic',
     'work.case1.title': 'Interactive flat pricing',
@@ -108,11 +109,16 @@ export const translations: Record<Lang, Record<string, string>> = {
     'work.case3.r2.label': 'bounce rate',
     'work.case3.r3.value': '2 clicks',
     'work.case3.r3.label': 'from any page to a booking',
-    'work.case3.alt1': 'Clinic homepage before and after the redesign, side by side.',
+    'work.case3.alt1':
+      'Clinic homepage before the redesign: a dim photo slider with small, hard-to-read text.',
     'work.case3.alt2':
-      'About page before and after, with clinic photography and a clearer structure.',
+      'Clinic homepage after the redesign: a clear headline with the appointment button and phone number up front.',
     'work.case3.alt3':
-      'Treatments page before and after, with procedures grouped into readable cards.',
+      'Plastic surgery clinic page before the redesign: dense text blocks and a third-party booking widget.',
+    'work.case3.alt4':
+      'Plastic surgery clinic page after the redesign: an editorial about section with procedures, photography and key numbers.',
+    'work.case3.cap1': 'Women\u2019s health clinic \u2014 homepage',
+    'work.case3.cap2': 'Plastic surgery clinic \u2014 about page',
 
     'work.case4.meta': 'Medical alert devices',
     'work.case4.title': 'Device and plan configurator',
@@ -303,6 +309,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     'work.label.fix': 'Naprawa',
     'work.compare.before': 'Przed',
     'work.compare.after': 'Po',
+    'work.compare.drag': 'Przeci\u0105gnij, aby por\u00f3wna\u0107 przed i po',
 
     'work.case1.meta': 'Klinika medycyny estetycznej',
     'work.case1.title': 'Interaktywny, p\u0142aski cennik',
@@ -353,11 +360,16 @@ export const translations: Record<Lang, Record<string, string>> = {
     'work.case3.r2.label': 'wsp\u00f3\u0142czynnik odrzuce\u0144',
     'work.case3.r3.value': '2 klikni\u0119cia',
     'work.case3.r3.label': 'z dowolnej strony do rezerwacji',
-    'work.case3.alt1': 'Strona g\u0142\u00f3wna kliniki przed i po redesignie, obok siebie.',
+    'work.case3.alt1':
+      'Strona g\u0142\u00f3wna kliniki przed redesignem: przyciemniony slider ze zdj\u0119ciem i drobnym, nieczytelnym tekstem.',
     'work.case3.alt2':
-      'Podstrona \u201eO nas\u201d przed i po, ze zdj\u0119ciami kliniki i czytelniejsz\u0105 struktur\u0105.',
+      'Strona g\u0142\u00f3wna kliniki po redesignie: wyra\u017any nag\u0142\u00f3wek, przycisk um\u00f3wienia wizyty i numer telefonu na pierwszym planie.',
     'work.case3.alt3':
-      'Podstrona zabieg\u00f3w przed i po, z procedurami pogrupowanymi w czytelne karty.',
+      'Strona kliniki chirurgii plastycznej przed redesignem: g\u0119ste bloki tekstu i zewn\u0119trzny wid\u017cet rezerwacji.',
+    'work.case3.alt4':
+      'Strona kliniki chirurgii plastycznej po redesignie: redakcyjna sekcja \u201eO nas\u201d z zabiegami, zdj\u0119ciami i kluczowymi liczbami.',
+    'work.case3.cap1': 'Klinika ginekologiczna \u2014 strona g\u0142\u00f3wna',
+    'work.case3.cap2': 'Klinika chirurgii plastycznej \u2014 podstrona \u201eO nas\u201d',
 
     'work.case4.meta': 'Urz\u0105dzenia SOS dla senior\u00f3w',
     'work.case4.title': 'Konfigurator urz\u0105dzenia i pakietu',

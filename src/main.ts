@@ -3,6 +3,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import { captureAttribution } from './attribution';
 import { initBookingModal, initCalendly, initFallbackForms } from './booking';
+import { initCompareSliders } from './compare';
 import { initMobileNav } from './nav';
 import { getStoredLang, setLanguage, type Lang } from './i18n';
 import { initNotice } from './notice';
@@ -139,6 +140,7 @@ document.querySelectorAll<HTMLElement>('[data-lang]').forEach((btn) => {
 initNotice();
 initCursor();
 initMagnetics();
+initCompareSliders();
 initNavScrollState();
 initMobileNav();
 initBookingModal();
