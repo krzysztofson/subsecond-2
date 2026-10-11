@@ -31,7 +31,7 @@ function scheduled(inviteeUuid: string, opts?: { origin?: string; source?: Messa
 }
 
 function leadCalls(oaiq: Mock<Tag>) {
-  return oaiq.mock.calls.filter((call) => call[0] === 'measure' && call[1] === 'lead_created');
+  return oaiq.mock.calls.filter((call) => call[0] === 'measure' && call[1] === 'appointment_scheduled');
 }
 
 describe('Calendly tracking', () => {
@@ -49,7 +49,7 @@ describe('Calendly tracking', () => {
     `;
   });
 
-  it('should fire exactly one lead_created per booking, with the invitee as event_id', () => {
+  it('should fire exactly one appointment_scheduled per booking, with the invitee as event_id', () => {
     handleCalendlyMessage(scheduled('INV-ONCE'));
     handleCalendlyMessage(scheduled('INV-ONCE'));
 
@@ -57,7 +57,7 @@ describe('Calendly tracking', () => {
     expect(calls).toHaveLength(1);
     expect(calls[0]).toEqual([
       'measure',
-      'lead_created',
+      'appointment_scheduled',
       { type: 'customer_action' },
       { event_id: 'INV-ONCE' },
     ]);

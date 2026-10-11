@@ -29,6 +29,6 @@ export function trackPageView(id: string, name: string): void {
  * invitee UUID so a future Conversions API call can be deduplicated against it.
  */
 export function trackBooking(eventId: string, placement: string): void {
-  window.oaiq?.('measure', 'lead_created', { type: 'customer_action' }, { event_id: eventId });
+  window.oaiq?.('measure', 'appointment_scheduled', { type: 'customer_action' }, { event_id: eventId });
   trackEvent('calendly_booking_completed', { placement, event_id: eventId });
 }

@@ -43,7 +43,7 @@ npm test         # run unit tests
 ## Tracking
 
 - The OpenAI Measurement Pixel (`OPENAI_PIXEL_ID`) and GA4 (`GA_ID`) from `src/config.ts` are injected into every HTML page by the `injectTracking()` plugin in `vite.config.ts`. Pixel debug logging is on for `localhost` or with `?oaiq_debug=1`.
-- **Primary conversion:** `lead_created` fires once per successful Calendly booking (`calendly.event_scheduled`), with the Calendly invitee UUID as `event_id`. Opening Calendly or clicking a CTA never counts as a lead.
+- **Primary conversion:** `appointment_scheduled` fires once per successful Calendly booking (`calendly.event_scheduled`), with the Calendly invitee UUID as `event_id`. Opening Calendly or clicking a CTA never counts as a lead.
 - GA4 funnel events: `openai_lp_view`, `revenue_review_cta_click`, `booking_cta_click`, `calendly_opened`, `calendly_date_selected`, `calendly_booking_completed`.
 - Never strip the query string on the way in: the pixel reads `oppref` from the landing URL. `/revenue-review` is served without a redirect.
 - Bookings made on calendly.com directly (the "open in a new tab" fallback) carry UTMs but don't fire the pixel conversion.
