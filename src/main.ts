@@ -23,7 +23,7 @@ import {
 gsap.registerPlugin(ScrollTrigger);
 
 captureAttribution();
-trackPageView('home', 'Homepage');
+trackPageView('home-a', 'Homepage A (previous design)');
 
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 

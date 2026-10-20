@@ -1,8 +1,47 @@
-import gsap from 'gsap';
-
 /** Clamps a divider position to the 0–100 range. */
 export function clampPosition(value: number): number {
   return Math.min(100, Math.max(0, value));
+}
+
+const easeInOut = (t: number): number => (t < 0.5 ? 2 * t * t : 1 - (-2 * t + 2) ** 2 / 2);
+const easeOut = (t: number): number => 1 - (1 - t) ** 2;
+
+/**
+ * Left, right, back to rest: the one-time sweep that hints the divider can be
+ * dragged. Plain rAF so the pages using sliders don't need GSAP. Returns a cancel.
+ */
+function playHint(start: number, onFrame: (pos: number) => void): () => void {
+  const legs = [
+    { to: start - 22, ms: 900, ease: easeInOut },
+    { to: start + 18, ms: 1100, ease: easeInOut },
+    { to: start, ms: 800, ease: easeOut },
+  ];
+  let from = start;
+  let leg = 0;
+  let legStart = 0;
+  let raf = 0;
+
+  const tick = (now: number): void => {
+    legStart ||= now;
+    const { to, ms, ease } = legs[leg];
+    const t = Math.min(1, (now - legStart) / ms);
+    onFrame(from + (to - from) * ease(t));
+    if (t === 1) {
+      from = to;
+      leg += 1;
+      legStart = now;
+      if (leg === legs.length) return;
+    }
+    raf = requestAnimationFrame(tick);
+  };
+
+  const timer = window.setTimeout(() => {
+    raf = requestAnimationFrame(tick);
+  }, 400);
+  return () => {
+    window.clearTimeout(timer);
+    cancelAnimationFrame(raf);
+  };
 }
 
 /**
@@ -20,7 +59,7 @@ export function initCompareSliders(root: ParentNode = document): void {
     if (!handle) return;
 
     const state = { pos: Number(el.dataset.start ?? 50) };
-    let hint: gsap.core.Timeline | null = null;
+    let cancelHint: (() => void) | null = null;
 
     const render = (): void => {
       const pos = clampPosition(state.pos);
@@ -30,8 +69,8 @@ export function initCompareSliders(root: ParentNode = document): void {
     };
 
     const set = (pos: number): void => {
-      hint?.kill();
-      hint = null;
+      cancelHint?.();
+      cancelHint = null;
       state.pos = clampPosition(pos);
       render();
     };
@@ -83,12 +122,10 @@ export function initCompareSliders(root: ParentNode = document): void {
       (entries) => {
         if (!entries.some((entry) => entry.isIntersecting)) return;
         observer.disconnect();
-        const start = state.pos;
-        hint = gsap
-          .timeline({ delay: 0.4, onUpdate: render })
-          .to(state, { pos: start - 22, duration: 0.9, ease: 'power2.inOut' })
-          .to(state, { pos: start + 18, duration: 1.1, ease: 'power2.inOut' })
-          .to(state, { pos: start, duration: 0.8, ease: 'power2.out' });
+        cancelHint = playHint(state.pos, (pos) => {
+          state.pos = pos;
+          render();
+        });
       },
       { threshold: 0.6 },
     );

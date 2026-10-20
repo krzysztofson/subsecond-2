@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest';
-import indexHtml from '../index.html?raw';
+import indexHtml from '../a.html?raw';
 import { STORAGE_KEY, getStoredLang, isLang, setLanguage, translations } from './i18n';
 
 describe('translations', () => {
@@ -17,7 +17,7 @@ describe('translations', () => {
     }
   });
 
-  it('should define every key referenced from index.html', () => {
+  it('should define every key referenced from a.html (the previous homepage)', () => {
     const referenced = [
       ...indexHtml.matchAll(/data-i18n(?:-alt|-aria|-placeholder)?="([^"]+)"/g),
     ].map((match) => match[1]);
