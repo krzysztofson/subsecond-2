@@ -8,6 +8,7 @@ import { initBookingModal, initCalendly, loadCalendly } from './booking';
 import { initCompareSliders } from './compare';
 import { initReviewForms } from './forms';
 import { initNotice } from './notice';
+import { initThemeToggle } from './theme';
 import { trackEvent, trackPageView } from './tracking';
 
 captureAttribution();
@@ -21,6 +22,7 @@ document.querySelectorAll<HTMLElement>('[data-review-cta]').forEach((cta) => {
   cta.addEventListener('click', () => trackEvent('video_review_cta_click', { cta: cta.dataset.reviewCta }));
 });
 
+initThemeToggle();
 initNotice();
 initCompareSliders();
 initBookingModal();

@@ -28,7 +28,17 @@
     <link rel="stylesheet" href="/src/styles/widgets.css" />
     <link rel="stylesheet" href="/src/styles/b.css" />
   </head>
-  <body class="pr t-onyx" data-page="home-b" data-page-name="Homepage B (preview)">
+  <body class="pr" data-page="home-b" data-page-name="Homepage B (preview)">
+    <script>
+      // Pick Pearl (light) or Onyx (dark) before first paint; src/theme.ts takes over after load.
+      (function () {
+        var t = null;
+        try { t = localStorage.getItem('subsecond-b-theme'); } catch (e) {}
+        if (t !== 'light' && t !== 'dark') t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        if (t === 'dark') document.body.classList.add('t-onyx');
+        document.documentElement.style.colorScheme = t;
+      })();
+    </script>
     <header id="top" class="pr-hero">
       <div class="pr-light" aria-hidden="true"></div>
       <nav class="glass pr-nav" aria-label="Main">
@@ -39,6 +49,10 @@
           <a href="#results">Results</a>
           <a href="#faq">FAQ</a>
         </div>
+        <button type="button" class="pr-theme" data-theme-toggle aria-label="Switch to dark mode">
+          <svg class="ic i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"></path></svg
+          ><svg class="ic i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"></path></svg>
+        </button>
         <a href="#book" class="btn btn-ink" style="min-height: 44px; padding: 0 18px; font-size: 14px" data-booking-cta="nav"
           >Book a free review</a
         >
