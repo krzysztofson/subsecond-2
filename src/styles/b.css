@@ -1,7 +1,7 @@
 /* ------------------------------------------------------------------ */
-/*  /b preview — design B ("Prism"). Pearl (light) is the base; Onyx   */
-/*  (dark) is body.pr.t-onyx, picked from the system setting or the    */
-/*  nav toggle (src/theme.ts).                                          */
+/*  Design B ("Prism"), used by the homepage and /revenue-review.       */
+/*  Pearl (light) is the base; Onyx (dark) is body.pr.t-onyx, picked    */
+/*  from the system setting or the nav toggle (src/theme.ts).           */
 /*  Rules up to "Additions" mirror designs/b-prism one-to-one, except   */
 /*  the Onyx page and closing-section backgrounds, darkened on purpose  */
 /*  (#131314 → #0b0b0c, #1B1B1D → #121214).                             */
@@ -384,3 +384,34 @@ a{color:#0E1420}a:hover{color:#0E1420}
 .pr-form[data-state="sent"] .pr-field,.pr-form[data-state="sent"] button{display:none}
 .pr .cookie-notice__btn{min-height:44px;font-weight:600;letter-spacing:.04em}
 
+/* ------------------------------------------------------------------ */
+/*  Revenue review landing page (/revenue-review)                       */
+/* ------------------------------------------------------------------ */
+
+.lp-cards{list-style:none;margin:44px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:18px}
+.lp-card{border-radius:30px;padding:26px 28px 30px;display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.lp-cta-row{display:flex;flex-direction:column;align-items:center;gap:22px;margin-top:44px;text-align:center}
+.lp-proof li{gap:12px}
+.lp-proof .pr-d{max-width:24em;padding-top:12px;border-top:1px solid rgba(14,20,32,.08)}
+.pr.t-onyx .lp-proof .pr-d{border-color:rgba(255,255,255,.1)}
+/* no duration chip here, so each step spans three shared rows instead of four */
+.lp-steps li{grid-row:span 3}
+.lp-book-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px 40px;margin-bottom:36px}
+.lp-book-head .pr-link{min-height:0}
+.lp-booking{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:18px;align-items:start}
+.lp-embed{height:clamp(700px,90vh,960px);border-radius:30px;padding:12px;overflow:hidden}
+.lp-embed .calendly-inline-widget{border-radius:22px;overflow:hidden}
+@media (max-width:980px){.lp-booking{grid-template-columns:minmax(0,1fr)}.lp-embed{height:clamp(640px,120vh,880px)} }
+.pr textarea.pr-input{height:auto;min-height:110px;padding:14px 18px;line-height:1.5;resize:vertical}
+.pr .pr-input:focus-visible{outline:2px solid #0E1420;outline-offset:2px}
+.pr.t-onyx .pr-input:focus-visible{outline-color:#EBC970}
+/* phones: sticky CTA past the hero, hidden again at the calendar (src/revenue-review.ts) */
+.lp-sticky{display:none}
+@media (max-width:760px){
+.lp-sticky{display:block;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:12px clamp(20px,4vw,56px) calc(12px + env(safe-area-inset-bottom));background:rgba(236,238,241,.86);-webkit-backdrop-filter:blur(16px) saturate(180%);backdrop-filter:blur(16px) saturate(180%);border-top:1px solid rgba(14,20,32,.08);transform:translateY(100%);transition:transform .4s cubic-bezier(.2,.8,.2,1)}
+.pr.t-onyx .lp-sticky{background:rgba(11,11,12,.86);border-top-color:rgba(255,255,255,.1)}
+.lp-sticky.is-visible{transform:none}
+.lp-sticky .btn{width:100%}
+/* keep the cookie notice clear of the sticky CTA while it's showing */
+.lp-sticky.is-visible~.cookie-notice{bottom:calc(84px + env(safe-area-inset-bottom))}
+}

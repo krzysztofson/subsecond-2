@@ -1,5 +1,4 @@
-// jsdom does not implement matchMedia; GSAP's ScrollTrigger requires it at
-// registration time, so stub it before any module imports gsap.
+// jsdom does not implement matchMedia; src/theme.ts reads it, so stub it.
 if (typeof window !== 'undefined' && !window.matchMedia) {
   window.matchMedia = (query: string): MediaQueryList =>
     ({

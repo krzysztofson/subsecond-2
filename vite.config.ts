@@ -106,10 +106,6 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: 'index.html',
-        // Design B preview, served at /b (noindex).
-        b: 'b.html',
-        // Previous homepage, kept at /a (noindex) for comparison.
-        a: 'a.html',
         revenueReview: 'revenue-review.html',
       },
     },

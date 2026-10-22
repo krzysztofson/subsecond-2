@@ -30,243 +30,221 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400..700&family=Unbounded:wght@300..800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/src/styles/widgets.css" />
-    <link rel="stylesheet" href="/src/styles/d.css" />
+    <link rel="stylesheet" href="/src/styles/b.css" />
   </head>
-  <body class="d" data-page="home" data-page-name="Homepage">
-    <header class="d-nav">
-      <div class="wrap">
-        <a href="#top" class="d-mark">subsecond<sup>®</sup></a>
-        <nav class="d-links" aria-label="Main">
+  <body class="pr" data-page="home" data-page-name="Homepage">
+    <script>
+      // Pick Pearl (light) or Onyx (dark) before first paint; src/theme.ts takes over after load.
+      (function () {
+        var t = null;
+        try { t = localStorage.getItem('subsecond-b-theme'); } catch (e) {}
+        if (t !== 'light' && t !== 'dark') t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        if (t === 'dark') document.body.classList.add('t-onyx');
+        document.documentElement.style.colorScheme = t;
+      })();
+    </script>
+    <header id="top" class="pr-hero">
+      <div class="pr-light" aria-hidden="true"></div>
+      <nav class="glass pr-nav" aria-label="Main">
+        <a href="#top" class="pr-logo">subsecond</a>
+        <div class="pr-links">
           <a href="#offers">Services</a>
           <a href="#process">How it works</a>
           <a href="#results">Results</a>
           <a href="#faq">FAQ</a>
-        </nav>
-        <a href="#book" class="d-btn" style="min-height: 44px; padding: 0 1.2rem" data-booking-cta="nav"
+        </div>
+        <button type="button" class="pr-theme" data-theme-toggle aria-label="Switch to dark mode">
+          <svg class="ic i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"></path></svg
+          ><svg class="ic i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"></path></svg>
+        </button>
+        <a href="#book" class="btn btn-ink" style="min-height: 44px; padding: 0 18px; font-size: 14px" data-booking-cta="nav"
           >Book a free review</a
         >
+      </nav>
+      <div class="wrap pr-grid">
+        <h1 class="disp pr-h1" style="font-size: clamp(32px, 3.9vw, 56px)">
+          <span style="display: block">Your website and social media should bring you clients.</span
+          ><span class="pr-h1-acc" style="display: block">I make sure they do.</span>
+        </h1>
+        <div class="pr-stage">
+          <span class="pr-caustic" aria-hidden="true"></span>
+          <span class="pr-shadow" aria-hidden="true"></span>
+          <div class="pr-lens pr-ring">
+            <p class="pr-lens-k">Clients see around</p>
+            <p class="disp pr-lens-n">25%</p>
+            <p class="pr-lens-k">more bookings within 90 days</p>
+          </div>
+        </div>
+        <div class="pr-foot">
+          <p class="pr-sub">
+            I help businesses improve their marketing so they make more money. A premium website, on-brand content and
+            more clients from the visitors you already get, all handled by one person. You just send an email and it
+            gets done.
+          </p>
+          <div class="pr-ctas">
+            <a href="#book" class="btn btn-ink" data-booking-cta="hero"
+              ><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="3"></rect><path d="M3.5 10h17M8 3v4M16 3v4"></path></svg
+              >Book a free 20-minute website review</a
+            >
+            <a href="#review" class="btn btn-clear" data-review-cta="hero"
+              ><svg class="ic fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg>Get a free video review, no call
+              needed</a
+            >
+            <a href="#results" class="pr-link" style="align-self: flex-start">See the results</a>
+            <p class="pr-vtime" style="margin: 0">20 min · Free · The 3 biggest fixes</p>
+          </div>
+        </div>
+        <p class="pr-trust"><span class="pr-dot" style="margin-top: 0"></span>Trusted by clinics, law firms and service businesses since 2019.</p>
       </div>
     </header>
 
     <main>
-      <section id="top" class="d-hero">
-        <svg class="d-silk" viewBox="0 0 800 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-          <defs>
-            <radialGradient id="dsA"><stop offset="0" class="s1"></stop><stop offset="1" class="s0"></stop></radialGradient>
-            <radialGradient id="dsB"><stop offset="0" class="s2"></stop><stop offset="1" class="s0"></stop></radialGradient>
-            <radialGradient id="dsC"><stop offset="0" class="s3"></stop><stop offset="1" class="s0"></stop></radialGradient>
-            <filter id="dsWarp" x="-30%" y="-30%" width="160%" height="160%">
-              <feTurbulence type="fractalNoise" baseFrequency="0.005 0.011" numOctaves="3" seed="11" result="n"></feTurbulence>
-              <feDisplacementMap in="SourceGraphic" in2="n" scale="240" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap>
-            </filter>
-          </defs>
-          <g filter="url(#dsWarp)">
-            <ellipse cx="500" cy="300" rx="300" ry="110" fill="url(#dsA)"></ellipse>
-            <ellipse cx="360" cy="470" rx="320" ry="80" fill="url(#dsB)"></ellipse>
-            <ellipse cx="600" cy="560" rx="200" ry="190" fill="url(#dsC)"></ellipse>
-            <ellipse cx="420" cy="210" rx="160" ry="60" fill="url(#dsB)"></ellipse>
-            <ellipse cx="660" cy="380" rx="140" ry="220" fill="url(#dsA)"></ellipse>
-          </g>
-        </svg>
-        <svg class="d-grain" aria-hidden="true">
-          <filter id="dGrain">
-            <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"></feTurbulence>
-            <feColorMatrix type="saturate" values="0"></feColorMatrix>
-          </filter>
-          <rect width="100%" height="100%" filter="url(#dGrain)"></rect>
-        </svg>
-        <div class="wrap d-hero-main">
-          <h1 class="d-h1">
-            <span class="ln"><span>Your website and social media should bring you clients.</span></span
-            ><span class="ln"><span><em>I make sure they do.</em></span></span>
-          </h1>
-          <div class="d-hero-row">
-            <div class="d-hero-copy">
-              <p class="d-lede">
-                I help businesses improve their marketing so they make more money. A premium website, on-brand
-                content and more clients from the visitors you already get, all handled by one person. You just send
-                an email and it gets done.
-              </p>
-              <div class="d-ctas">
-                <a href="#book" class="d-btn" data-booking-cta="hero">Book a free 20-minute website review</a>
-                <a href="#review" class="d-btn ghost" data-review-cta="hero">Get a free video review, no call needed</a>
-                <a href="#results" class="d-link">See the results</a>
-              </div>
-              <p class="d-micro" style="margin: 0">20 min · Free · The 3 biggest fixes</p>
-              <p class="d-trust"><span class="d-dot"></span>Trusted by clinics, law firms and service businesses since 2019.</p>
-            </div>
-            <div class="d-receipt">
-              <span class="d-micro">Clients see around</span>
-              <span class="d-metric">~25%</span>
-              <span class="d-micro">more bookings within 90 days</span>
-            </div>
-          </div>
-        </div>
-        <span class="d-scroll" aria-hidden="true"></span>
-      </section>
-
-      <section id="problem" class="d-sec">
-        <div class="wrap">
-          <div class="d-eyebrow"><b>01</b>Problem</div>
-          <div class="d-head">
-            <h2 class="d-h2">You’re great at what you do. Your website doesn’t show it.</h2>
-            <div style="display: flex; flex-direction: column; gap: 22px">
-              <p class="d-lede">
-                Most service businesses lose clients before the first conversation. The site looks cheaper than the
-                service, it loads slowly on a phone, and the booking button is hard to find. Social media gets posted
-                when someone has a free hour, and inquiries that come in at 9 pm wait until morning.
-              </p>
-              <p class="d-em">Meanwhile, a competitor with a sharper website gets the call.</p>
-            </div>
-          </div>
-          <ul class="d-rows">
-            <li><span class="d-dot"></span>Visitors leave a slow site within 3 seconds.</li>
-            <li><span class="d-dot"></span>Inquiries left unanswered for hours go to whoever replies first.</li>
-            <li><span class="d-dot"></span>An outdated look makes premium prices feel hard to justify.</li>
+      <section id="problem" class="pr-sec" style="padding-top: 80px">
+        <span class="pr-pool" aria-hidden="true" style="left: 6%; bottom: 2%; width: 560px; height: 320px"></span>
+        <span class="pr-pool" aria-hidden="true" style="left: 38%; bottom: 0; width: 520px; height: 300px"></span>
+        <span class="pr-pool" aria-hidden="true" style="right: 4%; bottom: 4%; width: 560px; height: 320px"></span>
+        <div class="wrap pr-problem">
+          <h2 class="disp pr-h2" style="max-width: 15em">You’re great at what you do. Your website doesn’t show it.</h2>
+          <p class="pr-lead" style="max-width: 40em">
+            Most service businesses lose clients before the first conversation. The site looks cheaper than the service,
+            it loads slowly on a phone, and the booking button is hard to find. Social media gets posted when someone has
+            a free hour, and inquiries that come in at 9 pm wait until morning.
+          </p>
+          <p class="pr-strong">Meanwhile, a competitor with a sharper website gets the call.</p>
+          <ul class="glass pr-facts">
+            <li><span class="pr-dot"></span>Visitors leave a slow site within 3 seconds.</li>
+            <li><span class="pr-dot"></span>Inquiries left unanswered for hours go to whoever replies first.</li>
+            <li><span class="pr-dot"></span>An outdated look makes premium prices feel hard to justify.</li>
           </ul>
         </div>
       </section>
 
-      <section id="offers" class="d-sec">
+      <section id="offers" class="pr-sec" style="padding-top: 60px">
+        <span class="pr-pool" aria-hidden="true" style="left: -4%; top: 22%; width: 760px; height: 620px"></span>
+        <span class="pr-pool" aria-hidden="true" style="right: -6%; top: 16%; width: 620px; height: 620px"></span>
+        <span class="pr-pool" aria-hidden="true" style="left: 30%; bottom: 0; width: 820px; height: 520px"></span>
         <div class="wrap">
-          <div class="d-eyebrow"><b>02</b>Services</div>
-          <div class="d-head">
-            <h2 class="d-h2">Everything your online presence needs, handled by one person.</h2>
-            <p class="d-lede">
-              No agency, no dev team, no chasing five freelancers. You get design, content and ongoing improvements
-              from one person who knows your business.
+          <div class="pr-offhead">
+            <h2 class="disp pr-h2">Everything your online presence needs, handled by one person.</h2>
+            <p class="pr-lead" style="font-size: 17px">
+              No agency, no dev team, no chasing five freelancers. You get design, content and ongoing improvements from
+              one person who knows your business.
             </p>
           </div>
-          <div class="d-bento">
-            <article class="d-cell" style="grid-area: w">
-              <div class="d-mg mg-ba" aria-hidden="true">
-                <div class="ba-l ba-before">
-                  <i style="left: 6%; top: 8%; width: 20%; height: 6%"></i>
-                  <i style="left: 52%; top: 9%; width: 42%; height: 3%"></i>
-                  <i style="left: 6%; top: 21%; width: 60%; height: 4%"></i>
-                  <i style="left: 6%; top: 28%; width: 50%; height: 4%"></i>
-                  <i style="left: 6%; top: 37%; width: 28%; height: 25%"></i>
-                  <i style="left: 37%; top: 37%; width: 28%; height: 25%"></i>
-                  <i style="left: 68%; top: 37%; width: 26%; height: 25%"></i>
-                  <i style="left: 6%; top: 67%; width: 88%; height: 3%"></i>
-                  <i style="left: 6%; top: 73%; width: 80%; height: 3%"></i>
-                  <i style="left: 6%; top: 79%; width: 72%; height: 3%"></i>
-                  <i style="left: 82%; top: 89%; width: 12%; height: 3%"></i>
+          <div class="pr-bento">
+            <article class="glass pr-tile wide" style="grid-area: w">
+              <div class="pr-mg mg-layers" aria-hidden="true">
+                <div class="ly-scene">
+                  <div class="ly-stack">
+                    <span class="ly-plane p1"></span>
+                    <span class="ly-plane p2">
+                      <span class="ly-b hi" style="left: 8%; top: 12%; width: 54%; height: 12%"></span>
+                      <span class="ly-b" style="left: 8%; top: 30%; width: 40%; height: 5%"></span>
+                      <span class="ly-b" style="left: 8%; top: 39%; width: 32%; height: 5%"></span>
+                      <span class="ly-b" style="left: 8%; top: 62%; width: 26%; height: 24%"></span>
+                      <span class="ly-b" style="left: 37%; top: 62%; width: 26%; height: 24%"></span>
+                      <span class="ly-b" style="left: 66%; top: 62%; width: 26%; height: 24%"></span>
+                    </span>
+                    <span class="ly-plane p3"><span class="ly-book">Book</span></span>
+                  </div>
                 </div>
-                <div class="ba-l ba-after">
-                  <i style="left: 6%; top: 9%; width: 13%; height: 2.2%"></i>
-                  <span class="ba-pill" style="right: 6%; top: 6.5%">Book</span>
-                  <i class="h" style="left: 6%; top: 23%; width: 46%; height: 6.5%"></i>
-                  <i class="h" style="left: 6%; top: 32%; width: 36%; height: 6.5%"></i>
-                  <i style="left: 6%; top: 45%; width: 38%; height: 1.6%"></i>
-                  <i style="left: 6%; top: 49%; width: 32%; height: 1.6%"></i>
-                  <span class="ba-cta" style="left: 6%; top: 58%">Book a visit</span>
-                  <i class="img" style="left: 56%; top: 22%; width: 38%; height: 54%"></i>
-                  <i style="left: 6%; top: 86%; width: 88%; height: 1px"></i>
-                </div>
-                <span class="ba-split"></span>
-                <span class="ba-tag" style="left: 14px">Before</span>
-                <span class="ba-tag after" style="right: 14px">After</span>
               </div>
-              <div class="d-ctext">
-                <h3 class="d-ct">Premium web design</h3>
-                <p class="d-cd">
-                  A website that looks as premium as your service and is built around one goal: getting booked. Fast
-                  on every phone, clear prices, and a booking button never more than 2 clicks away.
+              <div class="pr-tb">
+                <h3 class="pr-t" style="font-size: 26px">Premium web design</h3>
+                <p class="pr-d">
+                  A website that looks as premium as your service and is built around one goal: getting booked. Fast on
+                  every phone, clear prices, and a booking button never more than 2 clicks away.
                 </p>
-                <p class="d-proof">
-                  <em>+27%</em><span>online bookings in the first 90 days after relaunch, on average. Pages load in under 1.5 seconds.</span>
+                <p class="pr-proof">
+                  <strong>+27%</strong><span>online bookings in the first 90 days after relaunch, on average. Pages load in under 1.5 seconds.</span>
                 </p>
               </div>
             </article>
 
-            <article class="d-cell" style="grid-area: l">
-              <div class="d-mg mg-dial" aria-hidden="true">
-                <div class="dl">
-                  <svg viewBox="0 0 200 200">
-                    <circle class="dl-ring" cx="100" cy="100" r="84"></circle>
-                    <circle class="dl-ticks" cx="100" cy="100" r="84"></circle>
-                    <circle class="dl-night" cx="100" cy="100" r="74"></circle>
-                  </svg>
-                  <span class="dl-lb" style="left: 50%; top: 0; transform: translateX(-50%)">00</span>
-                  <span class="dl-lb" style="right: 0; top: 50%; transform: translateY(-50%)">06</span>
-                  <span class="dl-lb" style="left: 50%; bottom: 0; transform: translateX(-50%)">12</span>
-                  <span class="dl-lb" style="left: 0; top: 50%; transform: translateY(-50%)">18</span>
-                  <span class="dl-hand"></span>
-                  <span class="dl-ping"></span>
-                  <span class="dl-c">24/7</span>
-                </div>
-                <ol class="dl-log">
-                  <li class="g1"><b>21:04</b>New inquiry</li>
-                  <li class="g2"><b>21:06</b>Answered</li>
-                  <li class="g3"><b>21:09</b>Visit booked</li>
-                </ol>
+            <article class="glass pr-tile" style="grid-area: c">
+              <div class="pr-mg mg-fan" aria-hidden="true">
+                <span class="fan f1"></span>
+                <span class="fan f2"></span>
+                <span class="fan f3"></span>
+                <span class="fan f4"><b></b><i></i><i></i></span>
+                <span class="fan-chip"
+                  ><svg class="ic" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="3"></rect><path d="M3.5 10h17M8 3v4M16 3v4"></path></svg>On
+                  schedule</span
+                >
               </div>
-              <div class="d-ctext">
-                <h3 class="d-ct">Fast lead response</h3>
-                <p class="d-cd">
-                  No inquiry waits until morning. An on-brand assistant answers website and social media questions
-                  24/7, collects the details and books the visit or call straight into your calendar.
-                </p>
-                <p class="d-proof">
-                  <em>&lt; 5 min</em><span>Every inquiry answered within 5 minutes, day or night. About 1 in 5 bookings now comes in outside opening hours.</span>
-                </p>
-              </div>
-            </article>
-
-            <article class="d-cell" style="grid-area: c">
-              <div class="d-mg mg-cal" aria-hidden="true">
-                <div class="dc-days"><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span></div>
-                <div class="dc-grid">
-                  <i></i><i><b style="animation-delay: 0.1s"></b></i><i></i><i><b style="animation-delay: 0.35s"></b></i><i></i><i></i><i><b style="animation-delay: 0.6s"></b></i>
-                  <i></i><i><b style="animation-delay: 0.85s"></b></i><i></i><i></i><i><b style="animation-delay: 1.1s"></b></i><i></i><i></i>
-                  <i><b style="animation-delay: 1.35s"></b></i><i></i><i></i><i><b style="animation-delay: 1.6s"></b></i><i></i><i><b style="animation-delay: 1.85s"></b></i><i></i>
-                  <i></i><i><b style="animation-delay: 2.1s"></b></i><i></i><i></i><i><b style="animation-delay: 2.35s"></b></i><i></i><i></i>
-                </div>
-              </div>
-              <div class="d-ctext">
-                <h3 class="d-ct">On-brand content</h3>
-                <p class="d-cd">
+              <div class="pr-tb">
+                <h3 class="pr-t">On-brand content</h3>
+                <p class="pr-d">
                   Social media posts, blog articles and landing pages that sound like you and match your new look.
                   Planned monthly, written and designed for you, and published on schedule.
                 </p>
-                <p class="d-proof"><em>8–12</em><span>ready posts a month. +35% website visits from social media within 6 months.</span></p>
+                <p class="pr-proof"><strong>8–12</strong><span>ready posts a month. +35% website visits from social media within 6 months.</span></p>
               </div>
             </article>
 
-            <article class="d-cell" style="grid-area: r">
-              <div class="d-mg mg-ab" aria-hidden="true">
-                <div class="ab-r"><span class="ab-k">A</span><span class="ab-line"><i class="a"></i></span><span></span></div>
-                <div class="ab-r"><span class="ab-k">B</span><span class="ab-line"><i class="b"></i></span><span class="ab-up">+18%</span></div>
-                <span class="d-micro">Same visitors · more inquiries</span>
+            <article class="glass pr-tile" style="grid-area: r">
+              <div class="pr-mg mg-split" aria-hidden="true">
+                <span class="sp-chip">+18%</span>
+                <div class="sp-frame">
+                  <div class="sp-side"><span class="sp-tag">A</span><span class="sp-bar" style="height: 46%"></span></div>
+                  <div class="sp-side"><span class="sp-tag">B</span><span class="sp-bar b" style="height: 76%"></span></div>
+                  <span class="sp-handle"></span>
+                </div>
               </div>
-              <div class="d-ctext">
-                <h3 class="d-ct">More clients from the visitors you already get</h3>
-                <p class="d-cd">I find where visitors give up, test better headlines, buttons and booking steps, and keep what works.</p>
-                <p class="d-proof">
-                  <em>+18%</em><span>more inquiries from the same number of visitors, on average. Every change measured, with a short monthly report.</span>
+              <div class="pr-tb">
+                <h3 class="pr-t">More clients from the visitors you already get</h3>
+                <p class="pr-d">I find where visitors give up, test better headlines, buttons and booking steps, and keep what works.</p>
+                <p class="pr-proof">
+                  <strong>+18%</strong><span>more inquiries from the same number of visitors, on average. Every change measured, with a short monthly report.</span>
                 </p>
               </div>
             </article>
 
-            <article class="d-cell" style="grid-area: d">
-              <div class="d-mg mg-live" aria-hidden="true">
-                <svg class="lv-env" viewBox="0 0 48 36"><rect x="1" y="1" width="46" height="34" rx="2"></rect><path d="M2 3l22 17L46 3"></path></svg>
-                <div class="lv-track"><span class="lv-run"></span></div>
-                <div class="lv-labels"><span>Email</span><span>Day 1</span><span>Day 2</span><span class="on">Live</span></div>
+            <article class="glass pr-tile" style="grid-area: l">
+              <div class="pr-mg mg-ping" aria-hidden="true">
+                <span class="pg-ring"></span>
+                <span class="pg-ring r2"></span>
+                <span class="pg-ring r3"></span>
+                <span class="pg-core"><svg class="ic" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"></path></svg>21:04</span>
+                <span class="pg-chip c1">New inquiry</span>
+                <span class="pg-chip c2">Answered</span>
+                <span class="pg-chip c3"><svg class="ic" viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7"></path></svg>Booked</span>
               </div>
-              <div class="d-ctext">
-                <h3 class="d-ct">Done-for-you service</h3>
-                <p class="d-cd">
-                  One yearly plan, one point of contact. Need a new page, a price change or a seasonal promotion? Send
-                  an email. It’s live within 2 business days, and you never have to brief a dev team.
+              <div class="pr-tb">
+                <h3 class="pr-t">Fast lead response</h3>
+                <p class="pr-d">
+                  No inquiry waits until morning. An on-brand assistant answers website and social media questions 24/7,
+                  collects the details and books the visit or call straight into your calendar.
                 </p>
-                <p class="d-proof">
-                  <em>≤ 2 days</em><span>Changes live in 2 business days or less, on average. 9 out of 10 clients renew their yearly plan.</span>
+                <p class="pr-proof">
+                  <strong>&lt; 5 min</strong><span>Every inquiry answered within 5 minutes, day or night. About 1 in 5 bookings now comes in outside opening hours.</span>
+                </p>
+              </div>
+            </article>
+
+            <article class="glass pr-tile" style="grid-area: d">
+              <div class="pr-mg mg-rail" aria-hidden="true">
+                <div class="rl-track">
+                  <span class="rl-run"
+                    ><span class="rl-env"
+                      ><svg class="ic" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2.5"></rect><path d="M4 7.5l8 6 8-6"></path></svg></span
+                  ></span>
+                </div>
+                <div class="rl-marks"><span>Email</span><span>Day 1</span><span>Day 2</span></div>
+                <div class="rl-live"><span class="rl-toggle"><span class="rl-knob"></span></span>Live</div>
+              </div>
+              <div class="pr-tb">
+                <h3 class="pr-t">Done-for-you service</h3>
+                <p class="pr-d">
+                  One yearly plan, one point of contact. Need a new page, a price change or a seasonal promotion? Send an
+                  email. It’s live within 2 business days, and you never have to brief a dev team.
+                </p>
+                <p class="pr-proof">
+                  <strong>≤ 2 days</strong><span>Changes live in 2 business days or less, on average. 9 out of 10 clients renew their yearly plan.</span>
                 </p>
               </div>
             </article>
@@ -274,31 +252,30 @@
         </div>
       </section>
 
-      <section id="process" class="d-sec">
+      <section id="process" class="pr-sec" style="padding-top: 60px">
         <div class="wrap">
-          <div class="d-eyebrow"><b>03</b>How it works</div>
-          <div class="d-head"><h2 class="d-h2">From outdated to fully booked in three steps.</h2></div>
-          <ol class="d-steps">
+          <h2 class="disp pr-h2" style="max-width: 14em">From outdated to fully booked in three steps.</h2>
+          <ol class="pr-steps">
             <li>
-              <span class="d-num" aria-hidden="true">01</span>
-              <h3 class="d-stt">Free website review</h3>
-              <span class="d-dur">20 minutes</span>
-              <p class="d-cd">I look at your site, social media and booking flow, and show you the 3 biggest things costing you clients.</p>
+              <span class="pr-n" aria-hidden="true">1</span>
+              <h3 class="pr-t" style="font-size: 22px">Free website review</h3>
+              <span class="pr-dur">20 minutes</span>
+              <p class="pr-d" style="font-size: 16px">I look at your site, social media and booking flow, and show you the 3 biggest things costing you clients.</p>
             </li>
             <li>
-              <span class="d-num" aria-hidden="true">02</span>
-              <h3 class="d-stt">Redesign built around bookings</h3>
-              <span class="d-dur">4 to 6 weeks</span>
-              <p class="d-cd">
+              <span class="pr-n" aria-hidden="true">2</span>
+              <h3 class="pr-t" style="font-size: 22px">Redesign built around bookings</h3>
+              <span class="pr-dur">4 to 6 weeks</span>
+              <p class="pr-d" style="font-size: 16px">
                 A premium new website with clear prices, fast pages and an easy booking path. You approve the design; I
                 handle everything else.
               </p>
             </li>
             <li>
-              <span class="d-num" aria-hidden="true">03</span>
-              <h3 class="d-stt">Grow on autopilot</h3>
-              <span class="d-dur">Ongoing</span>
-              <p class="d-cd">
+              <span class="pr-n" aria-hidden="true">3</span>
+              <h3 class="pr-t" style="font-size: 22px">Grow on autopilot</h3>
+              <span class="pr-dur">Ongoing</span>
+              <p class="pr-d" style="font-size: 16px">
                 Content, improvements and updates every month. You email, it gets done, and you see the results in a
                 short monthly report.
               </p>
@@ -307,32 +284,36 @@
         </div>
       </section>
 
-      <section id="results" class="d-sec">
+      <section id="results" class="pr-sec" style="padding-top: 60px">
+        <span class="pr-pool" aria-hidden="true" style="left: 8%; top: 6%; width: 620px; height: 360px"></span>
+        <span class="pr-pool" aria-hidden="true" style="right: 6%; top: 4%; width: 620px; height: 380px"></span>
+        <span class="pr-pool" aria-hidden="true" style="left: 20%; top: 50%; width: 820px; height: 520px"></span>
         <div class="wrap">
-          <div class="d-eyebrow"><b>04</b>Results</div>
-          <div class="d-head"><h2 class="d-h2">Results, not just a pretty website.</h2></div>
-          <ul class="d-stats">
-            <li><span class="d-metric">+27%</span><span class="d-label">More online bookings in 90 days</span></li>
-            <li><span class="d-metric">+18%</span><span class="d-label">More inquiries from the same visitors</span></li>
-            <li><span class="d-metric">&lt;5<small>min</small></span><span class="d-label">Reply time to every inquiry, 24/7</span></li>
-            <li><span class="d-metric">30+</span><span class="d-label">Businesses served</span></li>
+          <h2 class="disp pr-h2">Results, not just a pretty website.</h2>
+          <ul class="glass pr-stats">
+            <li><span class="pr-num">+27%</span><p>more online bookings in 90 days</p></li>
+            <li><span class="pr-num">+18%</span><p>more inquiries from the same visitors</p></li>
+            <li><span class="pr-num">&lt;5<small>min</small></span><p>reply time to every inquiry, 24/7</p></li>
+            <li><span class="pr-num">30+</span><p>businesses served</p></li>
           </ul>
 
-          <ul class="d-cases">
+          <ul class="pr-cases">
             <!-- Case 01 — medical clinic redesign, before/after -->
-            <li class="d-case">
-              <div class="d-case-head">
-                <div class="d-case-id">
-                  <span class="d-label">Medical clinics · Redesign · Booking</span>
-                  <h3 class="d-ct">Site redesign &amp; booking flow</h3>
-                </div>
-                <div class="d-case-kpi">
-                  <span class="d-metric">+58%</span>
-                  <span class="d-micro">online appointment bookings in 90 days</span>
+            <li class="glass pr-case">
+              <div class="pr-case-tb" style="padding-bottom: 6px">
+                <div class="pr-case-head">
+                  <div class="pr-case-id">
+                    <span class="pr-dur">Medical clinics · Redesign · Booking</span>
+                    <h3 class="pr-t">Site redesign &amp; booking flow</h3>
+                  </div>
+                  <div class="pr-case-kpi">
+                    <span class="pr-num">+58%</span>
+                    <span>online appointment bookings in 90 days</span>
+                  </div>
                 </div>
               </div>
-              <div class="d-cmp">
-                <figure class="d-shot">
+              <div class="pr-cmp">
+                <figure class="pr-shot">
                   <div class="compare" data-compare>
                     <img
                       class="compare__img"
@@ -368,9 +349,9 @@
                       <span class="compare__grip" aria-hidden="true"></span>
                     </div>
                   </div>
-                  <figcaption class="d-micro">Women’s health clinic · homepage</figcaption>
+                  <figcaption>Women’s health clinic · homepage</figcaption>
                 </figure>
-                <figure class="d-shot">
+                <figure class="pr-shot">
                   <div class="compare" data-compare>
                     <img
                       class="compare__img"
@@ -406,49 +387,53 @@
                       <span class="compare__grip" aria-hidden="true"></span>
                     </div>
                   </div>
-                  <figcaption class="d-micro">Plastic surgery clinic · about page</figcaption>
+                  <figcaption>Plastic surgery clinic · about page</figcaption>
                 </figure>
               </div>
-              <div class="d-case-body">
-                <dl class="d-notes">
-                  <div>
-                    <dt class="d-micro">The problem</dt>
-                    <dd>
-                      The old site buried the one thing patients came for. Walls of text, no clear path to a visit, and
-                      nothing that matched the standard of care inside the clinic.
-                    </dd>
-                  </div>
-                  <div>
-                    <dt class="d-micro">The fix</dt>
-                    <dd>
-                      Rebuilt around the appointment: services grouped the way patients ask for them, photography of
-                      the actual rooms and team, and booking within reach on every screen.
-                    </dd>
-                  </div>
-                </dl>
-                <ul class="d-receipts">
-                  <li><span class="d-rv">+41%</span><span class="d-micro">avg. time on site</span></li>
-                  <li><span class="d-rv">−34%</span><span class="d-micro">bounce rate</span></li>
-                  <li><span class="d-rv">2 clicks</span><span class="d-micro">from any page to a booking</span></li>
-                </ul>
+              <div class="pr-case-tb">
+                <div class="pr-case-body">
+                  <dl class="pr-notes">
+                    <div>
+                      <dt>The problem</dt>
+                      <dd>
+                        The old site buried the one thing patients came for. Walls of text, no clear path to a visit, and
+                        nothing that matched the standard of care inside the clinic.
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>The fix</dt>
+                      <dd>
+                        Rebuilt around the appointment: services grouped the way patients ask for them, photography of the
+                        actual rooms and team, and booking within reach on every screen.
+                      </dd>
+                    </div>
+                  </dl>
+                  <ul class="pr-receipts">
+                    <li><b>+41%</b><span>avg. time on site</span></li>
+                    <li><b>−34%</b><span>bounce rate</span></li>
+                    <li><b>2 clicks</b><span>from any page to a booking</span></li>
+                  </ul>
+                </div>
               </div>
             </li>
 
             <!-- Case 02 — plastic surgery clinic social media posts -->
-            <li class="d-case">
-              <div class="d-case-head">
-                <div class="d-case-id">
-                  <span class="d-label">Plastic surgery clinic · Social media · Content</span>
-                  <h3 class="d-ct">On-brand social media posts</h3>
-                </div>
-                <div class="d-case-kpi">
-                  <span class="d-metric">+240%</span>
-                  <span class="d-micro">engagement and reach on social</span>
+            <li class="glass pr-case">
+              <div class="pr-case-tb" style="padding-bottom: 6px">
+                <div class="pr-case-head">
+                  <div class="pr-case-id">
+                    <span class="pr-dur">Plastic surgery clinic · Social media · Content</span>
+                    <h3 class="pr-t">On-brand social media posts</h3>
+                  </div>
+                  <div class="pr-case-kpi">
+                    <span class="pr-num">+240%</span>
+                    <span>engagement and reach on social</span>
+                  </div>
                 </div>
               </div>
-              <ul class="d-posts">
+              <ul class="pr-posts">
                 <li>
-                  <figure class="d-shot">
+                  <figure class="pr-shot">
                     <img
                       src="/portfolio/social-post-01-brand.webp"
                       width="600"
@@ -457,11 +442,11 @@
                       decoding="async"
                       alt="Brand post: a portrait on a pink backdrop with the line “The art of beauty. Precision in healing.”"
                     />
-                    <figcaption class="d-micro">Brand</figcaption>
+                    <figcaption>Brand</figcaption>
                   </figure>
                 </li>
                 <li>
-                  <figure class="d-shot">
+                  <figure class="pr-shot">
                     <img
                       src="/portfolio/social-post-02-offer.webp"
                       width="600"
@@ -470,11 +455,11 @@
                       decoding="async"
                       alt="Treatment post: eyelid surgery, with a short explanation and a “Book a consultation” prompt."
                     />
-                    <figcaption class="d-micro">Treatment</figcaption>
+                    <figcaption>Treatment</figcaption>
                   </figure>
                 </li>
                 <li>
-                  <figure class="d-shot">
+                  <figure class="pr-shot">
                     <img
                       src="/portfolio/social-post-03-treatment.webp"
                       width="600"
@@ -483,11 +468,11 @@
                       decoding="async"
                       alt="Carousel slide “Step by step”: consultation, qualification, procedure and aftercare."
                     />
-                    <figcaption class="d-micro">Patient journey</figcaption>
+                    <figcaption>Patient journey</figcaption>
                   </figure>
                 </li>
                 <li>
-                  <figure class="d-shot">
+                  <figure class="pr-shot">
                     <img
                       src="/portfolio/social-post-04-doctor.webp"
                       width="600"
@@ -496,39 +481,41 @@
                       decoding="async"
                       alt="Team post introducing the clinic’s plastic and reconstructive surgeon, with a short quote."
                     />
-                    <figcaption class="d-micro">Team</figcaption>
+                    <figcaption>Team</figcaption>
                   </figure>
                 </li>
               </ul>
-              <div class="d-case-body">
-                <dl class="d-notes">
-                  <div>
-                    <dt class="d-micro">The problem</dt>
-                    <dd>
-                      Posts looked homemade and nothing like the clinic’s standard of care. They went out whenever
-                      someone had a free hour, so weeks went by with nothing new.
-                    </dd>
-                  </div>
-                  <div>
-                    <dt class="d-micro">The fix</dt>
-                    <dd>
-                      Beautiful, on-brand content that matches the new website, written and designed for the clinic.
-                      Done for them and published 3 times a week, every week.
-                    </dd>
-                  </div>
-                </dl>
-                <!-- PLACEHOLDER results: replace with the clinic's real numbers before launch -->
-                <ul class="d-receipts">
-                  <li><span class="d-rv">+35%</span><span class="d-micro">website visits from Instagram</span></li>
-                  <li><span class="d-rv">2.4×</span><span class="d-micro">engagement per post</span></li>
-                  <li><span class="d-rv">+20%</span><span class="d-micro">consultations booked from social</span></li>
-                </ul>
+              <div class="pr-case-tb">
+                <div class="pr-case-body">
+                  <dl class="pr-notes">
+                    <div>
+                      <dt>The problem</dt>
+                      <dd>
+                        Posts looked homemade and nothing like the clinic’s standard of care. They went out whenever someone
+                        had a free hour, so weeks went by with nothing new.
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>The fix</dt>
+                      <dd>
+                        Beautiful, on-brand content that matches the new website, written and designed for the clinic. Done
+                        for them and published 3 times a week, every week.
+                      </dd>
+                    </div>
+                  </dl>
+                  <!-- PLACEHOLDER results: replace with the clinic's real numbers before launch -->
+                  <ul class="pr-receipts">
+                    <li><b>+35%</b><span>website visits from Instagram</span></li>
+                    <li><b>2.4×</b><span>engagement per post</span></li>
+                    <li><b>+20%</b><span>consultations booked from social</span></li>
+                  </ul>
+                </div>
               </div>
             </li>
 
             <!-- Case 03 — beauty clinic flat pricing -->
-            <li class="d-case split">
-              <figure class="d-shot">
+            <li class="glass pr-case split">
+              <figure class="pr-shot">
                 <img
                   src="/portfolio/clinic-pricing.webp"
                   width="1200"
@@ -538,55 +525,57 @@
                   alt="Clinic pricing page: one searchable list of consultations and procedures with prices."
                 />
               </figure>
-              <div class="d-case-text">
-                <div class="d-case-head">
-                  <div class="d-case-id">
-                    <span class="d-label">Beauty clinic · Pricing · Booking</span>
-                    <h3 class="d-ct">Interactive flat pricing</h3>
+              <div class="pr-case-tb">
+                <div class="pr-case-head">
+                  <div class="pr-case-id">
+                    <span class="pr-dur">Beauty clinic · Pricing · Booking</span>
+                    <h3 class="pr-t">Interactive flat pricing</h3>
                   </div>
-                  <div class="d-case-kpi">
-                    <span class="d-metric">+44%</span>
-                    <span class="d-micro">online bookings in 90 days</span>
+                  <div class="pr-case-kpi">
+                    <span class="pr-num">+44%</span>
+                    <span>online bookings in 90 days</span>
                   </div>
                 </div>
-                <div class="d-case-body">
-                  <dl class="d-notes">
+                <div class="pr-case-body">
+                  <dl class="pr-notes">
                     <div>
-                      <dt class="d-micro">The problem</dt>
+                      <dt>The problem</dt>
                       <dd>
-                        Prices for 120+ treatments were spread across PDFs and sub-pages. Anyone who wanted the cost of
-                        one procedure had to call and ask, and most never did.
+                        Prices for 120+ treatments were spread across PDFs and sub-pages. Anyone who wanted the cost of one
+                        procedure had to call and ask, and most never did.
                       </dd>
                     </div>
                     <div>
-                      <dt class="d-micro">The fix</dt>
+                      <dt>The fix</dt>
                       <dd>
-                        One flat, searchable price list. Every procedure and specialist on a single page, with booking
-                        one tap away from any line.
+                        One flat, searchable price list. Every procedure and specialist on a single page, with booking one
+                        tap away from any line.
                       </dd>
                     </div>
                   </dl>
-                  <ul class="d-receipts">
-                    <li><span class="d-rv">5 → 1</span><span class="d-micro">clicks to book a visit</span></li>
-                    <li><span class="d-rv">120+</span><span class="d-micro">prices on one page</span></li>
+                  <ul class="pr-receipts">
+                    <li><b>5 → 1</b><span>clicks to book a visit</span></li>
+                    <li><b>120+</b><span>prices on one page</span></li>
                   </ul>
                 </div>
               </div>
             </li>
 
             <!-- Case 04 — SaaS speed rebuild (anonymized) -->
-            <li class="d-case">
-              <div class="d-case-head">
-                <div class="d-case-id">
-                  <span class="d-label">B2B software · Speed · Conversion</span>
-                  <h3 class="d-ct">Speed rebuild on the conversion path</h3>
-                </div>
-                <div class="d-case-kpi">
-                  <span class="d-metric">+34%</span>
-                  <span class="d-micro">conversion rate in 90 days</span>
+            <li class="glass pr-case">
+              <div class="pr-case-tb" style="padding-bottom: 6px">
+                <div class="pr-case-head">
+                  <div class="pr-case-id">
+                    <span class="pr-dur">B2B software · Speed · Conversion</span>
+                    <h3 class="pr-t">Speed rebuild on the conversion path</h3>
+                  </div>
+                  <div class="pr-case-kpi">
+                    <span class="pr-num">+34%</span>
+                    <span>conversion rate in 90 days</span>
+                  </div>
                 </div>
               </div>
-              <figure class="d-shot">
+              <figure class="pr-shot">
                 <img
                   src="/portfolio/saas-performance-rebuild.webp"
                   width="1600"
@@ -596,192 +585,166 @@
                   alt="The rebuilt landing page next to its Lighthouse report: performance 96, LCP 0.7 s."
                 />
               </figure>
-              <div class="d-case-body">
-                <dl class="d-notes">
-                  <div>
-                    <dt class="d-micro">The problem</dt>
-                    <dd>
-                      The pages built to convert were the slowest on the site. Every extra second of load was paid for
-                      in signups that never happened.
-                    </dd>
-                  </div>
-                  <div>
-                    <dt class="d-micro">The fix</dt>
-                    <dd>
-                      Rebuilt the pages that matter most for speed: 69% faster load, the main content on screen in
-                      under a second, and nothing left that makes the page freeze.
-                    </dd>
-                  </div>
-                </dl>
-                <ul class="d-receipts">
-                  <li><span class="d-rv">0.7 s</span><span class="d-micro">main content on screen</span></li>
-                  <li><span class="d-rv">0 ms</span><span class="d-micro">blocking time</span></li>
-                  <li><span class="d-rv">96</span><span class="d-micro">Lighthouse speed score</span></li>
-                </ul>
+              <div class="pr-case-tb">
+                <div class="pr-case-body">
+                  <dl class="pr-notes">
+                    <div>
+                      <dt>The problem</dt>
+                      <dd>
+                        The pages built to convert were the slowest on the site. Every extra second of load was paid for in
+                        signups that never happened.
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>The fix</dt>
+                      <dd>
+                        Rebuilt the pages that matter most for speed: 69% faster load, the main content on screen in under
+                        a second, and nothing left that makes the page freeze.
+                      </dd>
+                    </div>
+                  </dl>
+                  <ul class="pr-receipts">
+                    <li><b>0.7 s</b><span>main content on screen</span></li>
+                    <li><b>0 ms</b><span>blocking time</span></li>
+                    <li><b>96</b><span>Lighthouse speed score</span></li>
+                  </ul>
+                </div>
               </div>
             </li>
           </ul>
 
-          <figure class="d-quote">
+          <figure class="pr-quote">
             <blockquote>
-              “They didn’t just build us a website. They rebuilt how patients find us. Inquiries are up, and the ones
-              we get are actually worth our time.”
+              “They didn’t just build us a website. They rebuilt how patients find us. Inquiries are up, and the ones we
+              get are actually worth our time.”
             </blockquote>
-            <figcaption class="d-label">Owner · Medical clinic</figcaption>
+            <figcaption><span class="pr-dot" style="margin-top: 0"></span><span><b class="pr-ink">Owner</b>, medical clinic</span></figcaption>
           </figure>
         </div>
       </section>
 
-      <section id="about" class="d-sec">
-        <div class="wrap">
-          <div class="d-eyebrow"><b>05</b>About</div>
-          <div class="d-about">
-            <div class="d-frame">
-              <div class="d-photo">
-                <img
-                  src="/krzysztof-dabrowski.webp"
-                  width="660"
-                  height="878"
-                  loading="lazy"
-                  decoding="async"
-                  alt="Krzysztof Dąbrowski, smiling, in a white shirt outdoors."
-                />
-                <span class="d-micro">Krzysztof Dąbrowski · Founder</span>
-              </div>
-            </div>
-            <div class="d-about-copy">
-              <h2 class="d-h2">Hi, I’m <em>Krzysztof.</em></h2>
-              <p class="d-lede">
-                I’m a designer and developer who helps businesses get more clients from their website and social
-                media. Since 2019 I’ve worked with clinics, law firms and software companies. My yearly-plan clients
-                never need a dev or marketing team: they send me an email, and it’s done.
-              </p>
-              <p class="d-lede">
-                You always work with me directly, from the first review to every update. No account managers, no
-                handoffs.
-              </p>
-              <a href="https://www.linkedin.com/" class="d-link" target="_blank" rel="noopener">Connect with me on LinkedIn</a>
-            </div>
+      <section id="about" class="pr-sec" style="padding-top: 60px">
+        <div class="wrap pr-about">
+          <div class="pr-portrait pr-ring">
+            <img
+              src="/krzysztof-dabrowski.webp"
+              width="660"
+              height="878"
+              loading="lazy"
+              decoding="async"
+              alt="Krzysztof Dąbrowski, smiling, in a white shirt outdoors."
+            />
+            <span class="glass pr-plabel">Krzysztof Dąbrowski · Founder</span>
           </div>
-        </div>
-      </section>
-
-      <section id="faq" class="d-sec">
-        <div class="wrap d-split faq">
-          <div>
-            <div class="d-eyebrow"><b>06</b>FAQ</div>
-            <div class="d-faq">
-              <details open>
-                <summary>Do I need to know anything technical?<span class="d-pm" aria-hidden="true">+</span></summary>
-                <p>No. You send an email in plain words, and I take care of the rest.</p>
-              </details>
-              <details>
-                <summary>How fast will I see results?<span class="d-pm" aria-hidden="true">+</span></summary>
-                <p>
-                  Most clients see more booking requests within the first 90 days after relaunch. Monthly improvements
-                  keep the results growing.
-                </p>
-              </details>
-              <details>
-                <summary>Can you work with my current website?<span class="d-pm" aria-hidden="true">+</span></summary>
-                <p>Yes. If a full redesign isn’t needed yet, I start with the quick wins: speed, calls to action and the booking flow.</p>
-              </details>
-              <details>
-                <summary>What if I already post on social media myself?<span class="d-pm" aria-hidden="true">+</span></summary>
-                <p>Great. I can take over completely or just fill the gaps, so your posts stay consistent with your website.</p>
-              </details>
-              <details>
-                <summary>Am I locked in?<span class="d-pm" aria-hidden="true">+</span></summary>
-                <p>The yearly plan renews once a year, and you own your website and content whatever you decide.</p>
-              </details>
-            </div>
-          </div>
-          <div id="review">
-            <div class="d-eyebrow"><b>07</b>Free video review</div>
-            <div class="d-panel">
-              <h3 class="d-ct" style="font-size: clamp(1.5rem, 1.6vw + 0.6rem, 2.1rem)">Not ready for a call? Get a free video review.</h3>
-              <p class="d-cd">
-                Send me your website address. Within 3 business days you’ll get a short video, about 5 minutes, showing
-                the 3 biggest fixes that would bring you more clients. Free, no call, no pressure to buy.
-              </p>
-              <p class="d-micro" style="margin: 0">Within 3 business days · About 5 minutes · Free</p>
-              <form class="d-form" action="https://submit-form.com/nF9PeLkU9" method="POST" data-review-form="home">
-                <input type="hidden" name="form" value="video_review" />
-                <div class="d-field">
-                  <label for="d-site">Your website address</label>
-                  <input
-                    id="d-site"
-                    class="d-input"
-                    type="text"
-                    name="site_url"
-                    inputmode="url"
-                    autocomplete="url"
-                    autocapitalize="off"
-                    spellcheck="false"
-                    placeholder="yourclinic.com"
-                    required
-                  />
-                </div>
-                <div class="d-field">
-                  <label for="d-email">Your email address</label>
-                  <input
-                    id="d-email"
-                    class="d-input"
-                    type="email"
-                    name="email"
-                    autocomplete="email"
-                    placeholder="you@yourclinic.com"
-                    required
-                  />
-                </div>
-                <button type="submit" class="d-btn" style="width: 100%">Get my free video review</button>
-                <p class="d-status" role="status" aria-live="polite" data-form-status></p>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="book" class="d-final">
-        <span class="d-glow" aria-hidden="true"></span>
-        <svg class="d-silk two" viewBox="0 0 800 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-          <g filter="url(#dsWarp)">
-            <ellipse cx="460" cy="380" rx="300" ry="100" fill="url(#dsA)"></ellipse>
-            <ellipse cx="560" cy="520" rx="220" ry="160" fill="url(#dsC)"></ellipse>
-            <ellipse cx="380" cy="260" rx="200" ry="70" fill="url(#dsB)"></ellipse>
-          </g>
-        </svg>
-        <div class="wrap" style="position: relative; z-index: 1">
-          <h2 class="d-close">Ready for a website that brings in clients?</h2>
-          <div class="d-final-row">
-            <p class="d-lede">
-              Book a free 20-minute review. You’ll leave with the 3 biggest fixes for your site, whether you work with
-              me or not.
+          <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 22px">
+            <h2 class="disp pr-h2" style="font-size: clamp(38px, 4.8vw, 68px)">Hi, I’m Krzysztof.</h2>
+            <p class="pr-lead pr-lead-hi">
+              I’m a designer and developer who helps businesses get more clients from their website and social media.
+              Since 2019 I’ve worked with clinics, law firms and software companies. My yearly-plan clients never need a
+              dev or marketing team: they send me an email, and it’s done.
             </p>
-            <div class="d-ctas">
-              <a href="#book" class="d-btn" style="min-height: 56px; padding: 0 2rem" data-booking-cta="final">Book my free review</a>
-              <a href="#review" class="d-link" data-review-cta="final">Prefer not to talk yet? Get a free video review instead.</a>
-            </div>
+            <p class="pr-lead">You always work with me directly, from the first review to every update. No account managers, no handoffs.</p>
+            <a href="https://www.linkedin.com/" class="pr-link" target="_blank" rel="noopener"
+              >Connect with me on LinkedIn<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 16L16 8M9.5 8H16v6.5"></path></svg
+            ></a>
           </div>
+        </div>
+      </section>
+
+      <section id="faq" class="pr-sec" style="padding-top: 40px">
+        <div class="wrap pr-qa">
+          <aside id="review" class="glass pr-review">
+            <div style="display: flex; align-items: center; gap: 14px">
+              <span class="pr-play pr-ring" aria-hidden="true"><svg class="ic fill" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"></path></svg></span>
+              <span class="pr-vtime">A short video, about 5 minutes</span>
+            </div>
+            <h2 class="disp" style="margin: 0; font-size: clamp(22px, 2vw, 28px); line-height: 1.12">Not ready for a call? Get a free video review.</h2>
+            <p class="pr-d" style="font-size: 16px">
+              Send me your website address. Within 3 business days you’ll get a short video, about 5 minutes, showing the 3
+              biggest fixes that would bring you more clients. Free, no call, no pressure to buy.
+            </p>
+            <form class="pr-form" action="https://submit-form.com/nF9PeLkU9" method="POST" data-review-form="home">
+              <input type="hidden" name="form" value="video_review" />
+              <div class="pr-field">
+                <label for="pr-site">Your website address</label>
+                <input
+                  id="pr-site"
+                  class="pr-input"
+                  type="text"
+                  name="site_url"
+                  inputmode="url"
+                  autocomplete="url"
+                  autocapitalize="off"
+                  spellcheck="false"
+                  placeholder="yourclinic.com"
+                  required
+                />
+              </div>
+              <div class="pr-field">
+                <label for="pr-email">Your email address</label>
+                <input id="pr-email" class="pr-input" type="email" name="email" autocomplete="email" placeholder="you@yourclinic.com" required />
+              </div>
+              <button type="submit" class="btn btn-ink" style="width: 100%">Get my free video review</button>
+              <p class="pr-status" role="status" aria-live="polite" data-form-status></p>
+            </form>
+          </aside>
+          <div class="pr-faq">
+            <h2 class="disp pr-h2" style="font-size: clamp(30px, 3.3vw, 48px); margin-bottom: 16px">FAQ</h2>
+            <details open>
+              <summary>Do I need to know anything technical?<span class="pr-pm"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span></summary>
+              <p>No. You send an email in plain words, and I take care of the rest.</p>
+            </details>
+            <details>
+              <summary>How fast will I see results?<span class="pr-pm"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span></summary>
+              <p>Most clients see more booking requests within the first 90 days after relaunch. Monthly improvements keep the results growing.</p>
+            </details>
+            <details>
+              <summary>Can you work with my current website?<span class="pr-pm"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span></summary>
+              <p>Yes. If a full redesign isn’t needed yet, I start with the quick wins: speed, calls to action and the booking flow.</p>
+            </details>
+            <details>
+              <summary>What if I already post on social media myself?<span class="pr-pm"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span></summary>
+              <p>Great. I can take over completely or just fill the gaps, so your posts stay consistent with your website.</p>
+            </details>
+            <details>
+              <summary>Am I locked in?<span class="pr-pm"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span></summary>
+              <p>The yearly plan renews once a year, and you own your website and content whatever you decide.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section id="book" class="pr-final">
+        <span class="pr-orb pr-ring" aria-hidden="true"></span>
+        <span class="pr-orbc" aria-hidden="true"></span>
+        <div class="wrap" style="position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 26px">
+          <h2 class="disp pr-h2" style="max-width: 12em">Ready for a website that brings in clients?</h2>
+          <p class="pr-lead" style="text-align: center; color: #c3c9d6; max-width: 32em">
+            Book a free 20-minute review. You’ll leave with the 3 biggest fixes for your site, whether you work with me or
+            not.
+          </p>
+          <a href="#book" class="btn btn-pearl" style="min-height: 58px; padding: 0 34px; font-size: 16px" data-booking-cta="final">Book my free review</a>
+          <a href="#review" class="pr-link" style="color: #f7f8fa; text-decoration-color: rgba(247, 248, 250, 0.4)" data-review-cta="final"
+            >Prefer not to talk yet? Get a free video review instead.</a
+          >
         </div>
       </section>
     </main>
 
-    <footer class="d-foot">
-      <div class="wrap">
-        <span class="d-foot-mark">subsecond<sup>®</sup></span>
-        <div class="d-foot-row">
-          <nav aria-label="Footer">
-            <a href="#offers">Services</a>
-            <a href="#process">How it works</a>
-            <a href="#results">Results</a>
-            <a href="#faq">FAQ</a>
-            <a href="mailto:hello@subsecond.app">hello@subsecond.app</a>
-            <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
-          </nav>
-          <span class="d-foot-line">© <span id="footer-year">2026</span> subsecond</span>
-        </div>
+    <footer class="pr-footer">
+      <div class="wrap pr-ftop">
+        <span class="pr-logo" style="font-size: 15px">subsecond</span>
+        <nav aria-label="Footer">
+          <a href="#offers">Services</a>
+          <a href="#process">How it works</a>
+          <a href="#results">Results</a>
+          <a href="#faq">FAQ</a>
+          <a href="mailto:hello@subsecond.app">hello@subsecond.app</a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+        </nav>
+        <span>© <span id="footer-year">2026</span> Subsecond</span>
       </div>
+      <span class="pr-giant" aria-hidden="true">subsecond</span>
     </footer>
 
     <!-- Booking modal -->

@@ -1,13 +1,11 @@
 # subsecond.app
 
-Award-style one-page site for the subsecond boutique web agency. Dark editorial
-design, WebGL hero, scroll choreography, bilingual EN/PL copy.
+One-page site for the subsecond boutique web agency. Design B ("Prism"): glass
+surfaces, CSS-only animation, Pearl (light) and Onyx (dark) themes, EN copy.
 
 ## Stack
 
 - [Vite](https://vitejs.dev/) + vanilla TypeScript (no framework)
-- [GSAP](https://gsap.com/) + ScrollTrigger — preloader, line reveals, section staggers, magnetic buttons, custom cursor
-- [Three.js](https://threejs.org/) — hero background: domain-warped fbm noise shader reacting to the cursor
 - [Vitest](https://vitest.dev/) + jsdom — unit tests
 
 ## Commands
@@ -22,28 +20,22 @@ npm test         # run unit tests
 
 ## Structure
 
-- `index.html` + `src/styles/d.css` — homepage, design D (EN only, CSS-only animation, no GSAP/Three)
-- `b.html` + `src/styles/b.css` — design B preview at `/b` (`noindex`, Onyx theme)
-- `src/site.ts` — shared entry for `/` and `/b`: attribution, GA4/pixel page view, booking modal, before/after sliders, video review form
+- `index.html` + `src/styles/b.css` — homepage (EN only, CSS-only animation)
+- `src/site.ts` — homepage entry: attribution, GA4/pixel page view, booking modal, before/after sliders, video review form
 - `src/forms.ts` — free video review form: JSON post to Formspark with UTMs, inline success/error, `video_review_submit` GA4 event
 - `src/styles/widgets.css` — booking modal, Calendly loading state, cookie notice and slider, themed via `--w-*` properties
-- `designs/` — the D and B mockups the pages were built from (reference only, not deployed)
-- `a.html` — the previous homepage at `/a` (`noindex`); every translatable element carries a `data-i18n` key
-- `revenue-review.html` + `src/revenue-review.ts` — EN-only paid landing page at `/revenue-review` (OpenAI Ads destination; `noindex`)
+- `src/theme.ts` — Pearl / Onyx switch; an inline script in each page applies the stored or system theme before first paint
+- `designs/` — the B mockup the pages were built from (reference only, not deployed)
+- `revenue-review.html` + `src/revenue-review.ts` — EN-only paid landing page at `/revenue-review` (OpenAI Ads destination; `noindex`), same design B styles plus its own section at the end of `b.css`
 - `src/booking.ts` — Calendly: lazy embeds, booking modal, funnel + conversion tracking from Calendly's postMessage events
 - `src/attribution.ts` — keeps UTMs and `oppref` in `sessionStorage` for the session and passes UTMs to Calendly
 - `src/tracking.ts` — `oaiq` (OpenAI pixel) and `gtag` (GA4) wrappers
 - `src/notice.ts` — informational cookie notice (tracking does not depend on it)
-- `src/i18n.ts` — EN/PL dictionary, `setLanguage()`, localStorage persistence
-- `src/webgl.ts` — Three.js hero scene with reduced-motion and no-WebGL fallbacks
-- `src/animations.ts` — split-text helper, scroll reveals, cursor, magnetic buttons, preloader
-- `src/main.ts` — boot sequence and language-toggle wiring
-- `src/styles/main.css` — design system (custom properties, fluid type via `clamp()`)
 
 ## Notes
 
-- Language choice persists in `localStorage` (`subsecond-lang`) and updates `<html lang>`.
-- `prefers-reduced-motion` disables the preloader, smooth scroll, grain and the WebGL animation loop (a single static frame is rendered instead).
+- Theme choice persists in `localStorage` (`subsecond-b-theme`); with none stored, pages follow the system setting.
+- `prefers-reduced-motion` turns off every animation and transition on the design B pages.
 - Do not add CSS `scroll-behavior: smooth`.
 
 ## Tracking

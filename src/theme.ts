@@ -1,9 +1,10 @@
 /**
- * Light / dark switch for the design B preview: Pearl (light) is the base
+ * Light / dark switch for the design B pages: Pearl (light) is the base
  * styling, Onyx (dark) is `body.pr.t-onyx`. With no stored choice the page
  * follows the system setting; the nav toggle stores an explicit one.
- * The inline script at the top of b.html applies the same logic before
- * first paint, so keep THEME_KEY in sync with it.
+ * The inline script at the top of index.html and revenue-review.html
+ * applies the same logic before first paint, so keep THEME_KEY in sync
+ * with it.
  */
 
 export const THEME_KEY = 'subsecond-b-theme';

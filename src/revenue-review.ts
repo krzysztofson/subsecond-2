@@ -1,13 +1,8 @@
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
 import { captureAttribution } from './attribution';
 import { initCalendly, initFallbackForms, loadCalendly, mountEmbed } from './booking';
 import { initNotice } from './notice';
+import { initThemeToggle } from './theme';
 import { trackEvent, trackPageView } from './tracking';
-import { initCursor, initMagnetics, initNavScrollState, initReveals } from './animations';
-
-gsap.registerPlugin(ScrollTrigger);
 
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -72,11 +67,8 @@ if (sticky && hero && book && 'IntersectionObserver' in window) {
 /*  Interaction layers                                                */
 /* ---------------------------------------------------------------- */
 
-if (!prefersReducedMotion) initReveals();
+initThemeToggle();
 initNotice();
-initCursor();
-initMagnetics();
-initNavScrollState();
 initCalendly();
 initFallbackForms();
 

@@ -1,5 +1,5 @@
 /* ------------------------------------------------------------------ */
-/*  Shared widgets for the D (home) and B (preview) pages: booking      */
+/*  Shared widgets for the homepage and /revenue-review: booking        */
 /*  modal, Calendly loading state, cookie notice, before/after slider.  */
 /*  Each page themes them by overriding the --w-* properties on :root.  */
 /* ------------------------------------------------------------------ */

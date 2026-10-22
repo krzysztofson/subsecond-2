@@ -1,7 +1,7 @@
 /**
- * Entry for the homepage (design D, `/`) and the design B preview (`/b`).
- * Both are static, CSS-animated pages: this only wires attribution,
- * measurement, booking, the before/after sliders and the review form.
+ * Entry for the homepage (`/`, design B). It is a static, CSS-animated
+ * page: this only wires attribution, measurement, booking, the
+ * before/after sliders and the review form.
  */
 import { captureAttribution } from './attribution';
 import { initBookingModal, initCalendly, loadCalendly } from './booking';
