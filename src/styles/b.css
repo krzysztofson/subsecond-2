@@ -383,6 +383,11 @@ a{color:#0E1420}a:hover{color:#0E1420}
 .pr.t-onyx .pr-form[data-state="error"] .pr-status{color:#F0A898}
 .pr-form[data-state="sent"] .pr-field,.pr-form[data-state="sent"] button{display:none}
 .pr .cookie-notice__btn{min-height:44px;font-weight:600;letter-spacing:.04em}
+/* Hero lens aura: two soft arcs of colour travel around the rim, like an AI "thinking" glow.
+   Masked to a band across the edge and kept under the lens text; pulses gently. */
+.pr-lens::after{content:"";position:absolute;inset:-28px;z-index:-1;border-radius:50%;pointer-events:none;background:conic-gradient(rgba(108,183,255,0),rgba(108,183,255,.9) 50deg,rgba(169,139,255,.85) 100deg,rgba(169,139,255,0) 155deg,rgba(255,138,91,0) 190deg,rgba(255,138,91,.8) 240deg,rgba(255,214,107,.85) 285deg,rgba(123,232,196,.7) 325deg,rgba(123,232,196,0));-webkit-mask:radial-gradient(closest-side,transparent 80%,#000 88%,transparent 99%);mask:radial-gradient(closest-side,transparent 80%,#000 88%,transparent 99%);opacity:.5;animation:prSpin 9s linear infinite,prAura 4.5s ease-in-out infinite alternate}
+@keyframes prAura{from{opacity:.3}to{opacity:.7}}
+.pr.t-onyx .pr-lens::after{background:conic-gradient(rgba(235,201,112,0),rgba(255,241,196,.8) 60deg,rgba(235,201,112,.75) 110deg,rgba(184,134,47,0) 165deg,rgba(184,134,47,0) 195deg,rgba(245,220,146,.7) 255deg,rgba(184,134,47,.6) 310deg,rgba(235,201,112,0))}
 
 /* ------------------------------------------------------------------ */
 /*  Revenue review landing page (/revenue-review)                       */
