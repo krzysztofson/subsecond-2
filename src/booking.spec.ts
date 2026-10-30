@@ -6,6 +6,13 @@ import {
   mountEmbed,
   SLOW_AFTER_MS,
 } from './booking';
+import { getBotpoisonSolution } from './botpoison';
+
+vi.mock('./botpoison', () => ({
+  BOTPOISON_FIELD: '_botpoison',
+  prepareBotpoison: vi.fn(),
+  getBotpoisonSolution: vi.fn(),
+}));
 
 const CALENDLY = 'https://calendly.com';
 
@@ -159,18 +166,31 @@ describe('initBookingModal', () => {
 });
 
 describe('initFallbackForms', () => {
+  let submit: Mock;
+  const flush = () => new Promise((resolve) => setTimeout(resolve, 0));
+  const hidden = (form: HTMLFormElement, name: string) =>
+    form.querySelectorAll<HTMLInputElement>(`input[type="hidden"][name="${name}"]`);
+
   beforeEach(() => {
     sessionStorage.clear();
     window.oaiq = vi.fn<Tag>();
     window.gtag = vi.fn<Tag>();
+    submit = vi.fn();
+    vi.spyOn(HTMLFormElement.prototype, 'submit').mockImplementation(submit);
+    vi.mocked(getBotpoisonSolution).mockResolvedValue('SOLUTION');
     document.body.innerHTML = `
       <form data-fallback-form="lp" action="https://submit-form.com/x" method="POST">
         <input name="email" value="a@b.co" />
+        <button type="submit">Send</button>
       </form>
     `;
   });
 
-  it('should add stored UTMs as hidden fields and log a GA event, not a lead', () => {
+  afterEach(() => {
+    vi.restoreAllMocks();
+  });
+
+  it('should add stored UTMs and a Botpoison solution, submit once and log a GA event, not a lead', async () => {
     sessionStorage.setItem(
       'subsecond-attr',
       JSON.stringify({ utm_source: 'openai', utm_campaign: 'revenue_review' }),
@@ -179,15 +199,41 @@ describe('initFallbackForms', () => {
     const form = document.querySelector('form')!;
     form.dispatchEvent(new Event('submit', { cancelable: true }));
     form.dispatchEvent(new Event('submit', { cancelable: true }));
+    await flush();
 
-    const hidden = (name: string) =>
-      form.querySelectorAll<HTMLInputElement>(`input[type="hidden"][name="${name}"]`);
-    expect(hidden('utm_source')).toHaveLength(1);
-    expect(hidden('utm_source')[0].value).toBe('openai');
-    expect(hidden('utm_campaign')[0].value).toBe('revenue_review');
-    expect(hidden('landing_page')[0].value).toBe(window.location.pathname);
+    expect(hidden(form, 'utm_source')).toHaveLength(1);
+    expect(hidden(form, 'utm_source')[0].value).toBe('openai');
+    expect(hidden(form, 'utm_campaign')[0].value).toBe('revenue_review');
+    expect(hidden(form, 'landing_page')[0].value).toBe(window.location.pathname);
+    expect(hidden(form, '_botpoison')[0].value).toBe('SOLUTION');
+    expect(submit).toHaveBeenCalledTimes(1);
+    expect(form.querySelector('button')!.disabled).toBe(true);
     expect(window.gtag).toHaveBeenCalledWith('event', 'fallback_form_submit', { placement: 'lp' });
     expect(window.oaiq).not.toHaveBeenCalled();
+  });
+
+  it('should still submit when the spam check fails', async () => {
+    vi.mocked(getBotpoisonSolution).mockRejectedValueOnce(new Error('challenge failed'));
+    initFallbackForms();
+    const form = document.querySelector('form')!;
+    form.dispatchEvent(new Event('submit', { cancelable: true }));
+    await flush();
+
+    expect(hidden(form, '_botpoison')).toHaveLength(0);
+    expect(submit).toHaveBeenCalledTimes(1);
+  });
+
+  it('should be usable again after coming back to the page', async () => {
+    initFallbackForms();
+    const form = document.querySelector('form')!;
+    form.dispatchEvent(new Event('submit', { cancelable: true }));
+    await flush();
+    window.dispatchEvent(new Event('pageshow'));
+
+    form.dispatchEvent(new Event('submit', { cancelable: true }));
+    await flush();
+    expect(submit).toHaveBeenCalledTimes(2);
+    expect(hidden(form, '_botpoison')).toHaveLength(1);
   });
 });
 

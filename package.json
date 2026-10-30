@@ -17,5 +17,8 @@
     "vite": "^8.0.16",
     "vitest": "^4.1.8",
     "wrangler": "^4.129.1"
+  },
+  "dependencies": {
+    "@botpoison/browser": "1.1.0"
   }
 }

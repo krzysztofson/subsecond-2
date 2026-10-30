@@ -1,4 +1,5 @@
 import { getAttribution, getCalendlyUtm, withUtm } from './attribution';
+import { BOTPOISON_FIELD, getBotpoisonSolution, prepareBotpoison } from './botpoison';
 import { CALENDLY_ORIGIN, CALENDLY_URL } from './config';
 import { trackBooking, trackEvent } from './tracking';
 
@@ -224,14 +225,36 @@ export function initCalendly(): void {
 
 /**
  * Fallback inquiry forms next to the calendar: attach stored UTMs as hidden
- * fields so form leads keep their attribution, and log the submit to GA.
+ * fields so form leads keep their attribution, add a Botpoison solution for
+ * spam protection, and log the submit to GA.
  * Not an OpenAI conversion — only a completed booking is.
  */
 export function initFallbackForms(): void {
   document.querySelectorAll<HTMLFormElement>('form[data-fallback-form]').forEach((form) => {
-    form.addEventListener('submit', () => {
-      const attr = getAttribution();
-      Object.entries({ ...attr, landing_page: window.location.pathname }).forEach(([name, value]) => {
+    const button = form.querySelector<HTMLButtonElement>('button[type="submit"]');
+    form.addEventListener('focusin', prepareBotpoison);
+    // Coming back from Formspark's page via the back/forward cache: make the form usable again.
+    window.addEventListener('pageshow', () => {
+      delete form.dataset.state;
+      if (button) button.disabled = false;
+    });
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (form.dataset.state === 'sending') return;
+      form.dataset.state = 'sending';
+      if (button) button.disabled = true;
+
+      const fields: Record<string, string | undefined> = {
+        ...getAttribution(),
+        landing_page: window.location.pathname,
+      };
+      try {
+        fields[BOTPOISON_FIELD] = (await getBotpoisonSolution()) ?? undefined;
+      } catch {
+        // Post anyway: Formspark answers with its own error page rather than losing the lead silently.
+      }
+      Object.entries(fields).forEach(([name, value]) => {
         if (!value) return;
         let input = form.querySelector<HTMLInputElement>(`input[type="hidden"][name="${name}"]`);
         if (!input) {
@@ -243,6 +266,8 @@ export function initFallbackForms(): void {
         input.value = value;
       });
       trackEvent('fallback_form_submit', { placement: form.dataset.fallbackForm });
+      // Native submit (no submit event) so the browser follows Formspark's redirect as before.
+      HTMLFormElement.prototype.submit.call(form);
     });
   });
 }

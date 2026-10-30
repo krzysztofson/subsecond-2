@@ -23,6 +23,7 @@ npm test         # run unit tests
 - `index.html` + `src/styles/b.css` — homepage (EN only, CSS-only animation)
 - `src/site.ts` — homepage entry: attribution, GA4/pixel page view, booking modal, before/after sliders, video review form
 - `src/forms.ts` — free video review form: JSON post to Formspark with UTMs, inline success/error, `video_review_submit` GA4 event
+- `src/botpoison.ts` — Botpoison spam protection for both Formspark forms; solving starts when a visitor focuses a form
 - `src/styles/widgets.css` — booking modal, Calendly loading state, cookie notice and slider, themed via `--w-*` properties
 - `src/theme.ts` — Pearl / Onyx switch; an inline script in each page applies the stored or system theme before first paint
 - `designs/` — the B mockup the pages were built from (reference only, not deployed)
@@ -37,6 +38,11 @@ npm test         # run unit tests
 - Theme choice persists in `localStorage` (`subsecond-b-theme`); with none stored, pages follow the system setting.
 - `prefers-reduced-motion` turns off every animation and transition on the design B pages.
 - Do not add CSS `scroll-behavior: smooth`.
+
+## Spam protection
+
+- Both forms post to the same Formspark form with a `_botpoison` solution. Copy `.env.example` to `.env` and set `VITE_BOTPOISON_PUBLIC_KEY` (`pk_…`) before building; it is read at build time, so a build without it sends no solution and Formspark rejects every submission once Botpoison is on.
+- The secret key (`sk_…`) belongs in Formspark's form settings, never in this repo or the bundle. `.env` is gitignored.
 
 ## Tracking
 

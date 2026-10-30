@@ -1,6 +1,13 @@
 import { afterEach, beforeEach, describe, expect, it, vi, type Mock } from 'vitest';
 import { ATTRIBUTION_KEY } from './attribution';
+import { getBotpoisonSolution } from './botpoison';
 import { initReviewForms, normalizeSiteUrl } from './forms';
+
+vi.mock('./botpoison', () => ({
+  BOTPOISON_FIELD: '_botpoison',
+  prepareBotpoison: vi.fn(),
+  getBotpoisonSolution: vi.fn(),
+}));
 
 describe('normalizeSiteUrl', () => {
   it('should accept a bare domain and add https', () => {
@@ -54,6 +61,7 @@ describe('initReviewForms', () => {
     window.gtag = gtag;
     fetchMock = vi.fn().mockResolvedValue({ ok: true, status: 200 });
     vi.stubGlobal('fetch', fetchMock);
+    vi.mocked(getBotpoisonSolution).mockResolvedValue('SOLUTION');
   });
 
   afterEach(() => {
@@ -79,6 +87,7 @@ describe('initReviewForms', () => {
       utm_source: 'openai',
       utm_campaign: 'spring',
       placement: 'home',
+      _botpoison: 'SOLUTION',
     });
     expect(form.dataset.state).toBe('sent');
     expect(form.querySelector('[data-form-status]')!.textContent).toMatch(/on its way/);
@@ -121,5 +130,30 @@ describe('initReviewForms', () => {
     await flush();
 
     expect(fetchMock).toHaveBeenCalledTimes(1);
+  });
+
+  it('should not post and should show an error when the spam check fails', async () => {
+    vi.mocked(getBotpoisonSolution).mockRejectedValueOnce(new Error('challenge failed'));
+    const form = render();
+    fill(form, 'clinic.com');
+
+    form.dispatchEvent(new Event('submit', { cancelable: true }));
+    await flush();
+
+    expect(fetchMock).not.toHaveBeenCalled();
+    expect(form.dataset.state).toBe('error');
+    expect(gtag).toHaveBeenCalledWith('event', 'video_review_error', { placement: 'home' });
+  });
+
+  it('should post without a solution when no Botpoison key is configured', async () => {
+    vi.mocked(getBotpoisonSolution).mockResolvedValueOnce(null);
+    const form = render();
+    fill(form, 'clinic.com');
+
+    form.dispatchEvent(new Event('submit', { cancelable: true }));
+    await flush();
+
+    expect(JSON.parse(fetchMock.mock.calls[0][1].body)).not.toHaveProperty('_botpoison');
+    expect(form.dataset.state).toBe('sent');
   });
 });

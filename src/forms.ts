@@ -1,4 +1,5 @@
 import { getAttribution } from './attribution';
+import { BOTPOISON_FIELD, getBotpoisonSolution, prepareBotpoison } from './botpoison';
 import { trackEvent } from './tracking';
 
 /**
@@ -40,7 +41,7 @@ function setState(form: HTMLFormElement, state: FormState): void {
 /**
  * Free video review forms (`form[data-review-form]`): website + email, sent
  * to Formspark as JSON with the session's attribution so the lead keeps its
- * source. Without JS the same form posts to Formspark directly.
+ * source and a Botpoison solution so it passes spam protection.
  * Logs `video_review_submit` to GA4; not an OpenAI conversion — only a
  * completed booking is.
  */
@@ -48,6 +49,7 @@ export function initReviewForms(root: ParentNode = document): void {
   root.querySelectorAll<HTMLFormElement>('form[data-review-form]').forEach((form) => {
     const site = form.querySelector<HTMLInputElement>('input[name="site_url"]');
     site?.addEventListener('input', () => site.setCustomValidity(''));
+    form.addEventListener('focusin', prepareBotpoison);
 
     form.addEventListener('submit', async (event) => {
       event.preventDefault();
@@ -76,6 +78,8 @@ export function initReviewForms(root: ParentNode = document): void {
 
       setState(form, 'sending');
       try {
+        const solution = await getBotpoisonSolution();
+        if (solution) Object.assign(payload, { [BOTPOISON_FIELD]: solution });
         const res = await fetch(form.action, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
