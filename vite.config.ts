@@ -107,6 +107,7 @@ export default defineConfig({
       input: {
         main: 'index.html',
         revenueReview: 'revenue-review.html',
+        allegroApi: 'allegro-api.html',
       },
     },
   },

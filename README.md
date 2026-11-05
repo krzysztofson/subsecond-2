@@ -28,6 +28,7 @@ npm test         # run unit tests
 - `src/theme.ts` — Pearl / Onyx switch; an inline script in each page applies the stored or system theme before first paint
 - `designs/` — the B mockup the pages were built from (reference only, not deployed)
 - `revenue-review.html` + `src/revenue-review.ts` — EN-only paid landing page at `/revenue-review` (OpenAI Ads destination; `noindex`), same design B styles plus its own section at the end of `b.css`
+- `allegro-api.html` — static PL page at `/allegro-api` describing the Allegro REST API app (the URL in its `User-Agent` header; `noindex`); no JS needed, inline styles; `public/_redirects` sends `/allegro-api/` to it with a 301
 - `src/booking.ts` — Calendly: lazy embeds, booking modal, funnel + conversion tracking from Calendly's postMessage events
 - `src/attribution.ts` — keeps UTMs and `oppref` in `sessionStorage` for the session and passes UTMs to Calendly
 - `src/tracking.ts` — `oaiq` (OpenAI pixel) and `gtag` (GA4) wrappers
